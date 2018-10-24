@@ -1,0 +1,101 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav position="end" [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav"
+    perfectScrollbar>
+    <mat-accordion displayMode="flat" multi="true" class="tweets">
+      <mat-expansion-panel expanded>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h4>Tweets</h4>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Shiba Inu</mat-card-title>
+            </mat-card-header>
+            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+              <p fxLayoutAlign="left">
+                The Shiba Inu is the smallest of the six original.
+              </p>
+              <br>
+            </mat-card-content>
+            <mat-card-actions style=" padding-top: 0;">
+              <button mat-button>show summury</button>
+            </mat-card-actions>
+          </mat-card>
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Shiba Inu</mat-card-title>
+            </mat-card-header>
+            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+              <p>
+                The Shiba Inu is the smallest of the six original.
+              </p>
+            </mat-card-content>
+            <mat-card-actions style=" padding-top: 0;">
+              <button mat-button>show summury</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+    <mat-accordion displayMode="flat" multi="true">
+      <mat-expansion-panel expanded>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <img src="../../../assets/images/Home/bot-icon.png" style=" width: 48px; height: 43px; ">
+            <h4>ChatBot</h4>
+            <a fxLayoutAlign="left" mat-button routerLink="."></a>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div fxLayout="column">
+          <mat-card class="example-card">
+            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+              <p fxLayoutAlign="left" style="background: #67606061;border-radius: 25px;padding: 5%;">
+                Bonjour en quoi puis je vous etre utile aujourd'hui ?
+              </p>
+              <br>
+              <p fxLayoutAlign="right" style="background: rgba(236, 88, 88, 0.64);border-radius: 25px;padding: 5%;margin-left: 13%;">
+                The Shiba Inu is the smallest of the six original.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-sidenav>
+  <mat-sidenav-content class="all-products" ngClass.gt-sm="p-left">
+
+      <div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="space-between" class="filter-row mat-elevation-z1 text-muted">
+        <button *ngIf="!sidenavOpen" mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+      </div>
+
+        <div fxLayout="row">
+          <h2>Description Appel d'Offre</h2>
+        </div>
+        <div fxLayout="column" fxLayout.xs="column" fxLayoutGap="40px">
+            
+            <mat-grid-list cols="2" rowHeight="50px">
+              <mat-grid-tile fxLayoutAlign="start"><h3><span style="float:left">Nom</span> </h3></mat-grid-tile>
+              <mat-grid-tile>Engrais (Référence 00011111)</mat-grid-tile>
+              <mat-grid-tile><h3>Description</h3></mat-grid-tile>
+              <mat-grid-tile>Engrais haute qualité</mat-grid-tile>
+              <mat-grid-tile><h3>Origine</h3></mat-grid-tile>
+              <mat-grid-tile>casamance</mat-grid-tile>
+              <mat-grid-tile><h3>Emetteur Offre</h3></mat-grid-tile>
+              <mat-grid-tile>Amadou Thiam</mat-grid-tile>
+              <mat-grid-tile><h3>Contact</h3></mat-grid-tile>
+              <mat-grid-tile>774858685</mat-grid-tile>
+              <mat-grid-tile><h3>Date début</h3></mat-grid-tile>
+              <mat-grid-tile>14/10/2000</mat-grid-tile>
+              <mat-grid-tile><h3>Date fin</h3></mat-grid-tile>
+              <mat-grid-tile>14/10/2010</mat-grid-tile>
+            </mat-grid-list>
+        </div>
+      <br>
+  </mat-sidenav-content>
+</mat-sidenav-container>

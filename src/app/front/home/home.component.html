@@ -1,0 +1,186 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav" perfectScrollbar>
+
+        <mat-accordion displayMode="flat" multi="true">
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_HeaderMark.png" alt="">&nbsp;<h4>Filtres</h4>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <mat-checkbox color="primary"> <img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_1.png" alt=""> Domaines</mat-checkbox>
+                    <mat-checkbox color="primary"><img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_2.png" alt=""> Activités</mat-checkbox>
+                    <mat-checkbox color="primary"><img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_3.png" alt=""> Boutiques</mat-checkbox>
+                    <mat-checkbox color="primary"><img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_4.png" alt=""> Localités</mat-checkbox>
+                    <mat-checkbox color="primary"><img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_5.png" alt=""> Références produit</mat-checkbox>
+                    <mat-checkbox color="primary"><img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_6.png" alt=""> Prix</mat-checkbox>
+                    <mat-checkbox color="primary"><img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_7.png" alt=""> Disponibilités</mat-checkbox>
+                </div>
+            </mat-expansion-panel>
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <img src="../../../assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_HeaderMark.png" alt="">&nbsp;<h4>Catégories</h4>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <a fxLayoutAlign="left" mat-button routerLink=".">Technologie</a>
+                    <a fxLayoutAlign="left" mat-button routerLink=".">Business</a>
+                    <a fxLayoutAlign="left" mat-button routerLink=".">WEB</a>
+                    <a fxLayoutAlign="left" mat-button routerLink=".">E-COMMERCE</a>
+                    <a fxLayoutAlign="left" mat-button routerLink=".">WORDPRESS</a>
+                    <a fxLayoutAlign="left" mat-button routerLink=".">IOS</a>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+
+    </mat-sidenav>
+    <mat-sidenav #rightSidenav position="end" [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav"
+        perfectScrollbar>
+        <mat-accordion displayMode="flat" multi="true" class="tweets">
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <h4>Tweets</h4>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+                            <p fxLayoutAlign="left">
+                                The Shiba Inu is the smallest of the six original.
+                            </p>
+                            <br>
+                        </mat-card-content>
+                        <mat-card-actions style=" padding-top: 0;">
+                            <button mat-button>show summury</button>
+                        </mat-card-actions>
+                    </mat-card>
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title>Shiba Inu</mat-card-title>
+                        </mat-card-header>
+                        <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+                            <p>
+                                The Shiba Inu is the smallest of the six original.
+                            </p>
+                        </mat-card-content>
+                        <mat-card-actions style=" padding-top: 0;">
+                            <button mat-button>show summury</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+        <mat-accordion displayMode="flat" multi="true">
+            <mat-expansion-panel expanded>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <img src="../../../assets/images/Home/bot-icon.png" style=" width: 48px; height: 43px; ">
+                        <h4>ChatBot</h4>
+                        <a fxLayoutAlign="left" mat-button routerLink="."></a>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div fxLayout="column">
+                    <mat-card class="example-card">
+                        <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+                            <p fxLayoutAlign="left" style="background: #67606061;border-radius: 25px;padding: 5%;">
+                                Bonjour en quoi puis je vous etre utile aujourd'hui ?
+                            </p>
+                            <br>
+                            <p fxLayoutAlign="right" style="background: rgba(236, 88, 88, 0.64);border-radius: 25px;padding: 5%;margin-left: 13%;">
+                                The Shiba Inu is the smallest of the six original.
+                            </p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-sidenav>
+    <mat-sidenav-content class="all-products" ngClass.gt-sm="p-left">
+        <div fxLayout="row">
+            <h1>Domaine</h1>
+        </div>
+        <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" class="filter-row mat-elevation-z1 text-muted">
+            <button *ngIf="!sidenavOpen" mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-divider></mat-divider>
+            <div fxLayout="row" fxLayoutGap="60px" fxLayout.xs="column">
+                <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
+                    <a [routerLink]="['/domaine', 'agriculture']" style="text-decoration:none">
+                        <mat-card class="panel-domaine-ag">
+                            <mat-card-header>
+                                <img src="../../../assets/images/domaine/agriculture.png" alt="" width="50px" height="50px">
+                            </mat-card-header>
+                            <mat-card-title>
+                                Agriculture
+                            </mat-card-title>
+                            <mat-card-content>
+                                &nbsp; &nbsp;
+                            </mat-card-content>
+                            <mat-card-footer>
+                                &nbsp;
+                            </mat-card-footer>
+                        </mat-card>
+                    </a>
+                </div>
+                <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
+                    <a [routerLink]="['/domaine', 'elevage']" style="text-decoration:none">
+                        <mat-card class="panel-domaine-el">
+                            <mat-card-header>
+                                <img src="../../../assets/images/domaine/elevage.png" alt="" width="50px" height="50px">
+                            </mat-card-header>
+                            <mat-card-title>
+                                Elevage
+                            </mat-card-title>
+                            <mat-card-content>
+                                &nbsp; &nbsp;
+                            </mat-card-content>
+
+                            <mat-card-footer>
+                                &nbsp;
+                            </mat-card-footer>
+                        </mat-card>
+                    </a>
+                </div>
+                <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
+                    <a [routerLink]="['/domaine', 'peche']" style="text-decoration:none">
+                        <mat-card class="panel-domaine-pc">
+                            <mat-card-header>
+                                <img src="../../../assets/images/domaine/peche.png" alt="" width="50px" height="50px">
+                            </mat-card-header>
+                            <mat-card-title>
+                                Peche
+                            </mat-card-title>
+                            <mat-card-content>
+                                &nbsp; &nbsp;
+                            </mat-card-content>
+                            <mat-card-footer>
+                                &nbsp;
+                            </mat-card-footer>
+                        </mat-card>
+                    </a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end">
+            <div>
+                <a mat-raised-button color="primary" [routerLink]="['/domaine']">Plus</a>
+            </div>
+        </div>
+        <mat-divider></mat-divider>
+        <div fxLayout="row">
+            <h2>Top Recherches</h2>
+        </div>
+        <mat-divider></mat-divider>
+        <app-products-carousel [products]="topRatedProducts"></app-products-carousel>
+    </mat-sidenav-content>
+</mat-sidenav-container>

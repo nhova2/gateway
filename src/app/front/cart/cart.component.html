@@ -1,0 +1,72 @@
+<div *ngIf="appService.Data.cartList.length != 0">
+  <mat-chip-list>
+      <mat-chip color="warn" selected="true">YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</mat-chip>
+  </mat-chip-list>
+  <a [routerLink]="['/']" mat-raised-button color="primary" class="mt-2">Continue shopping</a>
+</div>
+
+<mat-card class="p-0">
+
+  <div class="mat-table cart-table">
+    <div class="mat-header-row">
+      <div class="mat-header-cell"><img src="../../../assets/images/Panier/FineTech_PS_Elmt_Panier_Reacp_Icon.png" alt=""></div>
+      <div class="mat-header-cell" style="margin-top: -1.8%;"><p class="countproduct">001</p><p class="products">Produits</p></div>
+      <div class="mat-header-cell productpolice">Nom</div>
+      <div class="mat-header-cell productpolice">Prix</div>      
+      <div class="mat-header-cell productpolice">Total</div>
+      <div class="mat-header-cell text-center">
+        <div class="px-1">
+          <button mat-raised-button color="warn" (click)="clear()" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">Effacer Tout</button>
+        </div>
+      </div>
+    </div>
+    <div class="mat-row">
+      <div class="mat-cell"><img src="../../../assets/images/Panier/Panier_Produit.jpg" alt=""></div>
+      <div class="mat-cell handle-counter" id="handleCounter">
+        <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
+       
+         <button  (click)="decrement()" class="counter-minus btn btn-primary" >-</button>
+       
+         <input type="text" value="{{counter}} " style="width:11%; padding: 1.5%">
+       
+         <button (click)="increment()" class="counter-plus btn btn-primary" >+</button>
+       </div>
+      <div class="mat-cell nameproduct"><!--<a [routerLink]="['/products', product.id, product.name]" class="product-name">{{product.name}}</a>-->Nom</div>
+      <div class="mat-cell firstprice">1000<SUP class="expo">XOF</SUP></div>      
+      
+      <div class="mat-cell totalprice">1000<SUP class="expo">XOF</SUP></div>
+      <div class="mat-cell text-center">
+        <div class="p-1">
+          <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+              <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+    <div class="mat-row">
+      <div class="mat-cell"><a [routerLink]="['/']" mat-raised-button color="primary" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">Continuer Achat</a></div>
+      <div class="mat-cell"></div>
+      <div class="mat-cell"></div>
+      <div class="mat-cell text-right">
+        <div fxLayout="column" fxLayoutAlign="center end" class="grand-total px-2">
+          <span>Sous Total:</span>
+          <span class="text-muted">Frais de livraison:</span>
+          <span class="new-price">Total:</span>
+        </div>        
+      </div>
+      <div class="mat-cell">
+        <div fxLayout="column" fxLayoutAlign="center start" class="grand-total">
+          <span>${{ grandTotal | number : '1.2-2'}}</span>
+          <span class="text-muted">15%</span>
+          <span class="new-price">${{ (grandTotal - (grandTotal*0.15)) | number : '1.2-2'}}</span>
+        </div>
+      </div>
+      <div class="mat-cell text-center"><a [routerLink]="['/checkout']" mat-raised-button style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt" >Passer Commande</a></div>
+    </div>
+  </div>
+
+ </mat-card>
+
+ 
+  

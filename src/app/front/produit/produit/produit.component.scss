@@ -1,0 +1,40 @@
+.panel-domaine-a {
+    width: 10em !important;
+    background-color: #ed7d31 !important;
+}
+
+.panel-domaine-b {
+    width: 10em !important;
+    background-color: #70ad47 !important;
+}
+
+.panel-domaine-c {
+    width: 10em !important;
+    background-color: #5b9bd5 !important;
+}
+
+.filter-sidenav {
+    width: 280px;
+    padding: 2px; //background: transparent !important;
+    .mat-expansion-panel-header-title {
+        text-transform: uppercase;
+    }
+}
+
+.filter-row {
+    background: #fff;
+    padding: 8px 12px;
+}
+
+.products-tabs {
+    margin-top: 30px;
+}
+
+.ratings {
+    color: #fbc02d;
+}
+
+.ratings-count {
+    margin-left: 12px;
+    font-weight: 500;
+}

@@ -1,0 +1,32 @@
+.panel-domaine-ag {
+    width: 10em !important;
+    margin: 3%;
+    background-color: #ed7d31 !important;
+    padding-right: 5%;
+}
+
+.panel-domaine-el {
+    width: 10em !important;
+    margin: 3%;
+    background-color: #70ad47 !important;
+    padding-right: 5%;
+}
+
+.panel-domaine-pc {
+    width: 10em !important;
+    margin: 3%;
+    background-color: #5b9bd5 !important;
+}
+
+.filter-sidenav {
+    width: 280px;
+    padding: 2px; //background: transparent !important;
+    .mat-expansion-panel-header-title {
+        text-transform: uppercase;
+    }
+}
+
+.filter-row {
+    background: #fff;
+    padding: 8px 12px;
+}

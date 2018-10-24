@@ -1,0 +1,370 @@
+
+<mat-sidenav-container>
+    <mat-sidenav fxFlex="20" #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav" perfectScrollbar>
+      <div fxLayout="row wrap" class="info-bar" ngClass.gt.md="m-0">
+        <h2>Commentaires</h2>
+        <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+          <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+            <div class="content">
+              <p>user 1</p>
+              <span class="text-muted m-0">30 Days money return guarantee</span>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+          <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+            <div class="content">
+              <p>user 1</p>
+              <span class="text-muted m-0">30 Days money return guarantee</span>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+          <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+            <div class="content">
+              <p>user 1</p>
+              <span class="text-muted m-0">30 Days money return guarantee</span>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+          <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+            <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+            <div class="content">
+              <p>user 1</p>
+              <span class="text-muted m-0">30 Days money return guarantee</span>
+            </div>
+          </mat-card>
+        </div>
+        <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+          <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <textarea matInput placeholder="Laisser un commentaire"></textarea>
+              </mat-form-field>
+            </form>
+          </mat-card>
+        </div>
+      </div>
+      
+    </mat-sidenav>
+    <mat-sidenav fxFlex="23" #rightSidenav position="end" [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'"
+      class="filter-sidenav" perfectScrollbar>
+      <mat-accordion displayMode="flat" multi="true" class="tweets">
+        <mat-expansion-panel expanded>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h4>Tweets</h4>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div fxLayout="column">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+              </mat-card-header>
+              <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+                <p fxLayoutAlign="left">
+                  The Shiba Inu is the smallest of the six original.
+                </p>
+                <br>
+              </mat-card-content>
+              <mat-card-actions style=" padding-top: 0;">
+                <button mat-button>show summury</button>
+              </mat-card-actions>
+            </mat-card>
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+              </mat-card-header>
+              <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+                <p>
+                  The Shiba Inu is the smallest of the six original.
+                </p>
+              </mat-card-content>
+              <mat-card-actions style=" padding-top: 0;">
+                <button mat-button>show summury</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion displayMode="flat" multi="true">
+        <mat-expansion-panel expanded>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <img src="../../../assets/images/Home/bot-icon.png" style=" width: 48px; height: 43px; ">
+              <h4>ChatBot</h4>
+              <a fxLayoutAlign="left" mat-button routerLink="."></a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div fxLayout="column">
+            <mat-card class="example-card">
+              <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
+                <p fxLayoutAlign="left" style="background: #67606061;border-radius: 25px;padding: 5%;">
+                  Bonjour en quoi puis je vous etre utile aujourd'hui ?
+                </p>
+                <br>
+                <p fxLayoutAlign="right" style="background: rgba(236, 88, 88, 0.64);border-radius: 25px;padding: 5%;margin-left: 13%;">
+                  The Shiba Inu is the smallest of the six original.
+                </p>
+                <p fxLayoutAlign="left" style="margin-top: 12%; background: #67606061;border-radius: 25px;padding: 5%;">
+                  ok bla blaa ?
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
+    
+    <mat-divider></mat-divider>
+    <mat-sidenav-content >
+      <div fxLayout="row wrap">
+          <div fxFlex="100" fxFlex.gt-md="35" fxFlex.md="45">
+            <mat-card class="product-image">
+              <button mat-icon-button fxHide="false" fxHide.gt-md>
+                <mat-icon>fullscreen</mat-icon>
+              </button>
+              <img src="../../../../assets/images/Produit/engrais.jpg"  />
+            </mat-card>
+          </div>
+        <div fxFlex="100" fxFlex.gt-md="45" fxFlex.md="55" ngClass.gt-sm="px-3 m-0" ngClass.sm="mt-2" ngClass.xs="mt-2">
+
+          <div #zoomViewer fxShow="false" fxShow.gt-md>
+            <mat-card *ngIf="zoomImage" class="zoom-viewer mat-elevation-z18" [ngStyle]="{'background-image': 'url(' + zoomImage + ')'}"></mat-card>
+          </div>
+
+          <div fxLayout="row">
+            <span style="font-weight:bold">Nom : &nbsp;</span><span> Acti Kote  </span>
+          </div>
+          <div fxLayout="row">
+            <span style="font-weight:bold">Origine : &nbsp;</span><span>....  </span>
+          </div>
+          <div fxLayout="row">
+            <span style="font-weight:bold">Vendeur : &nbsp;</span><span>....  </span>
+          </div>
+          <div fxLayout="row">
+            <span style="font-weight:bold">Description : &nbsp;</span><span>....  </span>
+          </div>
+          <div fxLayout="row">
+            <span style="font-weight:bold">Estimation valeur : &nbsp;</span><span>....  </span>
+          </div>
+          <div fxLayout="row">
+            <span style="font-weight:bold">Enchere courante : &nbsp;</span><span>....  </span>
+          </div>
+          <div fxLayout="row">
+            <span style="font-weight:bold">Nombre d'encheres : &nbsp;</span><span>....  </span>
+          </div>
+          <div class="py-1 lh">
+            <a mat-raised-button href="#" color="primary">Contactez le vendeur</a>
+          </div>
+          
+          <div class="divider mt-1"></div>
+
+          <div class="py-1">
+            <div fxLayout="row" fxLayoutGap="30px">
+              <div fxLayout="column" fxLayoutGap="10px">
+                <div>
+                  <mat-icon>visibility</mat-icon>
+                </div>
+                <div>
+                  352
+                </div>
+              </div>
+              <div fxLayout="column" fxLayoutGap="10px">
+                <div>
+                  <mat-icon>thumb_up_alt</mat-icon>
+                </div>
+                <div>
+                  60
+                </div>
+              </div>
+              <div fxLayout="column" fxLayoutGap="10px">
+                <div>
+                  <mat-icon>thumb_down_alt</mat-icon>
+                </div>
+                <div>
+                  60
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-1">
+            <div fxLayout="row" fxLayoutGap="30px">
+              <div>     
+                <a color="warn" disabled mat-raised-button>Il reste <span style="color:red">3h30</span>  pour cette vente</a>             
+              </div>
+              <div>
+                <a href="#" color="primary" mat-raised-button>j'enchéris</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+            <div fxLayout="row" >
+              <div fxLayout="colmun" fxLayoutGap="20px">
+                <div class="ratings">
+                  <mat-icon class="mat-icon-xs">star</mat-icon>
+                  <mat-icon class="mat-icon-xs">star</mat-icon>
+                  <mat-icon class="mat-icon-xs">star</mat-icon>
+                  <mat-icon class="mat-icon-xs">star</mat-icon>
+                </div>
+                <div>
+                  <h4>Rating breakdown</h4>
+                </div>   
+              </div>    
+            </div>
+        </div>
+      </div>
+      <div class="mt-2">
+        <span style="margin-left:2%"><h2>&nbsp; Encheres similaires</h2></span> 
+        <div class="divider"></div>
+        <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+          <div fxFlex="33.3" fxFlex.gt-xs="45" fxFlex.gt-md="35" ngClass.xs="mt-2">
+            <mat-card class="panel-domaine-ag">
+              <mat-card-title>
+                <div fxLayout="row" fxLayoutAlign="center center">Engrais</div>
+              </mat-card-title>
+              <mat-card-subtitle>
+
+
+              </mat-card-subtitle>
+              <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="5px">
+                  <div>
+                    <a href="#">
+                      <img ngStyle.sm="font-size:80%"  ngStyle.xs="font-size:40%" src="../../../assets/images/Produit/FineTech_PS_Elmt_Produit_Photo_Bg.png" alt="">
+                    </a>
+                  </div>
+                  <div>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_border</mat-icon>
+                    <mat-icon>star_border</mat-icon>
+                  </div>
+                  <div>
+                    Origine(Casamance)
+                  </div>
+                  <div>
+                    Quantité : 100kg
+                  </div>
+                  <div>
+                    <span style="font-size:12px">Début Enchere 13/10/2018</span>
+                  </div>
+                  <div>
+                    <span style="font-size:12px">Début Enchere 13/10/2018</span>
+                  </div>
+                </div>
+              </mat-card-content>
+              <mat-card-footer>
+                <div fxLayout="row" fxLayoutGap="60px">
+                  <div fxLayoutAlign="end">
+                    <a mat-raised-button color="primary" href="#">participer</a>
+                  </div>
+                </div>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+          <div fxFlex="33.3" fxFlex.gt-xs="45" fxFlex.gt-md="35" ngClass.xs="mt-2">
+            <mat-card class="panel-domaine-ag">
+              <mat-card-title>
+                <div fxLayout="row" fxLayoutAlign="center center">Engrais</div>
+              </mat-card-title>
+              <mat-card-subtitle>
+
+
+              </mat-card-subtitle>
+              <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="5px">
+                  <div>
+                    <a href="#">
+                      <img src="../../../assets/images/Produit/FineTech_PS_Elmt_Produit_Photo_Bg.png" alt="">
+                    </a>
+                  </div>
+                  <div>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_border</mat-icon>
+                    <mat-icon>star_border</mat-icon>
+                  </div>
+                  <div>
+                    Origine(Casamance)
+                  </div>
+                  <div>
+                    Quantité : 100kg
+                  </div>
+                  <div>
+                    <span style="font-size:12px">Début Enchere 13/10/2018</span>
+                  </div>
+                  <div>
+                    <span style="font-size:12px">Début Enchere 13/10/2018</span>
+                  </div>
+                </div>
+              </mat-card-content>
+              <mat-card-footer>
+                <div fxLayout="row" fxLayoutGap="60px">
+                  <div fxLayoutAlign="end">
+                    <a mat-raised-button color="primary" href="#">participer</a>
+                  </div>
+                </div>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+          <div fxFlex="33.3" fxFlex.gt-xs="45" fxFlex.gt-md="35" ngClass.xs="mt-2">
+            <mat-card class="panel-domaine-ag">
+              <mat-card-title>
+                <div fxLayout="row" fxLayoutAlign="center center">Engrais</div>
+              </mat-card-title>
+              <mat-card-subtitle>
+
+
+              </mat-card-subtitle>
+              <mat-card-content>
+                <div fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="5px">
+                  <div>
+                    <a href="#">
+                      <img src="../../../assets/images/Produit/FineTech_PS_Elmt_Produit_Photo_Bg.png" alt="">
+                    </a>
+                  </div>
+                  <div>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star</mat-icon>
+                    <mat-icon>star_border</mat-icon>
+                    <mat-icon>star_border</mat-icon>
+                  </div>
+                  <div>
+                    Origine(Casamance)
+                  </div>
+                  <div>
+                    Quantité : 100kg
+                  </div>
+                  <div>
+                    <span style="font-size:12px">Début Enchere 13/10/2018</span>
+                  </div>
+                  <div>
+                    <span style="font-size:12px">Début Enchere 13/10/2018</span>
+                  </div>
+                </div>
+              </mat-card-content>
+              <mat-card-footer>
+                <div fxLayout="row" fxLayoutGap="60px">
+                  <div fxLayoutAlign="end">
+                    <a mat-raised-button color="primary" href="#">participer</a>
+                  </div>
+                </div>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+        </div>
+          
+      </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
