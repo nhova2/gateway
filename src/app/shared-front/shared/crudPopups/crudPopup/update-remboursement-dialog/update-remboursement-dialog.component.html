@@ -1,0 +1,97 @@
+
+<mat-dialog-content class="mat-typography">
+        <div class="title">
+            <h2 mat-dialog-title >Modification Remboursement</h2>
+            </div>
+    <form class="example-container">
+          <div fxLayout="column" fxFlex="50px">
+              <div fxLayout="row">
+                  <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Montant" type="number" >
+                        <span matPrefix>$&nbsp;</span>
+                      </mat-form-field>
+                  </div>
+                 
+              </div>
+              <div fxLayout="row">
+                  <div style="margin-top: 48%;">
+                      <mat-slide-toggle> Immediate</mat-slide-toggle>
+                     
+                  </div>
+                  <div>
+                    <mat-form-field style="margin-left: 42%;">
+                       <input matInput type="date" >
+                        <mat-icon matSuffix>date_range</mat-icon>
+                    </mat-form-field>
+                  </div>
+                
+              </div>
+           
+              <div fxLayout="row" style="margin-top: 40%;">
+                   
+                  <div>     
+                        <mat-form-field style="width:100%;margin-top:-9%;">
+                     
+                                <mat-select required >
+                                  <mat-option value="option">Pret Concerné</mat-option>
+                                </mat-select>
+                            </mat-form-field>  
+                  </div>
+                  <div>
+                        <mat-form-field style="width:100%;margin-left:19%;margin-top:-9%;">
+                     
+                                <mat-select required >
+                                  <mat-option value="option">Mode de Paiement</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                  </div>
+              </div>
+              <div fxLayout="row" style="margin-top:-11%">
+                <div><img src="assets/images/others/OM.jpg" style=" width: 121px; height: 50px; margin-left: -39%"></div>
+                <div><img src="assets/images/others/Tigo-Cash-1024x730.png" style=" width: 121px; height: 50px; margin-left: 22%"></div>
+                <div><img src="assets/images/others/wari.jpg" style="width: 50px;height: 24px;margin-left: 218%;margin-top: 27%;"></div>
+              </div>
+              <div fxLayout="row" style="margin-top:-22%">
+                    <div>
+                          
+                        <mat-slide-toggle> </mat-slide-toggle>
+                       
+                    </div>
+                    <div style="margin-left: 322%">
+                            <mat-slide-toggle> </mat-slide-toggle>
+                    </div>
+                    <div style="margin-left: 252%">
+                            <mat-slide-toggle> </mat-slide-toggle>
+                    </div>
+                </div>
+                <div fxLayout="row" style="margin-top:-11%">
+                        <div><img src="../../../../../assets/images/others/OM.jpg" style=" width: 121px; height: 50px; margin-left: -39%"></div>
+                        <div><img src="../../../../../assets/images/others/Tigo-Cash-1024x730.png" style=" width: 121px; height: 50px; margin-left: 22%"></div>
+                        <div><img src="../../../../../assets/images/others/wari.jpg" style="width: 50px;height: 24px;margin-left: 218%;margin-top: 27%;"></div>
+                      </div>
+                      <div fxLayout="row" style="margin-top:-22%">
+                            <div>
+                                  
+                                <mat-slide-toggle> </mat-slide-toggle>
+                               
+                            </div>
+                            <div style="margin-left: 322%">
+                                    <mat-slide-toggle> </mat-slide-toggle>
+                            </div>
+                            <div style="margin-left: 252%">
+                                    <mat-slide-toggle> </mat-slide-toggle>
+                            </div>
+                        </div>
+           
+              
+            </div>
+       
+      
+    </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+            <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+            <button mat-raised-button color="warn" mat-dialog-close>Delete</button>
+            <button mat-raised-button class="save" color="" [mat-dialog-close]="true" cdkFocusInitial><mat-icon matPrefix>save_alt</mat-icon>Enregistrer</button>
+    </mat-dialog-actions>

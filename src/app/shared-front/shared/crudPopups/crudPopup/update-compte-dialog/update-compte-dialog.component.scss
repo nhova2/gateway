@@ -1,0 +1,44 @@
+.title {
+    background-color:tan;
+    text-align: center;
+}
+.mat-typography {
+    width: 575px;
+    height: 700px
+}
+.photo{
+    color: royalblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    height: 20px;
+}
+.add {
+    border:1px solid grey;   
+}  
+.open{
+    border:1px solid grey;   
+}  
+.addrole {
+    border:1px solid chartreuse;  
+}  
+.save {
+    border:1px solid chartreuse;  
+}
+.removerole {
+    border:1px solid red;
+}  
+
+.add-adresscontainer {
+    border:1px solid grey; 
+    width: 575px;
+    height: 172px; 
+    background-color: aliceblue;
+}
+.rue {
+ width: 100%;
+}
+.mat-raised-button {
+    background-color: blue;
+    color: white;
+}

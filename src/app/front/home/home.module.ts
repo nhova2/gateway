@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared-front/shared/shared.module';
 import { HomeComponent } from './home.component';
+import { FuseSidebarModule } from '@fuse/components';
+import { FuseDemoModule } from '@fuse/components/demo/demo.module';
+import { FuseSharedModule } from '@fuse/shared.module';
 
 export const routes = [
   { path: '', component: HomeComponent, pathMatch: 'full'  }
@@ -12,7 +15,10 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule   
+    SharedModule,
+    FuseSidebarModule,
+    FuseDemoModule,
+    FuseSharedModule   
   ],
   declarations: [
     HomeComponent

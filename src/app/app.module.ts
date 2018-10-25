@@ -47,8 +47,16 @@ const appRoutes: Routes = [
         loadChildren: './main/angular-material-elements/angular-material-elements.module#AngularMaterialElementsModule'
     },
     {
-        path      : '',
+        path      : 'domaines',
         loadChildren: './front/domaines/domaines.module#DomaineModule'
+    },
+    {
+        path      : '',
+        loadChildren: './front/home/home.module#HomeModule'
+    },
+    {
+        path      : 'popups',
+        loadChildren: './front/popups/popups.module#PopupsModule'
     },
     {
         path      : '**',

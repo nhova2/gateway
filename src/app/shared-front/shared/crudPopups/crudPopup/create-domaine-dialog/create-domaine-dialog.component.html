@@ -1,0 +1,56 @@
+
+<mat-dialog-content class="mat-typography">
+        <div class="title">
+            <h2 mat-dialog-title >Creation Domaine</h2>
+            </div>
+    <form class="example-container">
+          <div fxLayout="column" fxFlex="50px">
+              <div fxLayout="row">
+                  <div>
+                      <mat-form-field>
+                          <input matInput placeholder="Nom Domaine" >
+                        </mat-form-field>
+                     
+                  </div>
+                 
+              </div>
+              <div fxLayout="row" style="margin-top: -3%;">
+                  <div>
+                        <mat-form-field style="width: 200%;">
+                                <textarea matInput placeholder="Description Role"></textarea>
+                         </mat-form-field>
+                     
+                  </div>
+                
+              </div>
+           
+              <div fxLayout="row" style="margin-top: 40%;">
+                   
+                  <div>     <h4 mat-dialog-title >Ajout Logo</h4>
+                    <mat-dialog-actions style="margin-left: 88px;margin-top: -46%;">
+                            <input  style="display: none" 
+                            type="file" (change)="onFileChanged($event)" 
+                            #fileInput>
+                          <button  mat-fab color="primary"  (click)="fileInput.click()"><mat-icon matPrefix>import_export</mat-icon></button>
+                            <!--<button mat-fab color="primary" class="">Ajout</button>-->
+                    </mat-dialog-actions>   
+                  </div>
+                  <div>
+                        <div style="margin-top:3%;">
+                                <mat-slide-toggle style="margin-left: 90%"> Statut Actif</mat-slide-toggle>
+                        </div>
+                  </div>
+              </div>
+    
+              
+           
+              
+            </div>
+       
+      
+    </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+      <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial><mat-icon matPrefix>save_alt</mat-icon>Enregistrer</button>
+    </mat-dialog-actions>

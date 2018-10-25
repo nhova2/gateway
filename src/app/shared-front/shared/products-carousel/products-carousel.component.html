@@ -1,10 +1,8 @@
+
 <div *ngIf="products" class="swiper-container" [swiper]="config">
-    <div class="swiper-wrapper h-100">      
+    <div class="swiper-wrapper">      
         <div *ngFor="let product of products" class="swiper-slide">
             <mat-card class="product-item">
-                <mat-chip-list *ngIf="product.discount">
-                    <mat-chip color="warn" selected="true">{{product.discount}}% OFF</mat-chip>
-                </mat-chip-list>
                 <a [routerLink]="['/produit','detailsProduit', product.id]" class="image-link">
                     <img [attr.data-src]="product.images[0].medium" class="swiper-lazy"/>
                     <div class="swiper-lazy-preloader"></div>
@@ -27,6 +25,6 @@
             </mat-card>
         </div>
     </div>
-    <button mat-mini-fab class="swiper-button-prev swipe-arrow"><mat-icon>keyboard_arrow_left</mat-icon></button>
-    <button mat-mini-fab class="swiper-button-next swipe-arrow"><mat-icon>keyboard_arrow_right</mat-icon></button> 
+    <button class="swiper-button-prev"></button>
+    <button class="swiper-button-next"></button> 
 </div>

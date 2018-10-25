@@ -1,0 +1,111 @@
+
+<mat-dialog-content class="mat-typography">
+        <div class="title">
+            <h2 mat-dialog-title >Modification Service</h2>
+            </div>
+            <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
+    <form class="example-container">
+          <div fxLayout="column" fxFlex="50px">
+              <div fxLayout="row">
+                  <div>
+                      <mat-form-field>
+                          <input matInput placeholder="Code" >
+                        </mat-form-field>
+                     
+                  </div>
+                  <div style="margin-top:50%;">
+                        <mat-slide-toggle style="margin-left: 60%"> Statut Actif</mat-slide-toggle>
+                </div>
+                 
+              </div>
+              <div fxLayout="row" style="margin-top: -3%;">
+                    <div>
+                          <mat-form-field style="width: 200%;">
+                                  <textarea matInput placeholder="Designation"></textarea>
+                           </mat-form-field>
+                       
+                    </div>
+                  
+                </div>
+              <div fxLayout="row" style="margin-top: -3%;">
+                  <div>
+                        <mat-form-field style="width: 200%;">
+                                <textarea matInput placeholder="Description "></textarea>
+                         </mat-form-field>
+                     
+                  </div>
+                
+              </div>
+           
+              <div fxLayout="row" style="margin-top: 40%;">
+                   
+                  <div>    
+                        <mat-form-field>
+                        <label> Prix Unitaire</label><br>
+                        <input matInput>
+                        </mat-form-field>
+                  </div>
+                 
+              </div>
+              <div fxLayout="row" style="margin-top: 40%;">
+                    <div>
+                        <mat-form-field style="width:52%;">
+                            <mat-select required >
+                                <mat-option>-- None --</mat-option>
+                                <mat-option value="option">Boutique N</mat-option>
+                            </mat-select>
+                       </mat-form-field>
+                    </div>
+                    <div style="margin-left: -83%; margin-top: -14%;">
+                            <mat-dialog-actions>
+                                    <button  mat-raised-button color="primary">+ Boutique</button>
+                                  </mat-dialog-actions>
+                      </div>
+                    
+                      <div style="margin-left: 54%;margin-top: -14%;">
+                            <mat-dialog-actions>
+                                    <button mat-raised-button color="primary">- Boutique</button>
+                            </mat-dialog-actions>
+                      </div>
+
+            </div>
+            <div fxLayout="row" style="margin-top: -12%;">
+                    <div>
+                        <mat-form-field style="width: 52%;">
+                            <mat-select required >
+                              <mat-option value="option">Magasin M(QTY=220)</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div style="margin-top: -7%;margin-left: -108%;">
+                        <mat-form-field style ="width: 35%;">
+                            <input matInput placeholder="QTY">
+                        </mat-form-field>
+                    </div>
+                  <div style="margin-left: -83%; margin-top: -14%;">
+                          <mat-dialog-actions>
+                                  <button  mat-raised-button color="primary" class="add">+ Magasin</button>
+                                </mat-dialog-actions>
+                    </div>
+                  
+                    <div style="margin-left: 54%;margin-top: -14%;">
+                          <mat-dialog-actions>
+                                  <button mat-raised-button color="primary" class="acheteur">- Magasin</button>
+                                </mat-dialog-actions>
+                    </div>
+                  
+                </div>
+    
+              
+           
+              
+            </div>
+       
+      
+    </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+            <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+            <button mat-raised-button color="warn" mat-dialog-close>Delete</button>
+            <button mat-raised-button class="save" color="" [mat-dialog-close]="true" cdkFocusInitial><mat-icon matPrefix>save_alt</mat-icon>Enregistrer</button>
+    </mat-dialog-actions>

@@ -1,6 +1,6 @@
 <div class="main-slider">
-  <div class="swiper-container h-100" [swiper]="config">
-    <div class="swiper-wrapper h-100">      
+  <div class="swiper-container" [swiper]="config">
+    <div class="swiper-wrapper">      
       <div *ngFor="let slide of slides" class="swiper-slide">
         <div [attr.data-background]="slide.image" class="slide-item swiper-lazy">
             <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
@@ -8,13 +8,13 @@
             <div fxLayout="column" fxLayoutAlign="center center" class="content">
               <h1>{{slide.title}}</h1>
               <h3>{{slide.subtitle}}</h3>
-              <button mat-raised-button color="primary">Shop now</button>
+              <button mat-raised-button color="primary">Acheter maintenant</button>
             </div> 
         </div>
       </div>
     </div>
     <div class="swiper-pagination white"></div>
-    <button mat-mini-fab color="primary" class="swiper-button-prev swipe-arrow"><mat-icon>keyboard_arrow_left</mat-icon></button>
-    <button mat-mini-fab color="primary" class="swiper-button-next swipe-arrow"><mat-icon>keyboard_arrow_right</mat-icon></button>
+    <button color="primary" class="swiper-button-prev"><!-- <mat-icon>keyboard_arrow_left </mat-icon> --></button>
+    <button color="primary" class="swiper-button-next"><!-- <mat-icon>keyboard_arrow_right</mat-icon> --></button>
   </div>
 </div>

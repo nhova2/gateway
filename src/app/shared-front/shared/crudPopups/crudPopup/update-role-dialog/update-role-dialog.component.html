@@ -1,0 +1,74 @@
+
+<mat-dialog-content class="mat-typography">
+        <div class="title">
+            <h2 mat-dialog-title >Modification Role</h2>
+            </div>
+            <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
+    <form class="example-container">
+          <div fxLayout="column" fxFlex="50px">
+              <div fxLayout="row">
+                  <div>
+                      <mat-form-field>
+                          <input matInput placeholder="Nom Role" >
+                        </mat-form-field>
+                     
+                  </div>
+                 
+              </div>
+              <div fxLayout="row" style="margin-top: -3%;">
+                  <div>
+                        <mat-form-field style="width: 200%;">
+                                <textarea matInput placeholder="Description Operation"></textarea>
+                         </mat-form-field>
+                     
+                  </div>
+                
+              </div>
+           
+              
+              <div fxLayout="row" style="margin-top: 40%;">
+                    <div>    
+                      <h4 mat-dialog-title >Modifier Logo</h4>
+                      <mat-dialog-actions style="margin-left: 104px;margin-top: -43%;">
+                        <input  style="display: none" 
+                            type="file" (change)="onFileChanged($event)" 
+                            #fileInput>
+                        <button  mat-fab color="primary"  (click)="fileInput.click()"><mat-icon matPrefix>import_export</mat-icon></button>
+                            <!--<button mat-fab color="primary" class="">Ajout</button>-->
+                    </mat-dialog-actions>   
+                  </div>
+                  <div>
+                        <mat-form-field style="width:52%;margin-left:68%;margin-top:-9%;">
+                          <mat-select required >
+                            <mat-option>-- None --</mat-option>
+                            <mat-option value="option">Type Acteur</mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                  </div>
+              </div>
+              <div fxLayout="row" style="margin-top: 40%;">
+                  <div>
+                        <label>Ajout Operation</label>
+                        <mat-form-field style="width:70%;margin-top:-5%;">
+                          <mat-select required >
+                            <mat-option>-- None --</mat-option>
+                            <mat-option value="option">Nom Operation </mat-option>
+                          </mat-select>
+                        </mat-form-field>
+                  </div>
+                  <div>
+                        <mat-dialog-actions>
+                        <button mat-raised-button color="primary" mat-dialog-close>Ajouter</button>
+                    </mat-dialog-actions>
+                  </div>
+              </div>
+            </div>
+       
+      
+    </form>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+      <button mat-raised-button color="warn" mat-dialog-close>Delete</button>
+      <button mat-raised-button class="save" color="" [mat-dialog-close]="true" cdkFocusInitial><mat-icon matPrefix>save_alt</mat-icon>Enregistrer</button>
+    </mat-dialog-actions>

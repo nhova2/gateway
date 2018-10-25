@@ -1,0 +1,74 @@
+
+<mat-dialog-content class="mat-typography">
+    <div class="title">
+        <h2 mat-dialog-title >Modification Agreement</h2>
+    </div>
+    <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
+<form class="example-container">
+      <div fxLayout="column" fxFlex="50px">
+          <div fxLayout="row">
+              <div>
+                <mat-form-field style="margin-top:2%">
+                    <mat-select required >
+                      <mat-option value="option">Emetteur</mat-option>
+                    </mat-select>
+                </mat-form-field>
+              </div>
+             
+          </div>
+          <div fxLayout="row" style="margin-top: -3%;">
+                <div>
+                    <mat-form-field style="margin-top:2%">
+                        <label>Destiné à</label><br><br><br>
+                        <mat-select required >
+                          <mat-option value="option">Type de pret</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+              
+            </div>
+            <div fxLayout="row" style="margin-top: -3%;">
+                <div>
+                    <mat-form-field style="margin-top:2%">
+                        <label>Role Demandé</label><br><br><br>
+                        <mat-select required >
+                          <mat-option value="option">Fournisseur</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+                <div fxLayout="row" style="margin-top: -3%;">
+                    <div>
+                        <mat-form-field style="margin-top:2%">
+                            <label>Niveau Agreement</label><br><br><br>
+                            <mat-select required >
+                              <mat-option value="option">Niveau 3</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                  
+                </div>
+       
+          <div fxLayout="row" style="margin-top: 40%;">
+            
+                <div style="margin-top:15%;">
+                        <mat-slide-toggle> Urgent</mat-slide-toggle>
+                </div>
+                <div style="margin-left: 328%;margin-top: -50%;">
+                    <mat-form-field>
+                        <label>Date</label><br>
+                       <input matInput type="date" >
+                        <mat-icon matSuffix>date_range</mat-icon>
+                    </mat-form-field>
+                </div>
+          </div>
+        </div>
+   
+  
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="primary" mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="warn" mat-dialog-close>Delete</button>
+    <button mat-raised-button class="save" color="" [mat-dialog-close]="true" cdkFocusInitial>Enregistrer</button>
+</mat-dialog-actions>

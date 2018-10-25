@@ -1,0 +1,83 @@
+
+<mat-dialog-content class="mat-typography">
+    <div class="title">
+        <h2 mat-dialog-title >Creation Demande Pret</h2>
+        </div>
+<form class="example-container">
+      <div fxLayout="column" fxFlex="50px">
+          <div fxLayout="row">
+              <div>
+                <mat-form-field>
+                    <input matInput placeholder="Montant Pret" type="number" >
+                    <span matPrefix>$&nbsp;</span>
+                  </mat-form-field>
+              </div>
+             
+          </div>
+          <div fxLayout="row" style="margin-top: -3%;">
+                <div>
+                    <mat-form-field  style="width:233%;">
+                        <input matInput placeholder="Montant Restant Dû" type="number">
+                        <span matPrefix>$&nbsp;</span>
+                      </mat-form-field>
+                   
+                </div>
+              
+            </div>
+            <div fxLayout="row" style="margin-top: -3%;">
+                <div>
+                    <mat-form-field style="margin-top:2%">
+                        <mat-select required >
+                          <mat-option value="option">Type de pret</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field style="margin-left: 50%;margin-top:2%">
+                        <mat-select required >
+                          <mat-option value="option">Etat Pret</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+            </div>
+                  
+                </div>
+                <div fxLayout="row" style="margin-top: -3%;">
+                    <div>
+                        <mat-form-field style="margin-top:2%">
+                            <mat-select required >
+                              <mat-option value="option">Echeance(4X)</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-form-field style="margin-left: 50%;margin-top:2%">
+                            <mat-select required >
+                              <mat-option value="option">Fournisseur</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                      
+                </div>
+       
+          <div fxLayout="row" style="margin-top: 40%;">
+            
+                <div style="margin-top:15%;">
+                        <mat-slide-toggle> Urgent</mat-slide-toggle>
+                </div>
+                <div style="margin-left: 328%;margin-top: -50%;">
+                    <mat-form-field>
+                        <label>Date</label><br>
+                       <input matInput type="date" >
+                        <mat-icon matSuffix>date_range</mat-icon>
+                    </mat-form-field>
+                </div>
+          </div>
+        </div>
+   
+  
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial><mat-icon matPrefix>save_alt</mat-icon>Enregistrer</button>
+</mat-dialog-actions>
