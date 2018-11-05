@@ -1,0 +1,49 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+  <div>
+    <h2 class="title">Sauvegarde</h2>
+  </div>
+</div>
+<div fxLayout="column" fxLayoutGap="50px" class="px-24">
+
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
+    <div fxFlex="50" class="panel">
+      <div fxLayout="column" fxLayoutAlign="center center" style="color:black; font-weight:bold">
+        <div> <mat-checkbox>Photos</mat-checkbox></div>
+      </div>
+    </div>
+    <div fxFlex="50" class="panel">
+
+      <div fxLayout="column" style="color:black; font-weight:bold" fxLayoutAlign="center center">
+        
+        <div><mat-checkbox>Messages</mat-checkbox></div>
+      </div>
+    </div>
+    <div fxFlex="50" class="panel">
+
+      <div fxLayout="column" style="color:black; font-weight:bold" fxLayoutAlign="center center">
+        <div> <mat-checkbox>Videos</mat-checkbox></div>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="100px" class="px-24">
+    <div>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Date début">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker1" placeholder="Date fin">
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="30px" class="px-24" fxLayoutAlign="end">
+    <button mat-raised-button color="warn">Sauvegarder</button>
+  </div>
+
+</div>

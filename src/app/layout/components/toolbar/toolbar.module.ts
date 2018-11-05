@@ -6,6 +6,7 @@ import { FuseSearchBarModule, FuseShortcutsModule } from '@fuse/components';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { ToolbarComponent } from 'app/layout/components/toolbar/toolbar.component';
+import { CoreModule } from '../../../../@core/components/core/core.module';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { ToolbarComponent } from 'app/layout/components/toolbar/toolbar.componen
         FuseSharedModule,
         FuseSearchBarModule,
         FuseShortcutsModule,
-        SharedModule
+        SharedModule,
+        CoreModule
     ],
     exports     : [
         ToolbarComponent

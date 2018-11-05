@@ -29,8 +29,7 @@ export class MainCarouselComponent implements OnInit {
       keyboard: true,
       navigation: true,
       pagination: this.pagination,
-      grabCursor: true,
-      watchSlidesVisibility: false,        
+      grabCursor: true,     
       loop: false,
       preloadImages: false,
       lazy: true,     
@@ -39,7 +38,7 @@ export class MainCarouselComponent implements OnInit {
         disableOnInteraction: false
       },
       speed: 500,
-      effect: "slide"
+      effect: 'slide'
     }
   }
 

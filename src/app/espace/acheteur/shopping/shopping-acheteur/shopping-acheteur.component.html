@@ -1,0 +1,200 @@
+<div fxLayout="row wrap">
+  <div fxFlex="100" fxFlex.gt-md="35" fxFlex.md="45">
+
+    <mat-card class="product-image">
+      <button mat-icon-button (click)="openZoomViewer()" fxHide="false" fxHide.gt-md>
+        <mat-icon>fullscreen</mat-icon>
+      </button>
+      <img *ngIf="image" [src]="image" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave($event)" />
+    </mat-card>
+
+    <div class="small-carousel">
+      <div class="swiper-container" [swiper]="config">
+        <div class="swiper-wrapper">
+          <div *ngFor="let image of product?.images" class="swiper-slide">
+            <mat-card (click)="selectImage(image)" class="p-1">
+              <img [attr.data-src]="image.small" class="swiper-lazy" />
+              <div class="swiper-lazy-preloader"></div>
+            </mat-card>
+          </div>
+        </div>
+        <button mat-icon-button class="swiper-button-prev swipe-arrow">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+        </button>
+        <button mat-icon-button class="swiper-button-next swipe-arrow">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="100" fxFlex.gt-md="20" class="ml-4" fxFlex.md="30" ngClass.gt-sm="px-3 m-0" ngClass.sm="mt-2" ngClass.xs="mt-2">
+
+    <div #zoomViewer fxShow="false" fxShow.gt-md>
+      <mat-card *ngIf="zoomImage" class="zoom-viewer mat-elevation-z18" [ngStyle]="{'background-image': 'url(' + zoomImage + ')'}"></mat-card>
+    </div>
+
+    <h2>Rating breakdown:</h2>
+    <div class="py-1 lh ">
+      <section class="example-section">
+        <label class="example-margin">5</label>
+        <label class="example-margin">
+          <mat-icon>star</mat-icon>
+        </label>
+        <mat-progress-bar class="example-margin" color="primary" mode="Determinate" value="100" bufferValue="100">
+        </mat-progress-bar>
+      </section>
+      <section class="example-section">
+        <label class="example-margin">4</label>
+        <label class="example-margin">
+          <mat-icon>star</mat-icon>
+        </label>
+        <mat-progress-bar class="example-margin" color="primary" mode="Determinate" value="75" bufferValue="100">
+        </mat-progress-bar>
+      </section>
+      <section class="example-section">
+        <label class="example-margin">4</label>
+        <label class="example-margin">
+          <mat-icon>star</mat-icon>
+        </label>
+        <mat-progress-bar class="example-margin" color="primary" mode="Determinate" value="50" bufferValue="100">
+        </mat-progress-bar>
+      </section>
+      <section class="example-section">
+        <label class="example-margin">3</label>
+        <label class="example-margin">
+          <mat-icon>star</mat-icon>
+        </label>
+        <mat-progress-bar class="example-margin" color="primary" mode="Determinate" value="25" bufferValue="100">
+        </mat-progress-bar>
+      </section>
+      <section class="example-section">
+        <label class="example-margin">2</label>
+        <label class="example-margin">
+          <mat-icon>star</mat-icon>
+        </label>
+        <mat-progress-bar class="example-margin" color="primary" mode="Determinate" value="15" bufferValue="100">
+        </mat-progress-bar>
+      </section>
+      <section class="example-section">
+        <label class="example-margin">1</label>
+        <label class="example-margin">
+          <mat-icon>star</mat-icon>
+        </label>
+        <mat-progress-bar class="example-margin" color="primary" mode="Determinate" value="5" bufferValue="100">
+        </mat-progress-bar>
+      </section>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="py-1 pt-4 pl-5 ml-5" style="margin-left:10%">
+      <div fxLayout="row" fxLayoutGap="30px">
+        <div fxLayout="column" fxLayoutGap="10px">
+          <div>
+            <mat-icon>visibility</mat-icon>
+          </div>
+          <div>
+            352
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <div>
+            <mat-icon>thumb_up_alt</mat-icon>
+          </div>
+          <div>
+            60
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutGap="10px">
+          <div>
+            <mat-icon>thumb_down_alt</mat-icon>
+          </div>
+          <div>
+            60
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="py-1 mt-4 p-5" style="margin-left:10%">
+      <app-rating [ratingsCount]="product?.ratingsCount" [ratingsValue]="product?.ratingsValue" [direction]="'row'"></app-rating>
+    </div>
+    <!-- <div class="py-1 mt-4">
+      <app-controls [product]="product" [type]="'all'"></app-controls>
+    </div> -->
+
+    <div class="divider"></div>
+
+  </div>
+  <div fxFlex="100" fxFlex.gt-md="40" class="ml-4" fxFlex.md="45" ngClass.gt-sm="px-3 m-0" ngClass.sm="mt-2" ngClass.xs="mt-2">
+
+    <div #zoomViewer fxShow="false" fxShow.gt-md>
+      <mat-card *ngIf="zoomImage" class="zoom-viewer mat-elevation-z18" [ngStyle]="{'background-image': 'url(' + zoomImage + ')'}"></mat-card>
+    </div>
+
+    <h2>Details Informations</h2>
+    <div class="py-1 lh ">
+      <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="60px">
+        <div>
+          <section class="example-section">
+            <label class="example-margin">
+              <h3>Nom :</h3>
+            </label>
+            <label class="example-margin">
+              Clavier retro
+            </label>
+          </section>
+          <section class="example-section">
+            <label class="example-margin">
+              <h3>Prix :</h3>
+            </label>
+            <label class="example-margin">
+              4500
+            </label>
+          </section>
+          <section class="example-section">
+            <label class="example-margin">
+              <h3>Fournisseur :</h3>
+            </label>
+            <label class="example-margin">
+              AMD
+            </label>
+          </section>
+          <section class="example-section">
+            <label class="example-margin">
+              <h3>Quantité en stock :</h3>
+            </label>
+            <label class="example-margin">
+              45
+            </label>
+          </section>
+        </div>
+        <div>
+          <h3>Modalité livraison</h3>
+          <div>livraison prévue : <span style="color:red">entre le 09/08 et le 13/08</span> </div>
+        </div>
+
+      </div>
+      
+    </div>
+    <div class="py-1 lh pt-4" style="margin-left:1%">
+      <mat-divider></mat-divider>
+      <div fxLayout="column" fxLayoutGap="20px">
+        <h2>Choix modeles et quantité</h2>
+        <app-controls [product]="product" [type]="'all'"></app-controls>
+      </div>
+      <mat-divider></mat-divider>
+      <h2>Modalité de paiement</h2>
+      <div fxLayout="row" fxLayoutGap="60px" fxLayout.xs="column">
+        <div><button mat-raised-button color="primary">Wari</button></div>
+        <div><button mat-raised-button color="accent">Orange money</button></div>
+        <div><button mat-raised-button color="warn">Tigo cash</button></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+
+  </div>
+</div>
+<div class="mt-2">
+  <h2>&nbsp; Articles similaires</h2>
+  <div class="divider"></div>
+  <app-products-carousel [products]="relatedProducts"></app-products-carousel>
+</div>

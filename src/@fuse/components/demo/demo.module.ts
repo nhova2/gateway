@@ -7,12 +7,16 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FuseDemoContentComponent } from './demo-content/demo-content.component';
 import { FuseDemoSidebarComponent } from './demo-sidebar/demo-sidebar.component';
 import { ChatBotSidebarComponent } from './chatBot-sidebar/chbot-sidebar.component';
+import { AdminSidebarComponent } from './admin-side-menu/admin-sidebar.component';
+import { SharedModule } from '../../../app/shared-front/shared/shared.module';
+
 
 @NgModule({
     declarations: [
         FuseDemoContentComponent,
         FuseDemoSidebarComponent,
-        ChatBotSidebarComponent
+        ChatBotSidebarComponent,
+        AdminSidebarComponent
     ],
     imports     : [
         RouterModule,
@@ -20,12 +24,14 @@ import { ChatBotSidebarComponent } from './chatBot-sidebar/chbot-sidebar.compone
         MatDividerModule,
         MatListModule,
         MatCheckboxModule,
-        MatExpansionModule
+        MatExpansionModule,
+        SharedModule
     ],
     exports     : [
         FuseDemoContentComponent,
         FuseDemoSidebarComponent,
-        ChatBotSidebarComponent
+        ChatBotSidebarComponent,
+        AdminSidebarComponent
     ]
 })
 export class FuseDemoModule

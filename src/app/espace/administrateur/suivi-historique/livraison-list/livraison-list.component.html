@@ -1,0 +1,73 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+  <div>
+    <h2 class="title">LIVRAISON</h2>
+  </div>
+</div>
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="NoLivraison">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> NoLivraison </th>
+      <td mat-cell *matCellDef="let row"> {{row.NoLivraison}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="Emetteur">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Emetteur </th>
+      <td mat-cell *matCellDef="let row"> {{row.Emetteur}}% </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Date_Emission">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date_Emission </th>
+      <td mat-cell *matCellDef="let row"> {{row.Date_Emission}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Reglement">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Reglement </th>
+      <td mat-cell *matCellDef="let row"> {{row.Reglement}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Details">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+      <td mat-cell *matCellDef="let row"> {{row.Details}}
+        <button mat-raised-button>
+          <mat-icon>dehaze</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Modifier">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
+      <td mat-cell *matCellDef="let row"> {{row.Modifier}}
+        <button mat-raised-button>
+          <mat-icon class="orange600">edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Supprimer">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Supprimer </th>
+      <td mat-cell *matCellDef="let row"> {{row.Supprimer}}
+        <button mat-raised-button>
+          <mat-icon class="red600">delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

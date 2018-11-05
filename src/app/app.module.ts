@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,7 +23,9 @@ import { LayoutModule } from 'app/layout/layout.module';
 import { AppService } from './front/app.service';
 
 import { SharedModule } from './shared-front/shared/shared.module';
-
+import { AdministrateurComponent } from './espace/administrateur/admin.component';
+import { FuseDemoModule } from '../@fuse/components/demo/demo.module';
+import { AcheteurComponent } from './espace/acheteur/acheteur.component';
 
 const appRoutes: Routes = [
     {
@@ -59,21 +61,78 @@ const appRoutes: Routes = [
         loadChildren: './front/popups/popups.module#PopupsModule'
     },
     {
-        path      : '**',
+        path: '',
+        component: AdministrateurComponent, children: [
+            {
+                path: 'main',
+                loadChildren: './espace/administrateur/main/main.module#MainModule'
+            },
+            {
+                path: 'alertes',
+                loadChildren: './espace/administrateur/alertes/alertes.module#AlertesModule'
+            },
+            {
+                path: 'suivi',
+                loadChildren: './espace/administrateur/suivi-historique/suivi-historique.module#SuiviHistoriqueModule'
+            },
+            {
+                path: 'statistique',
+                loadChildren: './espace/administrateur/statistique/statistique.module#StatistiqueModule'
+            },
+            {
+                path: 'sauvegarde',
+                loadChildren: './espace/administrateur/sauvegarde/sauvegarde.module#SauvegardeModule'
+            }
+
+        ]
+    },
+    {
+        path: '',
+        component: AcheteurComponent, children: [
+            {
+                path: 'shopping',
+                loadChildren: './espace/acheteur/shopping/shopping.module#ShoppingModule'
+            },
+            {
+                path: 'demande-devis',
+                loadChildren: './espace/acheteur/demande-devis/demande-devis.module#DemandeDevisModule'
+            },
+            {
+                path: 'suivi-commande',
+                loadChildren: './espace/acheteur/suivi-commandes/suivi-commandes.module#SuiviCommandesModule'
+            },
+            {
+                path: 'livraisons',
+                loadChildren: './espace/acheteur/livraison/livraison.module#LivraisonModule'
+            },
+            {
+                path: 'demande-financement',
+                loadChildren: './espace/acheteur/demande-financement/demande-financement.module#DemandeFinancementModule'
+            },
+            {
+                path: 'historique-commandes',
+                loadChildren: './espace/acheteur/historique-commandes/historique-commandes.module#HistoriqueCommandesModule'
+            }
+
+        ]
+    },
+    {
+        path: '**',
         redirectTo: 'apps/dashboards/analytics'
     }
 ];
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        AdministrateurComponent,
+        AcheteurComponent
     ],
     imports     : [
         BrowserModule,
         BrowserAnimationsModule,
         HttpClientModule,
         RouterModule.forRoot(appRoutes),
-
         TranslateModule.forRoot(),
         InMemoryWebApiModule.forRoot(FakeDbService, {
             delay             : 0,
@@ -97,7 +156,8 @@ const appRoutes: Routes = [
         // App modules
         LayoutModule,
         AppStoreModule,
-        SharedModule
+        SharedModule,
+        FuseDemoModule    
     ],
     bootstrap   : [
         AppComponent

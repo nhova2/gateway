@@ -13,6 +13,7 @@ export class GetByIdPipe implements PipeTransform
      * @param {number} id
      * @param {string} property
      * @returns {any}
+     * 
      */
     transform(value: any[], id: number, property: string): any
     {

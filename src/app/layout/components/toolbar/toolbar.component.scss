@@ -52,3 +52,7 @@ toolbar {
         }
     }
 }
+
+.mat-menu-content:not(:empty) {
+    padding-bottom: 0px !important;
+}

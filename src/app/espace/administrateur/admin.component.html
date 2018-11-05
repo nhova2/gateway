@@ -1,0 +1,80 @@
+<div fxLayout="column" fxFlex="100">   
+    <div class="px-24 py-8">
+        <div fxLayout="row" fxLayoutGap="100px">
+            <div style="display:inline-flex">
+                <mat-form-field>
+                    <mat-select placeholder="Domaine" disableRipple>
+                        <mat-option value="1">Domaine 1</mat-option>
+                        <mat-option value="2">Domaine 2</mat-option>
+                        <mat-option value="3">Domaine 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div style="display:inline-flex">
+                <mat-form-field>
+                    <input matInput placeholder="rechercher">
+                </mat-form-field>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="page-layout carded left-sidebar">
+        <!-- CENTER -->
+        <div class="center pb-4" style="margin-left:10px !important">
+
+            <!-- CONTENT CARD -->
+            <div class="content-card px-5">
+
+                <!-- CONTENT TOOLBAR -->
+               <div class="toolbar px-24 py-8">
+
+                    <button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                    
+                    <span class="mr-5">
+                        <h5 style="font-weight: bold"> <mat-icon>error</mat-icon> Echec remboursement</h5>
+                    </span>
+                    <div class="toolbar-separator"></div>
+                    <span class="mr-5">
+                        <h5 style="font-weight: bold"><mat-icon>error</mat-icon> Fin de Stock produit</h5>
+                    </span>
+                    <div class="toolbar-separator"></div>
+                    <span class="mr-5">
+                        <h5 style="font-weight: bold"> <mat-icon>error</mat-icon> Retard livraison</h5>
+                    </span>
+                    <div class="toolbar-separator"></div>
+                    <span class="mr-5">
+                        <h5 style="font-weight: bold"> <mat-icon>error</mat-icon> Retard Paiement</h5>
+                    </span>
+                    <div class="toolbar-separator"></div>
+                    <span class="mr-5">
+                        <h5 style="font-weight: bold"> <mat-icon>error</mat-icon> Echéance Pret</h5>
+                    </span>
+
+                </div>
+                <!-- / CONTENT TOOLBAR -->
+                <div content class="content p-24">
+                  <router-outlet></router-outlet>  
+                </div>
+                <!-- / CONTENT -->
+            </div>
+
+
+        </div>
+        <!-- / CONTENT CARD -->
+        <!-- / CENTER -->
+        <!-- SIDEBAR -->
+        <fuse-sidebar class="sidebar" name="carded-right-sidebar-1" position="end" lockedOpen="gt-md">
+
+            <!-- SIDEBAR CONTENT -->
+            <div class="content p-24">
+                <admin-sidebar></admin-sidebar>
+            </div>
+            <!-- / SIDEBAR CONTENT -->
+
+        </fuse-sidebar>
+        <!-- / SIDEBAR -->
+    </div>
+</div>
