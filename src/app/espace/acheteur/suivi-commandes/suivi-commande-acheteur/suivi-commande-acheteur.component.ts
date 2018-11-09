@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./suivi-commande-acheteur.component.scss']
 })
 export class SuiviCommandeAcheteurComponent implements OnInit {
-
+  isLinear = false;
   constructor() { }
 
   ngOnInit() {

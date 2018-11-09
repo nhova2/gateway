@@ -18,10 +18,10 @@ export class AuthenticationComponent implements OnInit {
   }
  
   login (): void {
-    if (this.username === 'admin' && this.password === 'admin'){
-      this.router.navigate(['']);
+    if (this.username === 'banq' && this.password === 'banq'){
+      this.router.navigate(['banque']);
     }
-    else if (this.username === 'banq' && this.password === 'banq') {
+    else if (this.username === 'admin' && this.password === 'admin') {
       this.router.navigate(['main']);
      
     }

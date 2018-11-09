@@ -1,0 +1,30 @@
+<div fxLayout="column" fxFlex="100">
+  <div class="px-24 py-8">
+    <div fxLayout="row">
+
+    </div>
+  </div>
+
+
+  <div class="page-layout carded left-sidebar">
+    <!-- CENTER -->
+    <div class="center pb-4" style="margin-left:10px !important">
+
+      <!-- CONTENT CARD -->
+      <div class="content-card px-5">
+        <button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <!-- / CONTENT TOOLBAR -->
+        <div content class="content p-24">
+          <router-outlet></router-outlet>
+        </div>
+        <!-- / CONTENT -->
+      </div>
+
+
+    </div>
+    <!-- / CONTENT CARD -->
+    <!-- / CENTER -->
+  </div>
+</div>

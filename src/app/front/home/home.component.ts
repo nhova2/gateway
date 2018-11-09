@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { Data, AppService } from '../../front/app.service';
 import { Product } from '../../front/app.models';
 import { MatDialog } from '@angular/material';
-
+import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
+import { navigation } from 'app/navigation/navigation';
 
 @Component({
   selector: 'app-home',
@@ -13,9 +14,21 @@ export class HomeComponent {
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public brands = [];
-  constructor(public appService: AppService) { }
+  constructor(public appService: AppService, private _fuseNavigationService: FuseNavigationService) {
+
+    this.navigation = navigation;
+
+    // Register the navigation to the service
+    this._fuseNavigationService.register('main', this.navigation);
+
+    // Set the main navigation as our current navigation
+    this._fuseNavigationService.setCurrentNavigation('main');
+
+
+   }
   public topRatedProducts: Array<Product>;
   public viewCol: number = 25;
+  navigation: any;
 
   public slides = [
     { title: 'The biggest sale', subtitle: '...   ...', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },

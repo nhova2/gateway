@@ -1,0 +1,26 @@
+<div fxLayout="column" fxLayoutGap="30px" class="px-24">
+
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
+    <a [routerLink]="['demande-pret-list']" fxFlex="50" class="panel">
+      <div>
+        <span class="title">
+          <mat-icon>dialpad</mat-icon> Demande Pret</span>
+      </div>
+    </a>
+    <a [routerLink]="['demande-ligne-credit-list']" fxFlex="50" class="panel">
+      <div>
+        <span class="title">
+          <mat-icon>save_alt</mat-icon> Demande Ligne de Credit </span>
+      </div>
+    </a>
+  </div>
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column" fxLayoutAlign="center center">
+    <a [routerLink]="['demande-ligne-depot-list']" fxFlex="50" class="panel">
+      <div>
+        <span class="title">
+          <mat-icon>dialpad</mat-icon> Demande Ligne de Depot</span>
+      </div>
+    </a>
+  </div>
+
+</div>

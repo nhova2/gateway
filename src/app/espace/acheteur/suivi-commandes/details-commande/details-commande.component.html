@@ -1,0 +1,168 @@
+<mat-horizontal-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="">
+    <ng-template matStepLabel>Commande en préparation</ng-template>
+  </mat-step>
+  <mat-step [stepControl]="">
+    <ng-template matStepLabel>Livraison en cours</ng-template>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Livraison en cours</ng-template>
+  </mat-step>
+</mat-horizontal-stepper>
+<div fxLayout="column" fxLayoutGap="2px">
+  <div class="toolbar px-4">
+    <h2>Details commande</h2>
+  </div>
+  <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
+    <div fxFlex="68">
+      <mat-card>
+        <div class="mat-table cart-table">
+          <div class="mat-header-row toolbar px-4">
+            <div class="mat-header-cell productpolice">ARTICLE</div>
+            <div class="mat-header-cell productpolice">DESCRIPTION</div>
+            <div class="mat-header-cell productpolice">
+              <span class="price">MONTANT</span>
+            </div>
+          </div>
+          <div class="mat-row">
+            <div class="mat-cell nameproduct">
+              <img src="assets/images/Panier/Panier_Produit.jpg" alt="">
+            </div>
+            <div class="mat-cell firstprice">
+              <p class="p-4">Northwoods pomona pour homme, cruiser velo, 66cm</p>
+            </div>
+            <div class="mat-cell totalprice">
+              <span class="price">1000
+                <SUP class="expo">XOF</SUP>
+              </span>
+
+            </div>
+          </div>
+          <div class="mat-row">
+            <div class="mat-cell nameproduct">
+              <img src="assets/images/Panier/Panier_Produit.jpg" alt="">
+            </div>
+            <div class="mat-cell firstprice">
+              <p class="p-4">Northwoods pomona pour homme, cruiser velo, 66cm</p>
+            </div>
+
+            <div class="mat-cell totalprice">
+              <span class="price">5000
+                <SUP class="expo">XOF</SUP>
+              </span>
+
+            </div>
+          </div>
+          <div class="mat-row">
+            <div class="mat-cell nameproduct">
+              <img src="assets/images/Panier/Panier_Produit.jpg" alt="">
+            </div>
+            <div class="mat-cell firstprice">
+              <p class="p-4">Northwoods pomona pour homme, cruiser velo, 66cm</p>
+            </div>
+
+            <div class="mat-cell totalprice">
+              <span class="price">1000
+                <SUP class="expo">XOF</SUP>
+              </span>
+
+            </div>
+          </div>
+          <div class="mat-footer-row toolbar px-4">
+            <div class="mat-header-cell productpolice">TOTAL</div>
+            <div class="mat-header-cell productpolice">&nbsp;</div>
+            <div class="mat-header-cell productpolice">
+              <span class="price">7000
+                <SUP class="expo">XOF</SUP>
+              </span>
+            </div>
+          </div>
+        </div>
+      </mat-card>
+    </div>
+    <div fxFlex="30">
+      <mat-card>
+        <mat-card-title>
+          <div class="toolbar px-4">
+            <span class="productpolice">INFORMATIONS LIVRAISON</span>
+          </div>
+        </mat-card-title>
+        <mat-card-content>
+          <div fxLayout="column" fxLayoutGap="1px">
+            <div fxLayout="column" style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+                        padding: 1%;
+                        text-decoration: none;
+                        background-color: #9A3838;
+                        color: white;">
+              <div>p A Domicile</div>
+              <div>Jean Marc Dupont</div>
+              <div>2 rue Pierre expert</div>
+              <div>92700 Colombie</div>
+              <div>Telephone: 0689585447</div>
+            </div>
+            <div fxLayout="column">
+              <div>
+                <h2>ETAT DE LA LIVRAISON</h2>
+              </div>
+              <div style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0,
+                0, 0.12); padding: 1%; text-decoration: none; background-color: #9A3838; color: white;">
+                <div>
+                  <mat-icon>airport_shuttle</mat-icon> En acheminement</div>
+              </div>
+            </div>
+            <div fxLayout="column">
+              <div>
+                <h2>TYPE DE LIVRAISON</h2>
+              </div>
+              <div style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0,
+                              0, 0.12); padding: 1%; text-decoration: none; background-color: #9A3838; color: white;">
+                <div>
+                  <mat-icon>flight_takeoff</mat-icon> Par la poste</div>
+              </div>
+            </div>
+            <div fxLayout="column">
+              <div>
+                <h2>DATE LIVRAISON PREVUE</h2>
+              </div>
+              <div style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0,
+                                            0, 0.12); padding: 1%; text-decoration: none; background-color: #9A3838; color: white;">
+                <div>
+                  <mat-icon>date_range</mat-icon> 30 / 03 / 18</div>
+              </div>
+            </div>
+            <div fxLayout="column">
+              <div>
+                <h2>PAIEMENT</h2>
+              </div>
+              <div style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0,
+                                                          0, 0.12); padding: 1%; text-decoration: none; background-color: #9A3838; color: white;">
+                <div>
+                  <mat-icon>attach_money</mat-icon> Par Wari</div>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutGap="30px">
+    <div>
+      <button mat-raised-button color="primary">
+        <mat-icon>arrow_back_ios</mat-icon>
+        Retour details de commande
+      </button>
+    </div>
+    <div>
+      <button mat-raised-button color="accent">
+        <mat-icon>cancel_presentation</mat-icon>
+        Annuler la commande
+      </button>
+    </div>
+    <div>
+      <button mat-raised-button color="warn">
+        <mat-icon>receipt</mat-icon>
+        Accuser reception
+      </button>
+    </div>
+  </div>
+</div>

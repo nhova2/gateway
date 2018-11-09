@@ -1,0 +1,149 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div>
+        <button mat-raised-button color="accent" [routerLink]="['/domaine']">Nouvelle demande</button>
+    </div>
+    <div>
+        <button mat-raised-button color="accent" [routerLink]="['/domaine']">Liste des demande</button>
+    </div>
+  </div>
+  <div fxLayout="row" class="toolbar">
+    <h1>DETAILS DEMANDE</h1>
+  </div>
+  <div fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="5px">
+      <div fxFlex="50">
+        <span>
+          <h3>INFORMATIONS PERSONNELLES</h3>
+          <mat-divider></mat-divider>
+        </span>
+        <div class="form-container">
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Nom">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Email">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Prenom">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Telephone">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Fonction">
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutGap="20px">
+            <mat-form-field>
+              <textarea matInput placeholder="Adresse"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="50">
+        <span>
+          <h3>INFORMATIONS INSTITUT FINANCIER</h3>
+          <mat-divider></mat-divider>
+        </span>
+        <div class="form-container">
+          <div fxLayout="row" fxLayoutGap="20px">
+            <mat-form-field>
+              <input matInput placeholder="Institut">
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutGap="20px">
+            <mat-form-field>
+              <textarea matInput placeholder="Adresse"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <span>
+          <h3>CONTACT</h3>
+        </span>
+        <mat-divider></mat-divider>
+        <div class="form-container">
+          <div fxLayout="row" fxLayoutGap="50px" fxLayout.xs="column">
+            <div>
+              <mat-form-field>
+                <input matInput placeholder="Nom">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <input matInput placeholder="Prenom">
+              </mat-form-field>
+            </div>
+          </div>
+          <div fxLayout="row" fxLayoutGap="50px" fxLayout.xs="column">
+            <div>
+              <mat-form-field>
+                <input matInput placeholder="Email">
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <input matInput placeholder="Telephone">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider><span>
+      <h3>INFORMATIONS DE LA DEMANDE</h3>
+      <mat-divider></mat-divider>
+    </span>
+    <div fxLayout="row" fxLayoutGap="10px">
+      <div fxFlex="70">
+        <div class="form-container">
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="No Demande">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput placeholder="Date">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <mat-select value="option1">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">En attente d'approbation</mat-option>
+                <mat-option value="option2">Approuvé</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="row">
+            <mat-form-field>
+              <input matInput placeholder="Objet">
+            </mat-form-field>
+          </div>
+          <div fxLayout="column">
+            <textarea placeholder="Intitulé">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui provident dolorem id in? Pariatur commodi rerum maiores doloremque ullam, voluptatem quod animi voluptates, reiciendis voluptate nemo explicabo autem dicta perferendis?
+            </textarea>
+          </div>
+      </div>
+      </div>
+      <div fxFlex="30">
+        <div fxLayout="row" fxLayoutAlign="end">
+          <div class="px-4 py-8">
+            <button mat-raised-button color="accent" onclick="document.getElementById('fileToUpload').click()">
+              joindre document
+            </button>
+            <input id="fileToUpload" type="file" style="display:none;"> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" class="px-4" fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutGap="40px">
+    <button mat-raised-button color="accent">valider</button>
+    <button mat-raised-button color="warn">Rejeter</button>
+  </div>
+</div>

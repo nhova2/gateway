@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../../shared-front/shared/shared.module';
 import { ProduitsComponent } from './produit.component';
 import { ProduitComponent } from './produit/produit.component';
 import { DetailsProduitComponent } from './details-produit/details-produit.component';
@@ -10,6 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { PipesModule } from '../../front/theme/pipes/pipes.module';
+import { SharedModule } from '../../shared-front/shared/shared.module';
+import { FuseSidebarModule } from '@fuse/components';
+import { FuseDemoModule } from '@fuse/components/demo/demo.module';
+import { FuseSharedModule } from '@fuse/shared.module';
 
 export const routes = [
   { path: '', component: ProduitsComponent, pathMatch: 'full' },
@@ -27,7 +30,12 @@ export const routes = [
     SwiperModule,
     NgxPaginationModule,
     SharedModule,
-    PipesModule
+    PipesModule,
+    SharedModule,
+    FuseSidebarModule,
+    FuseDemoModule,
+    FuseSharedModule
+    
   ],
   declarations: [
     ProduitsComponent,

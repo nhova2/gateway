@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from '../../shared-front/shared/shared.module';
 import { ServiceComponent } from './services.component';
+import { SharedModule } from '../../shared-front/shared/shared.module';
+import { FuseSidebarModule } from '@fuse/components';
+import { FuseDemoModule } from '@fuse/components/demo/demo.module';
+import { FuseSharedModule } from '@fuse/shared.module';
 
 export const routes = [
   { path: '', component: ServiceComponent, pathMatch: 'full' }
@@ -12,7 +15,11 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    SharedModule,
+    FuseSidebarModule,
+    FuseDemoModule,
+    FuseSharedModule
   ],
   declarations: [
     ServiceComponent

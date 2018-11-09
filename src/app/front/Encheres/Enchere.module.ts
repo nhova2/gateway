@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 import { SharedModule } from '../../shared-front/shared/shared.module';
 import { EnchereComponent } from './Enchere.component';
 import { DetailEnchereComponent } from './detail-enchere/detail-enchere.component';
+import { FuseSidebarModule } from '@fuse/components';
+import { FuseDemoModule } from '@fuse/components/demo/demo.module';
+import { FuseSharedModule } from '@fuse/shared.module';
 
 export const routes = [
   { path: '', component: EnchereComponent, pathMatch: 'full' },
@@ -15,7 +18,11 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
+    SharedModule,
+    FuseSidebarModule,
+    FuseDemoModule,
+    FuseSharedModule   
   ],
   declarations: [
     EnchereComponent,

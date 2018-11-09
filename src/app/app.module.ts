@@ -26,6 +26,7 @@ import { SharedModule } from './shared-front/shared/shared.module';
 import { AdministrateurComponent } from './espace/administrateur/admin.component';
 import { FuseDemoModule } from '../@fuse/components/demo/demo.module';
 import { AcheteurComponent } from './espace/acheteur/acheteur.component';
+import { BanqueComponent } from './espace/banque/banque.component';
 
 const appRoutes: Routes = [
     {
@@ -49,8 +50,28 @@ const appRoutes: Routes = [
         loadChildren: './main/angular-material-elements/angular-material-elements.module#AngularMaterialElementsModule'
     },
     {
-        path      : 'domaines',
+        path        : 'domaines',
         loadChildren: './front/domaines/domaines.module#DomaineModule'
+    },
+    {   path        : 'produit', 
+        loadChildren: './front/produit/produit.module#ProduitModule'
+    },
+    { 
+        path        : 'Enchere', 
+        loadChildren: './front/Encheres/Enchere.module#EnchereModule'
+    },
+    { 
+        path        : 'services', 
+        loadChildren: './front/services/services.module#ServiceModule'
+    },
+    {   path        : 'cart', 
+        loadChildren: './front/cart/cart.module#CartModule'
+    },
+    {   path: 'ratings', 
+        loadChildren: './front/rating/rating.module#RatingModule'
+    },
+    {   path        : 'offres', 
+        loadChildren: './front/offres/offres.module#OffresModule'
     },
     {
         path      : '',
@@ -61,7 +82,7 @@ const appRoutes: Routes = [
         loadChildren: './front/popups/popups.module#PopupsModule'
     },
     {
-        path: '',
+        path        : '',
         component: AdministrateurComponent, children: [
             {
                 path: 'main',
@@ -117,6 +138,51 @@ const appRoutes: Routes = [
         ]
     },
     {
+        path: '',
+        component: BanqueComponent, children: [
+            {
+                path: 'banque',
+                loadChildren: './espace/banque/accueil/accueil.module#AccueilModule'
+            },
+            {
+                path: 'credit',
+                loadChildren: './espace/banque/credit/credit.module#CreditModule'
+            },
+            {
+                path: 'agreement',
+                loadChildren: './espace/banque/agreement/agreement.module#AgreementModule'
+            },
+            {
+                path: 'demande',
+                loadChildren: './espace/banque/demande/demande.module#DemandeModule'
+            },
+            {
+                path: 'depot',
+                loadChildren: './espace/banque/depot/depot.module#DepotModule'
+            },
+            {
+                path: 'commande',
+                loadChildren: './espace/banque/commande/commande.module#CommandeModule'
+            },
+            {
+                path: 'flux-commissionement',
+                loadChildren: './espace/banque/flux-commission/flux-commission.module#FluxCommissionModule'
+            },
+            {
+                path: 'devis',
+                loadChildren: './espace/banque/devis/devis.module#DevisModule'
+            },
+            {
+                path: 'produit',
+                loadChildren: './espace/banque/produit/produit.module#ProduitModule'
+            },
+            {
+                path: 'banque-cl',
+                loadChildren: './espace/banque/client/client.module#ClientModule'
+            }
+        ]
+    },
+    {
         path: '**',
         redirectTo: 'apps/dashboards/analytics'
     }
@@ -126,7 +192,8 @@ const appRoutes: Routes = [
     declarations: [
         AppComponent,
         AdministrateurComponent,
-        AcheteurComponent
+        AcheteurComponent, 
+        BanqueComponent
     ],
     imports     : [
         BrowserModule,

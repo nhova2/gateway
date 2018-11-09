@@ -1,193 +1,159 @@
-<mat-sidenav-container>
-  <mat-sidenav fxFlex="20" #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav" perfectScrollbar>
-    <div fxLayout="row wrap" class="info-bar" ngClass.gt.md="m-0">
-      <h2>Commentaires</h2>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
+<div fxLayout="column" fxFlex="100">
+  <app-main-carousel [slides]="slides"></app-main-carousel>
+  <div class="page-layout carded left-sidebar">
+    <!-- SIDEBAR -->
+    <fuse-sidebar class="sidebar" name="carded-left-sidebar-1" position="left" lockedOpen="gt-md">
+    
+      <!-- SIDEBAR CONTENT -->
+      <div class="content p-24">
+        <div fxLayout="row wrap" class="info-bar" ngClass.gt.md="m-0">
+          <h2>Commentaires</h2>
+          <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+            <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+              <div class="content">
+                <p>user 1</p>
+                <span class="text-muted m-0">30 Days money return guarantee</span>
+              </div>
+            </mat-card>
           </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
+          <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+            <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+              <div class="content">
+                <p>user 1</p>
+                <span class="text-muted m-0">30 Days money return guarantee</span>
+              </div>
+            </mat-card>
           </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
+          <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+            <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+              <div class="content">
+                <p>user 1</p>
+                <span class="text-muted m-0">30 Days money return guarantee</span>
+              </div>
+            </mat-card>
           </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
+          <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+            <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+              <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+              <div class="content">
+                <p>user 1</p>
+                <span class="text-muted m-0">30 Days money return guarantee</span>
+              </div>
+            </mat-card>
           </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <form class="example-form">
-            <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Laisser un commentaire"></textarea>
-            </mat-form-field>
-          </form>
-        </mat-card>
-      </div>
-    </div>
-  
-  </mat-sidenav>
-  <mat-sidenav fxFlex="23" #rightSidenav position="end" [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav"
-    perfectScrollbar>
-    <mat-accordion displayMode="flat" multi="true" class="tweets">
-      <mat-expansion-panel expanded>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <h4>Tweets</h4>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div fxLayout="column">
-          <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-            </mat-card-header>
-            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
-              <p fxLayoutAlign="left">
-                The Shiba Inu is the smallest of the six original.
-              </p>
-              <br>
-            </mat-card-content>
-            <mat-card-actions style=" padding-top: 0;">
-              <button mat-button>show summury</button>
-            </mat-card-actions>
-          </mat-card>
-          <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-            </mat-card-header>
-            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
-              <p>
-                The Shiba Inu is the smallest of the six original.
-              </p>
-            </mat-card-content>
-            <mat-card-actions style=" padding-top: 0;">
-              <button mat-button>show summury</button>
-            </mat-card-actions>
-          </mat-card>
+          <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+            <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+              <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <textarea matInput placeholder="Laisser un commentaire"></textarea>
+                </mat-form-field>
+              </form>
+            </mat-card>
+          </div>
         </div>
-      </mat-expansion-panel>
-    </mat-accordion>
-    <mat-accordion displayMode="flat" multi="true">
-      <mat-expansion-panel expanded>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <img src="../../../assets/images/Home/bot-icon.png" style=" width: 48px; height: 43px; ">
-            <h4>ChatBot</h4>
-            <a fxLayoutAlign="left" mat-button routerLink="."></a>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div fxLayout="column">
-          <mat-card class="example-card">
-            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
-              <p fxLayoutAlign="left" style="background: #67606061;border-radius: 25px;padding: 5%;">
-                Bonjour en quoi puis je vous etre utile aujourd'hui ?
-              </p>
-              <br>
-              <p fxLayoutAlign="right" style="background: rgba(236, 88, 88, 0.64);border-radius: 25px;padding: 5%;margin-left: 13%;">
-                The Shiba Inu is the smallest of the six original.
-              </p>
-              <p fxLayoutAlign="left" style="margin-top: 12%; background: #67606061;border-radius: 25px;padding: 5%;">
-                ok bla blaa ?
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </mat-sidenav>
-  <div fxLayout="row wrap">
-    <div fxFlex="100" fxFlex.gt-md="35" fxFlex.md="45">
-
-      <mat-card class="product-image">
-        <button mat-icon-button (click)="openZoomViewer()" fxHide="false" fxHide.gt-md>
-          <mat-icon>fullscreen</mat-icon>
-        </button>
-        <img *ngIf="image" [src]="image" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave($event)" />
-      </mat-card>
-
-      <div class="small-carousel">
-        <div class="swiper-container" [swiper]="config">
-          <div class="swiper-wrapper">
-            <div *ngFor="let image of product?.images" class="swiper-slide">
-              <mat-card (click)="selectImage(image)" class="p-1">
-                <img [attr.data-src]="image.small" class="swiper-lazy" />
-                <div class="swiper-lazy-preloader"></div>
-              </mat-card>
+      </div>
+      <!-- / SIDEBAR CONTENT -->
+    
+    </fuse-sidebar>
+    <!-- / SIDEBAR -->
+      <!-- CENTER -->
+      <div class="center">
+      
+        <!-- CONTENT CARD -->
+        <div class="content-card">
+      
+            <!-- CONTENT TOOLBAR -->
+            <div class="toolbar px-24 py-8">
+        
+              <button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
+                <mat-icon>menu</mat-icon>
+              </button>
+        
+              <span>
+                <h1 style="font-weight: bold">Domaine</h1>
+              </span>
+        
             </div>
-          </div>
-          <button mat-icon-button class="swiper-button-prev swipe-arrow">
-            <mat-icon>keyboard_arrow_left</mat-icon>
-          </button>
-          <button mat-icon-button class="swiper-button-next swipe-arrow">
-            <mat-icon>keyboard_arrow_right</mat-icon>
-          </button>
+            <!-- / CONTENT TOOLBAR -->
+            <div content class="content p-24">
+      
+              <div fxLayout="row wrap">
+                <div fxFlex="100" fxFlex.gt-md="35" fxFlex.md="45">
+
+                  <mat-card class="product-image">
+                    <button mat-icon-button (click)="openZoomViewer()" fxHide="false" fxHide.gt-md>
+                      <mat-icon>fullscreen</mat-icon>
+                    </button>
+                    <img *ngIf="image" [src]="image" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave($event)" />
+                  </mat-card>
+
+                  <div class="small-carousel">
+                    <div class="swiper-container" [swiper]="config">
+                      <div class="swiper-wrapper">
+                        <div *ngFor="let image of product?.images" class="swiper-slide">
+                          <mat-card (click)="selectImage(image)" class="p-1">
+                            <img [attr.data-src]="image.small" class="swiper-lazy" />
+                            <div class="swiper-lazy-preloader"></div>
+                          </mat-card>
+                        </div>
+                      </div>
+                      <button mat-icon-button class="swiper-button-prev swipe-arrow">
+                        <mat-icon>keyboard_arrow_left</mat-icon>
+                      </button>
+                      <button mat-icon-button class="swiper-button-next swipe-arrow">
+                        <mat-icon>keyboard_arrow_right</mat-icon>
+                      </button>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div fxFlex="100" fxFlex.gt-md="45" fxFlex.md="55" ngClass.gt-sm="px-3 m-0" ngClass.sm="mt-2" ngClass.xs="mt-2">
+
+                  <div #zoomViewer fxShow="false" fxShow.gt-md>
+                    <mat-card *ngIf="zoomImage" class="zoom-viewer mat-elevation-z18" [ngStyle]="{'background-image': 'url(' + zoomImage + ')'}"></mat-card>
+                  </div>
+
+                  <h2>{{product?.name}}</h2>
+                  <div class="py-1 lh">
+                    <p>
+                      <span class="text-muted fw-500">Categorie: </span>
+                      <span>{{ ( appService.Data.categories | filterById : product?.categoryId )?.name }}</span>
+                    </p>
+                    <p>
+                      <span class="text-muted fw-500">Disponibilité: </span>
+                      <span>{{ (product?.availibilityCount > 0) ? 'En stock':'Unavailable'}}</span>
+                    </p>
+                  </div>
+                  <div class="py-1">
+                    <app-rating [ratingsCount]="product?.ratingsCount" [ratingsValue]="product?.ratingsValue" [direction]="'row'"></app-rating>
+                  </div>
+                  <p class="py-1 text-muted lh">{{product?.description}}</p>
+
+                  <div class="divider mt-1"></div>
+                  <h2 class="py-2 new-price">{{product?.newPrice}} CFA</h2>
+
+                  <div class="py-1">
+                    <app-controls [product]="product" [type]="'all'"></app-controls>
+                  </div>
+
+                  <div class="divider"></div>
+
+                </div>
+              </div>
+              <div class="mt-2">
+                <h2>&nbsp; Articles similaires</h2>
+                <div class="divider"></div>
+                <app-products-carousel [products]="relatedProducts"></app-products-carousel>
+              </div>
+            </div>
         </div>
       </div>
-
-
-    </div>
-    <div fxFlex="100" fxFlex.gt-md="45" fxFlex.md="55" ngClass.gt-sm="px-3 m-0" ngClass.sm="mt-2" ngClass.xs="mt-2">
-
-      <div #zoomViewer fxShow="false" fxShow.gt-md>
-        <mat-card *ngIf="zoomImage" class="zoom-viewer mat-elevation-z18" [ngStyle]="{'background-image': 'url(' + zoomImage + ')'}"></mat-card>
-      </div>
-
-      <h2>{{product?.name}}</h2>
-      <div class="py-1 lh">
-        <p>
-          <span class="text-muted fw-500">Categorie: </span>
-          <span>{{ ( appService.Data.categories | filterById : product?.categoryId )?.name }}</span>
-        </p>
-        <p>
-          <span class="text-muted fw-500">Disponibilité: </span>
-          <span>{{ (product?.availibilityCount > 0) ? 'En stock':'Unavailable'}}</span>
-        </p>
-      </div>
-      <div class="py-1">
-        <app-rating [ratingsCount]="product?.ratingsCount" [ratingsValue]="product?.ratingsValue" [direction]="'row'"></app-rating>
-      </div>
-      <p class="py-1 text-muted lh">{{product?.description}}</p>
-
-      <div class="divider mt-1"></div>
-      <h2 class="py-2 new-price">{{product?.newPrice}} CFA</h2>
-
-      <div class="py-1">
-        <app-controls [product]="product" [type]="'all'"></app-controls>
-      </div>
-
-      <div class="divider"></div>
-
-    </div>
+      <!-- / CONTENT CARD -->
+      <!-- / CENTER -->
+      <!-- SIDEBAR -->
   </div>
-
-  <div class="mt-2">
-    <h2>&nbsp; Articles similaires</h2>
-    <div class="divider"></div>
-    <app-products-carousel [products]="relatedProducts"></app-products-carousel>
-  </div>
-</mat-sidenav-container>
+</div>
