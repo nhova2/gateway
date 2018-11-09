@@ -1,0 +1,68 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+  <div><h2 class="title">SUIVI MAGASINS</h2></div>
+</div>
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="NoFoMagasin">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> # Magasin </th>
+      <td mat-cell *matCellDef="let row"> {{row.NoFoMagasin}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="Nom">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
+      <td mat-cell *matCellDef="let row"> {{row.Nom}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Date_Emission">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Creation </th>
+      <td mat-cell *matCellDef="let row"> {{row.Date_Emission}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Adresse">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Adresse </th>
+      <td mat-cell *matCellDef="let row"> {{row.Adresse}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Contact">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact </th>
+        <td mat-cell *matCellDef="let row"> {{row.Contact}} </td>
+      </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Details">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+      <td mat-cell *matCellDef="let row"> {{row.Details}}<button mat-icon-button><mat-icon>dehaze</mat-icon></button></td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Modifier">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
+      <td mat-cell *matCellDef="let row"> {{row.Modifier}}<button mat-icon-button clear><i class="material-icons s-16">edit</i></button> </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Supprimer">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Supprimer </th>
+      <td mat-cell *matCellDef="let row"> {{row.Supprimer}} <button mat-icon-button><i class="material-icons s-16">delete</i></button></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  <button mat-raised-button color="primary">
+      <span>AJOUT + MAGASIN</span>
+  </button>
+</div>

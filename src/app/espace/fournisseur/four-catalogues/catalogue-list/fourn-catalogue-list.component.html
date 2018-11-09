@@ -1,0 +1,62 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+  <div><h2 class="title">CATALOGUE DE PRODUITS</h2></div>
+</div>
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="NoFoCatalogue">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> #Produit</th>
+      <td mat-cell *matCellDef="let row"> {{row.NoFoCatalogue}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="FoCode">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Code </th>
+      <td mat-cell *matCellDef="let row"> {{row.FoCode}}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Designation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Designation </th>
+      <td mat-cell *matCellDef="let row"> {{row.Designation}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Prix">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Prix </th>
+      <td mat-cell *matCellDef="let row"> {{row.Prix}} </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Details">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+      <td mat-cell *matCellDef="let row"> {{row.Details}}<button mat-icon-button><mat-icon>dehaze</mat-icon></button></td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Modifier">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
+      <td mat-cell *matCellDef="let row"> {{row.Modifier}}<button mat-icon-button><i class="material-icons s-16">edit</i></button> </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Supprimer">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Supprimer </th>
+      <td mat-cell *matCellDef="let row"> {{row.Supprimer}} <button mat-icon-button><i class="material-icons s-16">delete</i></button></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  <button mat-icon-button color="primary">
+      <span>AJOUT + PRODUIT</span>
+  </button>
+</div>

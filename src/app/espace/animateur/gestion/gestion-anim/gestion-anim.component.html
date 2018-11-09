@@ -1,0 +1,121 @@
+<!--div fxLayout="column" fxLayoutGap="10px">
+
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
+    <div fxFlex="50">
+      <span class="title">Plafond Ligne de Crédits</span>
+  
+      <div fxLayout="column" class="mt-4" fxLayoutGap="10px" class="elmt-content">
+        <div>Nom prenom (Animateur) <mat-icon class="orange600">money</mat-icon></div>
+        <div>Nom prenom (Animateur) <mat-icon class="orange600">money</mat-icon></div>
+        <div>Nom prenom (Animateur) <mat-icon class="red600">money</mat-icon></div>
+      </div>
+    </div>
+    <div fxFlex="50">
+      <span class="title">Fin de Stock</span>
+  
+      <div fxLayout="column" class="mt-4" fxLayoutGap="10px" class="elmt-content">
+        <div>Nom produit (Magasin) <mat-icon class="orange600">schedule</mat-icon></div>
+        <div>Nom produit (Magasin)<mat-icon class="orange600">schedule</mat-icon></div>
+        <div>Nom produit (Magasin)<mat-icon class="red600">schedule</mat-icon></div>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
+    <div fxFlex="50">
+      <span class="title">Plafond Ligne de Dépots</span>
+  
+      <div fxLayout="column" class="mt-4" fxLayoutGap="10px" class="elmt-content">
+        <div>Nom prenom (Animateur) <mat-icon class="red600">new_releases</mat-icon></div>
+        <div>Nom prenom (Animateur) <mat-icon class="red600">new_releases</mat-icon></div>
+        <div>Nom prenom (Animateur) <mat-icon class="red600">new_releases</mat-icon></div>
+      </div>
+    </div>
+    <div fxFlex="50">
+      <span class="title">Echec Paiements</span>
+  
+      <div fxLayout="column" class="mt-4" fxLayoutGap="10px" class="elmt-content">
+        <div>Nom produit (Magasin) <mat-icon class="red600">announcement</mat-icon></div>
+        <div>Nom produit (Magasin) <mat-icon class="red600">announcement</mat-icon></div>
+        <div>Nom produit (Magasin) <mat-icon class="red600">announcement</mat-icon></div>
+      </div>
+    </div>
+  </div>
+
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
+    <div fxFlex="50">
+      <span class="title">Retard Remboursement Pret</span>
+  
+      <div fxLayout="column" class="mt-4" fxLayoutGap="10px" class="elmt-content">
+        <div>Nom prenom (Animateur) <mat-icon class="red600">watch_later</mat-icon></div>
+        <div>Nom prenom (Animateur) <mat-icon class="red600">watch_later</mat-icon></div>
+        <div>Nom prenom (Animateur) <mat-icon class="orange600">watch_later</mat-icon></div>
+      </div>
+    </div>
+    <div fxFlex="50">
+      <span class="title">Retard Livraison</span>
+  
+      <div fxLayout="column" class="mt-4" fxLayoutGap="10px" class="elmt-content">
+        <div>Nom produit (Magasin) <mat-icon class="orange600">restore</mat-icon></div>
+        <div>Nom produit (Magasin) <mat-icon class="orange600">restore</mat-icon></div>
+        <div>Nom produit (Magasin) <mat-icon class="red600">restore</mat-icon></div>
+      </div>
+    </div>
+  </div>
+  
+</div-->
+<div id="gestion-elements" class="page-layout simple">
+<div class="content p-24">
+    <div fxLayout="column" fxLayoutAlign="center">
+        <div class="filters" fxLayout="column" fxLayoutAlign="center center"
+             fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-between center">
+            <mat-form-field class="course-search">
+                <input matInput placeholder="Search for a course" [(ngModel)]="searchTerm"
+                       (input)="filterCoursesByTerm()">
+            </mat-form-field>
+            <mat-form-field class="category-selector">
+
+                <mat-select placeholder="Select Category" [(ngModel)]="currentCategory"
+                            (selectionChange)="filterCoursesByCategory()">
+                    <mat-option [value]="'all'">
+                        All
+                    </mat-option>
+                    <mat-option *ngFor="let category of categories" [value]="category.value">
+                        {{ category.label }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="courses" fxLayout="row wrap" fxLayoutAlign="center" [@animateStagger]="{value:'50'}">
+            <div class="course" *ngFor="let course of filteredCourses" fxFlex="100" fxFlex.gt-xs="50"
+                 fxFlex.gt-sm="33" [ngClass]="course.category" [@animate]="{value:'*',params:{y:'100%'}}">
+                <div class="course-content" fxLayout="column" fxFlex="1 1 auto">
+                    <div class="header" fxLayout="row" fxLayoutAlign="center center"
+                         [ngClass]="course.category + '-bg'">
+                        <div class="category" fxFlex>
+                            {{course.category}}
+                        </div>
+                        <div class="length" fxLayout="row" fxLayoutAlign="center center">
+                            <mat-icon class="length-icon s-20">access_time</mat-icon>
+                            <div class="min">{{course.length}} min</div>
+                        </div>
+                    </div>
+                    <div class="content" fxLayout="column" fxLayoutAlign="center center" fxFlex="1 1 auto">
+                        <div class="h1">{{course.title}}</div>
+                        <div class="updated">Updated {{course.updated}}</div>
+                    </div>
+                    <div class="footer" fxLayout="row" fxLayoutAlign="center center">
+                        <button mat-button color="accent"
+                                [routerLink]="'/apps/academy/courses/' + course.id + '/' + course.slug">
+                            START
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="no-courses" *ngIf="filteredCourses.length === 0">
+                No courses found!
+            </div>
+        </div>
+    </div>
+</div>
+</div>

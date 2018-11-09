@@ -1,0 +1,336 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+    <div><h2 class="title">STATS</h2></div>
+  </div>
+<div fxLayout="column" fxLayoutGap="30px" class="px-24">
+
+  <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
+      <div class="content">
+					<div class="widget-group" fxLayout="row wrap" fxFlex="100" *fuseIfOnDom
+                         [@animateStagger]="{value:'50'}">
+                        <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column"
+                                     fxFlex="100" fxFlex.gt-sm="50">
+                            <div class="fuse-widget-front mat-elevation-z2">
+                                <div class="h3 px-16 py-24">
+                                    {{widgets.widget8.title}}
+                                </div>
+
+                                <mat-divider></mat-divider>
+
+                                <div class="h-400">
+                                    <ngx-charts-pie-chart
+                                        *fuseIfOnDom
+                                        [scheme]="widget8.scheme"
+                                        [results]="widgets.widget8.mainChart"
+                                        [legend]="widget8.legend"
+                                        [explodeSlices]="widget8.explodeSlices"
+                                        [labels]="widget8.labels"
+                                        [doughnut]="widget8.doughnut"
+                                        [gradient]="widget8.gradient"
+                                        (select)="widget8.onSelect($event)">
+                                    </ngx-charts-pie-chart>
+                                </div>
+
+                            </div>
+                            <!-- / Front -->
+
+                        </fuse-widget>
+                        <!-- / WIDGET 8 -->
+
+                        <!-- WIDGET 9 -->
+                        <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="column"
+                                     fxFlex="100" fxFlex.gt-sm="50">
+
+                            <!-- Front -->
+                            <div class="fuse-widget-front mat-elevation-z2">
+                                <div class="px-16 py-12 border-bottom" fxLayout="row"
+                                     fxLayoutAlign="space-between center">
+                                    <div class="h3">{{widgets.widget9.title}}</div>
+                                    <mat-form-field>
+                                        <mat-select [(ngModel)]="widget9.currentRange" aria-label="Change range">
+                                            <mat-option *ngFor="let range of widgets.widget9.ranges | keys"
+                                                        [value]="range.key">
+                                                {{range.value}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+
+                                <div class="px-16 py-24" fxLayout="column" fxLayoutAlign="center"
+                                     fxLayout.gt-xs="row"
+                                     fxLayoutAlign.gt-xs="space-between end">
+                                    <div fxFlex="0 1 auto">
+                                        <div class="h4 secondary-text">{{widgets.widget9.weeklySpent.title}}</div>
+                                        <div class="pt-8 mat-display-1 m-0 font-weight-300 text-nowrap">
+                                            <span class="secondary-text">$</span>
+                                            <span>{{widgets.widget9.weeklySpent.count[widget9.currentRange]}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="h-52" fxFlex>
+                                        <ngx-charts-area-chart
+                                            *fuseIfOnDom
+                                            [results]="widgets.widget9.weeklySpent.chart[widget9.currentRange]"
+                                            [scheme]="widget9.scheme"
+                                            [gradient]="widget9.gradient"
+                                            [xAxis]="widget9.xAxis"
+                                            [yAxis]="widget9.yAxis"
+                                            [legend]="widget9.legend"
+                                            [showXAxisLabel]="widget9.showXAxisLabel"
+                                            [showYAxisLabel]="widget9.showYAxisLabel"
+                                            [xAxisLabel]="widget9.xAxisLabel"
+                                            [yAxisLabel]="widget9.yAxisLabel"
+                                            [curve]="widget9.curve">
+                                        </ngx-charts-area-chart>
+                                    </div>
+                                </div>
+
+                                <div class="px-16 py-24" fxLayout="column" fxLayoutAlign="center"
+                                     fxLayout.gt-xs="row"
+                                     fxLayoutAlign.gt-xs="space-between end">
+                                    <div fxFlex="0 1 auto">
+                                        <div class="h4 secondary-text">{{widgets.widget9.totalSpent.title}}</div>
+                                        <div class="pt-8 mat-display-1 m-0 font-weight-300 text-nowrap">
+                                            <span class="secondary-text">$</span>
+                                            <span>{{widgets.widget9.totalSpent.count[widget9.currentRange]}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="h-52" fxFlex>
+                                        <ngx-charts-area-chart
+                                            *fuseIfOnDom
+                                            [results]="widgets.widget9.totalSpent.chart[widget9.currentRange]"
+                                            [scheme]="widget9.scheme"
+                                            [gradient]="widget9.gradient"
+                                            [xAxis]="widget9.xAxis"
+                                            [yAxis]="widget9.yAxis"
+                                            [legend]="widget9.legend"
+                                            [showXAxisLabel]="widget9.showXAxisLabel"
+                                            [showYAxisLabel]="widget9.showYAxisLabel"
+                                            [xAxisLabel]="widget9.xAxisLabel"
+                                            [yAxisLabel]="widget9.yAxisLabel"
+                                            [curve]="widget9.curve">
+                                        </ngx-charts-area-chart>
+                                    </div>
+                                </div>
+
+                                <div class="px-16 py-24" fxLayout="column" fxLayoutAlign="center"
+                                     fxLayout.gt-xs="row"
+                                     fxLayoutAlign.gt-xs="space-between end">
+                                    <div fxFlex="0 1 auto">
+                                        <div class="h4 secondary-text">{{widgets.widget9.remaining.title}}</div>
+                                        <div class="pt-8 mat-display-1 m-0 font-weight-300 text-nowrap">
+                                            <span class="secondary-text">$</span>
+                                            <span>{{widgets.widget9.remaining.count[widget9.currentRange]}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="h-52" fxFlex>
+                                        <ngx-charts-area-chart
+                                            *fuseIfOnDom
+                                            [results]="widgets.widget9.remaining.chart[widget9.currentRange]"
+                                            [scheme]="widget9.scheme"
+                                            [gradient]="widget9.gradient"
+                                            [xAxis]="widget9.xAxis"
+                                            [yAxis]="widget9.yAxis"
+                                            [legend]="widget9.legend"
+                                            [showXAxisLabel]="widget9.showXAxisLabel"
+                                            [showYAxisLabel]="widget9.showYAxisLabel"
+                                            [xAxisLabel]="widget9.xAxisLabel"
+                                            [yAxisLabel]="widget9.yAxisLabel"
+                                            [curve]="widget9.curve">
+                                        </ngx-charts-area-chart>
+                                    </div>
+                                </div>
+
+                                <div class="px-16 py-24 border-top">
+                                    <div class="h4 secondary-text">{{widgets.widget9.totalBudget.title}}</div>
+                                    <div class="pt-8 mat-display-1 m-0 font-weight-300">
+                                        <span class="secondary-text">$</span>
+                                        <span>{{widgets.widget9.totalBudget.count}}</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- / Front -->
+
+                        </fuse-widget>
+                        <!-- / WIDGET 9 -->
+
+                        <!-- WIDGET 10 -->
+                        <fuse-widget [@animate]="{value:'*',params:{y:'100%'}}" class="widget" fxLayout="row"
+                                     fxFlex="100">
+
+                            <!-- Front -->
+                            <div class="fuse-widget-front mat-elevation-z2">
+
+                                <div class="simple-table-container" ms-responsive-table>
+                                    <div class=" table-title">
+                                        {{widgets.widget10.title}}
+                                    </div>
+
+                                    <table class="simple">
+
+                                        <thead>
+                                            <tr>
+                                                <th *ngFor="let column of widgets.widget10.table.columns">
+                                                    {{column.title}}
+                                                </th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr *ngFor="let row of widgets.widget10.table.rows">
+                                                <td *ngFor="let cell of row">
+                                                    <span class="p-4" [ngClass]="cell.classes">
+                                                        {{cell.value}}
+                                                    </span>
+                                                    <mat-icon *ngIf="cell.icon" class="s-16">{{cell.icon}}
+                                                    </mat-icon>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- / Front -->
+
+                        </fuse-widget>
+                        <!-- / WIDGET 10 -->
+                    </div>
+        </div>
+  </div>
+
+  <div fxLayout="column" fxLayoutGap="30px" class="px-24">
+  
+    <div fxLayout="row" fxLayout.xs="column">
+      <div fxFlex="50" class="">
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="center center" style="color:black; font-weight:bold">
+          
+          <div class="title2" style="margin-bottom:1%">Agreement</div>
+          <div style="width:10em">
+            <section class="example-section">
+              <label class="example-margin" style="width:7em">niveau 1</label>
+              <mat-progress-bar class="example-margin" color="accent" mode="Determinate" value="75" bufferValue="100">
+              </mat-progress-bar>
+            </section>
+          </div>
+          <div style="width:10em">
+            <section class="example-section">
+              <label class="example-margin" style="width:7em">niveau 2</label>
+              <mat-progress-bar class="example-margin" color="accent" mode="Determinate" value="80" bufferValue="100">
+              </mat-progress-bar>
+            </section>
+          </div>
+          <div style="width:10em">
+            <section class="example-section">
+              <label class="example-margin" style="width:7em">niveau 3</label>
+              <mat-progress-bar class="example-margin" color="accent" mode="Determinate" value="90" bufferValue="100">
+              </mat-progress-bar>
+            </section>
+          </div>
+          <div style="width:10em">
+            <section class="example-section">
+              <label class="example-margin" style="width:7em">niveau 3</label>
+              <mat-progress-bar class="example-margin" color="accent" mode="Determinate" value="90" bufferValue="100">
+              </mat-progress-bar>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="50" class="">
+  
+        <div fxLayout="column" fxLayoutGap="10px" style="color:black; font-weight:bold" fxLayoutAlign="center center">
+        
+          <div class="title2" style="margin-bottom:1%">Top 10 CA Animateur</div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Animateur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Animateur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Animateur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Animateur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+        </div>
+      </div>
+  
+      <div fxFlex="50" class="" style="color:black; font-weight:bold" fxLayoutAlign="center center">
+  
+        <div fxLayout="column" fxLayoutGap="10px">
+          
+          <div class="title2" style="margin-bottom:1%">Top 10 CA Fournisseur </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Fournisseur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Fournisseur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Fournisseur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Fournisseur)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="50" class="" style="color:black; font-weight:bold" fxLayoutAlign="center center">
+  
+        <div fxLayout="column" fxLayoutGap="10px">
+          
+          <div class="title2" style="margin-bottom:1%">Top 10 CA Boutique </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Boutique)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Boutique)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Boutique)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+          <div style="width:14em">
+            <section class="example-section">
+              <label class="example-margin" style="width:13em">Nom Prenom (Boutique)</label>
+              <mat-icon class="orange600">star</mat-icon>
+            </section>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+
+</div>

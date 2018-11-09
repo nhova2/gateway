@@ -11,7 +11,7 @@ import { FuseSharedModule } from '@fuse/shared.module';
 @NgModule({
   imports: [
     CommonModule,
-    BrowserModule,
+    //BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
     MatButtonModule,
