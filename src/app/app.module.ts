@@ -1,5 +1,5 @@
 import { NgModule} from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+//import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
@@ -26,6 +26,14 @@ import { SharedModule } from './shared-front/shared/shared.module';
 import { AdministrateurComponent } from './espace/administrateur/admin.component';
 import { FuseDemoModule } from '../@fuse/components/demo/demo.module';
 import { AcheteurComponent } from './espace/acheteur/acheteur.component';
+import { AnimateurComponent } from './espace/animateur/anim.component';
+import { ProjectDashboardService } from './main/apps/dashboards/project/project.service';
+import { AnimHomeService } from './espace/animateur/anim-home.service';
+import { FournisseurComponent } from './espace/fournisseur/fourniss.component';
+import { FournissHomeService } from './espace/fournisseur/fourniss-home.service';
+import { MultiUserComponent } from './espace/multiuser/muser.component';
+import { MuserHomeService } from './espace/multiuser/muser-home.service';
+import { CommonModule } from '@angular/common';
 
 const appRoutes: Routes = [
     {
@@ -116,6 +124,127 @@ const appRoutes: Routes = [
 
         ]
     },
+	{
+        path: '',
+        component: AnimateurComponent, children: [
+            {
+                path: 'main-anim',
+                loadChildren: './espace/animateur/main/main-anim.module#MainAnimModule'
+            },
+            {
+                path: 'anim-alertes',
+                loadChildren: './espace/animateur/alertes/animateur-alertes.module#AlertesAnimateurModule'
+            },
+            {
+                path: 'anim-suivi',
+                loadChildren: './espace/animateur/suivi-historique/suivi-historique.module#SuiviHistoriqueModule'
+            },
+            {
+                path: 'anim-statistique',
+                loadChildren: './espace/animateur/statistique/anim-statistique.module#StatistiqueAnimModule'
+            },
+            {
+                path: 'anim-gestion',
+                loadChildren: './espace/animateur/gestion/gestion.module#GestionAnimModule'
+            }
+
+        ]
+    },
+	{
+        path: '',
+        component: FournisseurComponent, children: [
+            /*{
+                path: 'main-fourniss',
+                loadChildren: './espace/fournisseur/main/main-fourniss.module#MainFournissModule'
+            },
+            { 
+                path: 'fourniss-alertes',
+                loadChildren: './espace/fournisseur/alertes/fournisseur-alertes.module#AlertesFournisseurModule'
+            },
+            {
+                path: 'fourniss-suivi',
+                loadChildren: './espace/fournisseur/suivi-historique/suivi-historique.module#SuiviHistoriqueModule'
+            },
+            {
+                path: 'fourniss-statistique',
+                loadChildren: './espace/fournisseur/statistique/fourniss-statistique.module#StatistiqueFournissModule'
+            },
+            {
+                path: 'fourniss-gestion',
+                loadChildren: './espace/fournisseur/gestion/gestion.module#GestionFournissModule'
+            },*/
+            {
+                path: 'main-livraisons',
+                loadChildren: './espace/fournisseur/four-livraisons/fournisseur-livraisons.module#LivraisonsFournisseurModule'
+            }
+            ,
+            {
+                path: 'main-commandes',
+                loadChildren: './espace/fournisseur/four-commandes/fournisseur-commandes.module#CommandesFournisseurModule'
+            },
+            {
+                path: 'main-magasin',
+                loadChildren: './espace/fournisseur/four-magasins/fournisseur-magasins.module#MagasinsFournisseurModule'
+            },
+            {
+                path: 'main-catalogue',
+                loadChildren: './espace/fournisseur/four-catalogues/fournisseur-catalogues.module#CataloguesFournisseurModule'
+            },
+            {
+                path: 'main-remboursement',
+                loadChildren: './espace/fournisseur/four-remboursements/fournisseur-remboursements.module#RemboursementsFournisseurModule'
+            },
+            {
+                path: 'main-statistique',
+                loadChildren: './espace/fournisseur/four-statistiques/fournisseur-statistiques.module#StatistiquesFournisseurModule'
+            },
+            {
+                path: 'main-boutique',
+                loadChildren: './espace/fournisseur/four-boutiques/fournisseur-boutiques.module#BoutiquesFournisseurModule'
+            },
+            {
+                path: 'main-statistique',
+                loadChildren: './espace/fournisseur/four-statistiques/fournisseur-statistiques.module#StatistiquesFournisseurModule'
+            },
+            {
+                path: 'main-boutique',
+                loadChildren: './espace/fournisseur/four-boutiques/fournisseur-boutiques.module#BoutiquesFournisseurModule'
+            },
+            {
+                path: 'main-offre',
+                loadChildren: './espace/fournisseur/four-offres/fournisseur-offres.module#OffresFournisseurModule'
+            },
+            {
+                path: 'main-enchere',
+                loadChildren: './espace/fournisseur/four-encheres/fournisseur-encheres.module#EncheresFournisseurModule'
+            }
+        ]
+    },
+	{
+        path: '',
+        component: MultiUserComponent, children: [
+            {
+                path: 'main-muser',
+                loadChildren: './espace/multiuser/main/main-muser.module#MainMuserModule'
+            },
+            { 
+                path: 'muser-alertes',
+                loadChildren: './espace/multiuser/alertes/multiuser-alertes.module#AlertesMultiuserModule'
+            },
+            {
+                path: 'muser-suivi',
+                loadChildren: './espace/multiuser/suivi-historique/suivi-historique.module#SuiviHistoriqueModule'
+            },
+            {
+                path: 'muser-statistique',
+                loadChildren: './espace/multiuser/statistique/muser-statistique.module#StatistiqueMuserModule'
+            },
+            {
+                path: 'muser-gestion',
+                loadChildren: './espace/multiuser/gestion/gestion.module#GestionMuserModule'
+            }
+        ]
+    },
     {
         path: '**',
         redirectTo: 'apps/dashboards/analytics'
@@ -126,10 +255,14 @@ const appRoutes: Routes = [
     declarations: [
         AppComponent,
         AdministrateurComponent,
-        AcheteurComponent
+        AcheteurComponent,
+        AnimateurComponent,
+        FournisseurComponent,
+        MultiUserComponent
+
     ],
     imports     : [
-        BrowserModule,
+        CommonModule,
         BrowserAnimationsModule,
         HttpClientModule,
         RouterModule.forRoot(appRoutes),
@@ -162,7 +295,8 @@ const appRoutes: Routes = [
     bootstrap   : [
         AppComponent
     ], 
-    providers: [AppService]
+    providers: [AppService,AnimHomeService,ProjectDashboardService,FournissHomeService,MuserHomeService
+    ]
 })
 export class AppModule
 {

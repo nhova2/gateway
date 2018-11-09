@@ -3,9 +3,9 @@ export class ContactsFakeDb
     public static contacts = [
         {
             'id'      : '5725a680b3249760ea21de52',
-            'name'    : 'Abbott',
-            'lastName': 'Keitch',
-            'avatar'  : 'assets/images/avatars/Abbott.jpg',
+            'name'    : 'Mamadou',
+            'lastName': 'Fall',
+            'avatar'  : 'assets/images/avatars/commande.png',
             'nickname': 'Royalguard',
             'company' : 'Saois',
             'jobTitle': 'Digital Archivist',

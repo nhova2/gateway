@@ -19,14 +19,32 @@ export class AuthenticationComponent implements OnInit {
  
   login (): void {
     if (this.username === 'admin' && this.password === 'admin'){
+		console.log("auth admin");
       this.router.navigate(['']);
     }
     else if (this.username === 'banq' && this.password === 'banq') {
+		console.log("auth banq");
       this.router.navigate(['main']);
      
     }
     else if (this.username === 'acheteur' && this.password === 'acheteur') {
+		console.log("auth acheteur");
       this.router.navigate(['shopping']);
+      
+    }
+	else if (this.username === 'anim' && this.password === 'anim') {
+		console.log("auth anim");
+      this.router.navigate(['main-anim']);
+     
+    }
+    else if (this.username === 'fourniss' && this.password === 'fourniss') {
+		console.log("auth fournisseur");
+      this.router.navigate(['main-magasin']);
+      
+    }
+	else if (this.username === 'multi' && this.password === 'multi') {
+		console.log("auth multiuser");
+      this.router.navigate(['main-muser']);
       
     }
     else{
