@@ -7,6 +7,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { AnimHomeService } from '../anim-home.service';
+import { AnimAlertesArticleComponent } from './alertes-anim/dialogs/article/article.component';
 
 
 export const routes = [
@@ -22,7 +23,7 @@ export const routes = [
     MatInputModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [AlertesAnimComponent],
+  declarations: [AlertesAnimComponent,AnimAlertesArticleComponent],
   providers   : [AnimHomeService  ]
 })
 export class AlertesAnimateurModule { }
