@@ -4,9 +4,11 @@ import { SuiviDepotComponent } from './suivi-depot/suivi-depot.component';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { DepotComponent } from './depot/depot.component';
 
 export const routes = [
-  { path: '', component: SuiviDepotComponent, pathMatch: 'full' },
+  { path: '', component: DepotComponent, pathMatch: 'full' },
+  { path: 'suivi-depot', component: SuiviDepotComponent, pathMatch: 'full' },
 ];
 
 
@@ -18,6 +20,6 @@ export const routes = [
     SharedModule,
     
   ],
-  declarations: [SuiviDepotComponent]
+  declarations: [SuiviDepotComponent, DepotComponent]
 })
 export class DepotModule { }

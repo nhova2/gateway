@@ -302,7 +302,7 @@ const appRoutes: Routes = [
                 loadChildren: './espace/banque/devis/devis.module#DevisModule'
             },
             {
-                path: 'produit',
+                path: 'produit-banq',
                 loadChildren: './espace/banque/produit/produit.module#ProduitModule'
             },
             {

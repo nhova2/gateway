@@ -2,31 +2,31 @@
 <div fxLayout="column" fxLayoutGap="30px" class="px-24">
 
   <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
-    <a [routerLink]="['commande-list']" fxFlex="50" class="panel">
+    <a [routerLink]="['/credit','suivi-credit']" fxFlex="50" class="panel">
       <div>
         <span class="title"><mat-icon>dialpad</mat-icon> Suivi Crédit</span>
       </div>
     </a>
-    <a [routerLink]="['pret-list']" fxFlex="50" class="panel">
+    <a [routerLink]="['/depot','suivi-depot']" fxFlex="50" class="panel">
       <div>
         <span class="title"> <mat-icon>save_alt</mat-icon> Suivi Ligne de Dépot </span>
       </div>
     </a>
   </div>
   <div fxLayout="row" fxLayoutGap="30px" fxLayout.xs="column">
-    <a [routerLink]="['livraison-list']" fxFlex="50" class="panel">
+    <a [routerLink]="['/produit-banq']" fxFlex="50" class="panel">
       <div>
         <span class="title"><mat-icon>swap_calls</mat-icon> suivi Livraison produit</span>
       </div>
     </a>
-    <a [routerLink]="['credit-list']" fxFlex="50" class="panel">
+    <a [routerLink]="['/devis']" fxFlex="50" class="panel">
       <div>
         <span class="title"><mat-icon>file_copy</mat-icon> suivi devis </span>
       </div>
     </a>
   </div>
   <div fxLayout="row" fxLayoutGap="30px" fxLayoutAlign="center center" fxLayout.xs="column">
-    <a [routerLink]="['livraison-list']" fxFlex="50" class="panel">
+    <a [routerLink]="['/flux-commissionement']" fxFlex="50" class="panel">
       <div>
         <span class="title"><mat-icon>donut_large</mat-icon> Livraison</span>
       </div>

@@ -305,15 +305,20 @@ body.theme-pink-dark {
     @include fuse-color-classes($palettes);
 }
 .fuse-navy-900 {
-    background-color: #9A3838 !important;
+    background-color: #270D0D !important;
     color: white !important;
 }
 .fuse-navy-700 {
-    background-color: #9A3838 !important;
+    background-color: #270D0D !important;
     color: white !important;
 }
 
 body.theme-default .mat-toolbar {
-    background:#9A3838 !important;
+    background:#270D0D !important;
     color: rgb(0, 0, 0);
+}
+
+body.theme-default .accent {
+    background-color: #dc0030 !important;
+    color: white !important;
 }
