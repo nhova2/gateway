@@ -1,7 +1,7 @@
 import { NgModule} from '@angular/core';
 //import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { MatButtonModule, MatIconModule } from '@angular/material';
@@ -35,6 +35,9 @@ import { FournissHomeService } from './espace/fournisseur/fourniss-home.service'
 import { MultiUserComponent } from './espace/multiuser/muser.component';
 import { MuserHomeService } from './espace/multiuser/muser-home.service';
 import { CommonModule } from '@angular/common';
+import { NgMarqueeModule } from 'ng-marquee';
+import { AppFilterSidebarComponent } from './commons/filter-sidebar/filter-sidebar.component';
+import { Ng5SliderModule } from 'ng5-slider';
 
 const appRoutes: Routes = [
     {
@@ -58,7 +61,7 @@ const appRoutes: Routes = [
         loadChildren: './main/angular-material-elements/angular-material-elements.module#AngularMaterialElementsModule'
     },
     {
-        path        : 'domaines',
+        path      : 'domaines',
         loadChildren: './front/domaines/domaines.module#DomaineModule'
     },
     {   path        : 'produit', 
@@ -90,7 +93,7 @@ const appRoutes: Routes = [
         loadChildren: './front/popups/popups.module#PopupsModule'
     },
     {
-        path        : '',
+        path: '',
         component: AdministrateurComponent, children: [
             {
                 path: 'main',
@@ -238,6 +241,10 @@ const appRoutes: Routes = [
             {
                 path: 'main-enchere',
                 loadChildren: './espace/fournisseur/four-encheres/fournisseur-encheres.module#EncheresFournisseurModule'
+            },
+            {
+                path: 'main-simulation',
+                loadChildren: './espace/fournisseur/four-simulations/fournisseur-simulations.module#SimulationsFournisseurModule'
             }
         ]
     },
@@ -326,7 +333,8 @@ const appRoutes: Routes = [
         AcheteurComponent,
         AnimateurComponent,
         FournisseurComponent,
-        MultiUserComponent
+        MultiUserComponent,
+        AppFilterSidebarComponent
 
     ],
     imports     : [
@@ -358,7 +366,11 @@ const appRoutes: Routes = [
         LayoutModule,
         AppStoreModule,
         SharedModule,
-        FuseDemoModule    
+        FuseDemoModule,
+        
+        // New modules
+        NgMarqueeModule,
+        Ng5SliderModule
     ],
     bootstrap   : [
         AppComponent

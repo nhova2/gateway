@@ -64,4 +64,8 @@ export class HomeComponent {
     (window.innerWidth < 1280) ? this.viewCol = 33.3 : this.viewCol = 25;
   }
 
+  toggleSidebar(name): void
+    {
+        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+    }
 }

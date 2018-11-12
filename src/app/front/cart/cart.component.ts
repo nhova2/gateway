@@ -8,7 +8,7 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class CartComponent implements OnInit {
   public counter : number = 0;
-    
+  product="empty";  
   increment(){
     this.counter += 1;
   }

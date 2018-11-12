@@ -13,6 +13,10 @@ import { FuseNavigationService } from '@fuse/components/navigation/navigation.se
 })
 export class MultiUserComponent {  
     navigation: any;
+	bool_acheteur ="empty";
+	bool_administrateur ="empty";
+	bool_fournisseur ="empty";
+	bool_animateur ="empty";
     constructor(private _fuseNavigationService: FuseNavigationService){
 
         this.navigation = muserNavigation;

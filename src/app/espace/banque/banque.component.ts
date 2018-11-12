@@ -23,4 +23,8 @@ export class BanqueComponent implements OnInit {
       // Set the main navigation as our current navigation
       this._fuseNavigationService.setCurrentNavigation('banq');
     }
+	toggleSidebar(name): void
+    {
+        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+    }
   }

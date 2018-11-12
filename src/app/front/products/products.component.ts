@@ -28,7 +28,8 @@ export class ProductsComponent implements OnInit {
   public colors = ["#5C6BC0","#66BB6A","#EF5350","#BA68C8","#FF4081","#9575CD","#90CAF9","#B2DFDB","#DCE775","#FFD740","#00E676","#FBC02D","#FF7043","#F5F5F5","#000000"];
   public sizes = ["S","M","L","XL","2XL","32","36","38","46","52","13.3\"","15.4\"","17\"","21\"","23.4\""];
   public page:any;
-
+  public param:any;
+  panelOpenState  = false;
   constructor(private activatedRoute: ActivatedRoute, public appService:AppService, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
@@ -121,6 +122,9 @@ export class ProductsComponent implements OnInit {
     if(event.target){
       this.router.navigate(['/products', event.target.innerText.toLowerCase()]); 
     }   
+  }
+  setStep (param)
+  {
   }
 
 }

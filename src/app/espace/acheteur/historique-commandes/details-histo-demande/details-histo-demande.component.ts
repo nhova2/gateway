@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsHistoDemandeComponent implements OnInit {
 
+  isLinear="empty";
   constructor() { }
 
   ngOnInit() {
