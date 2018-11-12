@@ -8,8 +8,8 @@ import { Options } from 'ng5-slider';
 })
 export class AppFilterSidebarComponent
 {
-    private minValue ="1";
-    private maxValue ="250";
+    public minValue ="1";
+    public maxValue ="250";
     /**
      * Constructor
      */

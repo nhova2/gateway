@@ -30,6 +30,7 @@ export class ProductsComponent implements OnInit {
   public page:any;
   public param:any;
   panelOpenState  = false;
+  step = 0;
   constructor(private activatedRoute: ActivatedRoute, public appService:AppService, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
