@@ -12,6 +12,7 @@ import { FuseNavigationService } from '@fuse/components/navigation/navigation.se
 })
 export class AnimateurComponent {  
     navigation: any;
+	title = "empty";
     constructor(private _fuseNavigationService: FuseNavigationService){
 
         this.navigation = animNavigation;

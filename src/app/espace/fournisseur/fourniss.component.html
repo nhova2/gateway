@@ -30,7 +30,11 @@
                             <mat-grid-tile><button mat-button class="block"><mat-icon>done_outline</mat-icon> Creer Produit</button></mat-grid-tile>
                             <mat-grid-tile><button mat-button class="block"><mat-icon>graphic_eq</mat-icon> Creer Magasin</button></mat-grid-tile>
                           </mat-grid-list>
+                          <filter-sidebar></filter-sidebar>
                 </div>
+                <!--div>
+                    <filter-sidebar></filter-sidebar>
+                </div-->
                 <!-- / SIDEBAR CONTENT -->
     
             </fuse-sidebar>
@@ -43,7 +47,14 @@
 
                 <!-- CONTENT TOOLBAR -->
                <div class="toolbar px-24 py-8">
-
+                     <!--ng-marquee duration="20">
+                        <mark>Hello, World.... Find Me @ <a href="https://www.linkedin.com/in/shivarajnaidu/" target="__blank"> https://www.linkedin.com/in/shivarajnaidu/ (Yuvaraj)</a></mark>
+                    </ng-marquee-->
+                    <ng-marquee duration="20">
+                        <mark>
+                            Echec remboursement<mat-icon>error</mat-icon>    Fin de Stock produit<mat-icon>error</mat-icon>    Retard livraison<mat-icon>error</mat-icon>   Retard Paiement<mat-icon>error</mat-icon>    Echéance Pret<mat-icon>error</mat-icon>
+                        </mark>
+                    </ng-marquee>
                     <!--button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
                         <mat-icon>menu</mat-icon>
                     </button>

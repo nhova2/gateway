@@ -29,4 +29,8 @@ export class ProduitsComponent {
       this.viewCol = 33.3;
     };
   }
+  toggleSidebar(name): void
+    {
+        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+    }
 }

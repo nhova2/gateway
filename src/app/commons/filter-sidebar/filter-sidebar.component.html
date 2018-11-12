@@ -1,0 +1,78 @@
+<div class="filter-sidebar">
+    <mat-list>
+        <mat-list-item>
+            <span>
+                <mat-form-field>
+                    <mat-select placeholder="Activité" disableRipple>
+                        <mat-option value="1">Activité 1</mat-option>
+                        <mat-option value="2">Activité 2</mat-option>
+                        <mat-option value="3">Activité 3</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </span>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+            <span>
+                <mat-checkbox color="primary">
+                    <span style="display:inline-flex">
+                        <img src="assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_3.png">
+                    </span>
+                    <span>Toutes les Boutiques</span>
+                </mat-checkbox>
+            </span>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+            <span>
+                <mat-checkbox color="primary">
+                    <span style="display:inline-flex">
+                        <img src="assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_4.png">
+                    </span>
+                    <span>Toutes les Localités</span>
+                </mat-checkbox>
+            </span>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+            <mat-checkbox color="primary">
+                <span style="display:inline-flex">
+                    <img src="assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_5.png">
+                </span>
+                <span>Références</span>
+            </mat-checkbox>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+
+        <mat-list-item>
+                <span style="display:inline-flex">
+                    <img src="assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_7.png">
+                </span>
+                <span>Prix</span>
+        </mat-list-item>
+        <mat-list-item>
+				<!--p>Min value: <input type="text" [(ngModel)]="minValue"></p><br>
+				<p>Max value: <input type="text" [(ngModel)]="maxValue"></p-->
+				<ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <!--mat-list-item>
+                <span style="display:inline-flex">
+                    <img src="assets/images/FilterCat/FineTech_PS_Elmt_FilterCat_TagLegend_Clr_6.png">
+                </span>
+                <span>Disponibilités Début</span>
+				<mat-form-field>
+				  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+				  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+				  <mat-datepicker #picker></mat-datepicker>
+				</mat-form-field>
+        </mat-list-item-->
+
+    </mat-list>
+</div>

@@ -22,5 +22,9 @@ export class AdministrateurComponent {
         // Set the main navigation as our current navigation
         this._fuseNavigationService.setCurrentNavigation('admin');
     }
+	 toggleSidebar(name): void
+    {
+        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+    }
 }
 

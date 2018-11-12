@@ -1,0 +1,63 @@
+<mat-card>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h1>Simulation de Pret</h1>
+                    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label>Montant Emprunt</label>
+                            <input type="text" formControlName="montantEmprunt" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.montantEmprunt.errors }" />
+                            <div *ngIf="submitted && f.montantEmprunt.errors" class="invalid-feedback">
+                                <div *ngIf="f.montantEmprunt.errors.required">Montant Emprunt is required</div>
+                            </div>
+                            &nbsp; &nbsp; 
+                             <label >Mensualité Souhaité</label>
+                              <select class="form-control" >
+                                <option *ngFor="let d of datas" [value]="d">{{d.valeur}}</option>
+                              </select>
+                        </div>
+                         <div>
+                            <h2>Résultat Simulation</h2>
+                          </div>
+                        <div>
+                            <table  class="table">
+                                <tr>
+                                    <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                                        <div>30.000 XOF</div>
+                                        <div>(Capital Emprunté)</div>
+                                    </td>
+                                    <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+                                        <i class="material-icons">add_box</i>
+                                    </td>
+                                    <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                                        <div>6.000 XOF</div>
+                                        <div>(Interets)</div>
+                                    </td>
+                                    <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+                                        <i class="material-icons">keyboard_tab</i>
+                                    </td>
+                                    <td title="'Age'" filter="{ age: 'number'}" sortable="'age'">
+                                        <div>36.000 XOF</div>
+                                        <div>(Montant Total Du)</div>
+                                    </td>
+                                </tr>
+                            </table>  
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div>
+                           <h2>Modalité: 12 mensualités de 3000f</h2>
+                        </div>
+                        <div>
+                           <h2>TAEG révisable: 20% (taux débiteur révisable de 18%)</h2>
+                        </div>
+                        <div>
+                           <h2>Durée accordée: 12 mois</h2>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <button mat-raised-button color="primary">
+                <span>ENVOYER DEMANDE</span>
+            </button>
+        </div>
+    </mat-card>

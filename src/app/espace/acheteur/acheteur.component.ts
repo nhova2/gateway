@@ -23,5 +23,10 @@ export class AcheteurComponent implements OnInit {
 
   ngOnInit() {
   }
+  
+  toggleSidebar(name): void
+    {
+        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+    }
 
 }

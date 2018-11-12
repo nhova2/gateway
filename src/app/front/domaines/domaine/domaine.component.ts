@@ -9,7 +9,7 @@ export class DomaineComponent implements OnInit {
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public viewCol: number = 25;
-
+	panelOpenState = true;
   constructor() { }
 
   ngOnInit() {
@@ -26,5 +26,10 @@ export class DomaineComponent implements OnInit {
     (window.innerWidth < 960) ? this.sidenavOpen = false : this.sidenavOpen = true;
     (window.innerWidth < 1280) ? this.viewCol = 33.3 : this.viewCol = 25;
   }
+  
+  toggleSidebar(name): void
+    {
+        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+    }
 
 }
