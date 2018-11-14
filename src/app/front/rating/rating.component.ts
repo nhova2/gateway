@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { Data, AppService } from '../../front/app.service';
 import { Product } from '../../front/app.models';
 import { MatDialog } from '@angular/material';
+import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 
 @Component({
@@ -13,7 +14,16 @@ import { MatDialog } from '@angular/material';
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public brands = [];
-  constructor(public appService: AppService) { }
+  /**
+     * Constructor
+     *
+     * 
+     * @param {FuseSidebarService} _fuseSidebarService
+     * 
+     */
+  constructor(public appService: AppService,
+    private _fuseSidebarService: FuseSidebarService) { }
+
   public topRatedProducts: Array<Product>;
   public viewCol: number = 25;
 
@@ -51,8 +61,8 @@ import { MatDialog } from '@angular/material';
     (window.innerWidth < 1280) ? this.viewCol = 33.3 : this.viewCol = 25;
   }
 
-  toggleSidebar(name):void{
-    
+  toggleSidebar(name): void {
+    // TODO 
+    this._fuseSidebarService.getSidebar(name).toggleOpen();
   }
-
-  }
+}

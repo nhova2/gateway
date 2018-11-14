@@ -6,6 +6,8 @@ import { SwiperConfigInterface, SwiperDirective } from 'ngx-swiper-wrapper';
 import { Data, AppService } from '../../app.service';
 import { Product } from '../../app.models';
 import { emailValidator } from '../../theme/utils/app-validators';
+import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
+
 
 @Component({
   selector: 'app-detail-enchere',
@@ -18,8 +20,15 @@ export class DetailEnchereComponent implements OnInit {
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public viewCol: number = 25;
+  public slides = [
+    { title: 'The biggest sale', subtitle: '...   ...', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
+    { title: 'Summer collection', subtitle: 'New Arrivals On Sale', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
+    { title: 'The biggest sale', subtitle: 'Special for today', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
+    { title: 'Summer collection', subtitle: 'New Arrivals On Sale', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
+    { title: 'The biggest sale', subtitle: 'Special for today', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' }
+  ];
 
-
+  
   @HostListener('window:resize')
   public onWindowResize(): void {
     (window.innerWidth < 960) ? this.sidenavOpen = false : this.sidenavOpen = true;
@@ -33,7 +42,15 @@ export class DetailEnchereComponent implements OnInit {
   public form: FormGroup;
   public relatedProducts: Array<Product>;
 
-  constructor(public appService: AppService, private activatedRoute: ActivatedRoute) { }
+  /**
+       * Constructor
+       *
+       * 
+       * @param {FuseSidebarService} _fuseSidebarService
+       * 
+       */
+  constructor(public appService: AppService, private activatedRoute: ActivatedRoute,
+    private _fuseSidebarService: FuseSidebarService) { }
 
   ngOnInit() {
     this.sub = this.activatedRoute.params.subscribe(params => {
@@ -126,6 +143,11 @@ export class DetailEnchereComponent implements OnInit {
     if (this.form.valid) {
       //email sent
     }
+  }
+
+  toggleSidebar(name): void {
+    // TODO 
+    this._fuseSidebarService.getSidebar(name).toggleOpen();
   }
 
 }

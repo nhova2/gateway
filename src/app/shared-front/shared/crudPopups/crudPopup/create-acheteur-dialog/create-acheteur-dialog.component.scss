@@ -3,8 +3,8 @@
     text-align: center;
 }
 .mat-typography {
-    width: 575px;
-    height: 700px
+    width: 600px;
+    height: 600px
 }
 .google {
     border:1px solid grey;  
@@ -17,16 +17,18 @@ input{
     height: 20px;
 }
 .add {
+  //  border:1px solid grey;   
+}  
+.animateur {
     border:1px solid grey;   
 }  
-
-.acheteur {
+.fournisseur {
     border:1px solid grey;   
 }  
 
 .add-adresscontainer {
     border:1px solid grey; 
-    width: 575px;
+    width: 529px;
     height: 172px; 
     background-color: aliceblue;
 }
@@ -36,4 +38,7 @@ input{
 .mat-raised-button {
     background-color: blue;
     color: white;
+}
+.inscrire {
+    border:1px solid chartreuse;  
 }

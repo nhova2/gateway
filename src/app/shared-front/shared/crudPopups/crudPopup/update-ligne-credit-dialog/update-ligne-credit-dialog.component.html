@@ -6,22 +6,22 @@
         <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
 <form class="example-container">
       <div fxLayout="column" fxFlex="50px">
-          <div fxLayout="row">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="5px">
               <div>
                   <mat-form-field>
                       <input matInput placeholder=" Libelle" >
                     </mat-form-field>
               </div>
-              <div>
-                <mat-form-field style="margin-left: 50%;margin-top:2%">
-                    <mat-select required >
-                      <mat-option value="option">Animateur A</mat-option>
-                    </mat-select>
-                </mat-form-field>
-            </div>
+              <div style="margin-left: 50%;margin-top:2%">
+                    <mat-form-field >
+                        <mat-select placeholder="Type Animateur" >
+                          <mat-option value="option">Animateur A</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
              
           </div>
-          <div fxLayout="row" style="margin-top: -3%;">
+          <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="5px">
                 <div>
                       <mat-form-field style="width: 200%;">
                               <textarea matInput placeholder="Description"></textarea>
@@ -30,7 +30,7 @@
                 </div>
               
             </div>
-            <div fxLayout="row" style="margin-top: -3%;">
+            <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="5px">
                 <div>
                     <mat-form-field>
                         <input matInput placeholder="Montant Actuel" type="number" >
@@ -38,7 +38,7 @@
                       </mat-form-field>
                 </div>
                 <div>
-                    <mat-form-field style="margin-left: 37%;">
+                    <mat-form-field >
                         <input matInput placeholder="Nouveau Montant" type="number" >
                         <span matPrefix>$&nbsp;</span>
                       </mat-form-field>
@@ -46,19 +46,23 @@
                   
                 </div>
        
-          <div fxLayout="row" style="margin-top: 40%;">
+          <div fxLayout="row" style="margin-top: 5%;">
             
-                <div style="margin-top:15%;">
+                <div>
                         <mat-slide-toggle> Urgent</mat-slide-toggle>
                 </div>
-                <div style="margin-left: 334%;margin-top: -50%;">
-                    <mat-form-field>
-                        <label>Date</label><br>
-                       <input matInput type="date" >
-                        <mat-icon matSuffix>date_range</mat-icon>
-                    </mat-form-field>
-                </div>
+              
           </div>
+          
+          <div fxLayout="row" style="margin-top: -13%;" fxLayout.xs="column" fxLayoutGap="5px">
+                <div style="margin-left: 111%;margin-top: -50%;">
+                        <mat-form-field>
+                            <label>Date</label><br>
+                           <input matInput type="date" >
+                            <mat-icon matSuffix>date_range</mat-icon>
+                        </mat-form-field>
+                    </div>
+            </div>
         </div>
    
   

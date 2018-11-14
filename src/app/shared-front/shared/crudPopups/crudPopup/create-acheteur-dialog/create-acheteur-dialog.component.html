@@ -1,113 +1,114 @@
-
 <mat-dialog-content class="mat-typography">
-        <div class="title">
-            <h2 mat-dialog-title >Creation Acheteur</h2>
-            </div>
-        <button href="#" class="facebook">Inscription via facebook</button>
-        <button href="#" class="google">Inscription via Google+</button>
+    <div class="title">
+        <h2 mat-dialog-title>Creation Acheteur</h2>
+    </div>
+    <button href="#" class="facebook">Inscription via facebook</button>
+    <button href="#" class="google">Inscription via Google+</button>
     <form class="example-container">
-          <div fxLayout="column" fxFlex="50px">
-              
-              <div fxLayout="row" style="margin-top: 10%;">
-                  <div>
-                      <mat-form-field >
-                          <input matInput placeholder="Nom">
-                        </mat-form-field>
-                  </div>
-                  <div style="margin-left: 130%;">
-                      <mat-form-field >
-                          <input matInput placeholder="Prenom" >
-                        </mat-form-field>
-                  </div>
-              </div>
-              <div fxLayout="row" style="margin-top: -38%;">
-                  <div>
-                        <mat-form-field>
-                                <input matInput placeholder="Enter your email" [formControl]="email" required>
-                                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                              </mat-form-field>
-                        
-                  </div>
-                  <div style="margin-left: 130%;">
-                      <mat-form-field  hintLabel="Max 10 chiffres" >
-                          <input matInput placeholder="Telephone" #input maxlength="10" >
-                          <mat-icon matSuffix>phone</mat-icon>
-                        </mat-form-field>
-                  </div>
-              </div>
-              <div fxLayout="row" style="margin-top: -5%;">
-                  <div>
-                        <mat-form-field>
-                                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </mat-form-field>
-                  </div>
-                  <div style="margin-left: 90%;">
-                        <mat-form-field>
-                                <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
-                                <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                        </mat-form-field>
-                  </div>
-              </div>
-              <div fxLayout="row" style="margin-top: -16%;">
-                    <div>
-                          <mat-form-field>
-                                  <input matInput placeholder="Reference Bancaire" required>
-                               <!--   <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
-                                </mat-form-field>
-                          
-                    </div>
-                    <div style="margin-left: 130%;">
-                        <mat-form-field>
-                            <input matInput placeholder="Montant Caution" type="number" >
-                            <span matPrefix>$&nbsp;</span>
-                          </mat-form-field>
-                    </div>
+        <div fxLayout="column" fxFlex="50px">
+
+            <div fxLayout="row" style="margin-top: 10%;" fxLayout.xs="column" fxLayoutGap="10px">
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Nom">
+                    </mat-form-field>
                 </div>
-              <div fxLayout="row" style="margin-top: 2%;">
-                  <div style="margin-top: 43%;">
-                          <mat-slide-toggle> Acteur Client</mat-slide-toggle>
-                  </div>
-                  <div style="margin-left: 240%; ">
-                             <mat-form-field >
-                                <input matInput placeholder="rechercher">
-                                 <mat-icon matSuffix style="margin-left: 12%;">search</mat-icon>
-                              </mat-form-field>
-       
-                  </div>
-              </div>
-    
-              <div fxLayout="row" style="margin-top: -12%;">
-                  <div>
-                      <mat-form-field style="width: 52%;">
-                          <label>Type Acteur</label><br><br>
-                          <mat-select required >
-                            <mat-option>-- None --</mat-option>
-                            <mat-option value="option">Option</mat-option>
-                          </mat-select>
-                      </mat-form-field>
-                  </div>
-                <div style="margin-left: 132%; margin-top: 39%;">
-                        <mat-dialog-actions>
-                                <button mat-button class="add">add role/+Niv. Agreement</button>
-                              </mat-dialog-actions>
-                  </div>
-                
-                  <div style="margin-left: 90%;margin-top: 39%;">
-                        <mat-dialog-actions>
-                                <button mat-button class="acheteur">Acheteur</button>
-                              </mat-dialog-actions>
-                  </div>
-                
-              </div>
-           
-              <div fxLayout="row" >
-                  
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Prenom">
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxLayout="row" style="margin-top: -38%;" fxLayout.xs="column" fxLayoutGap="10px">
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter your email" [formControl]="email" required>
+                        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                    </mat-form-field>
+
+                </div>
+                <div>
+                    <mat-form-field hintLabel="Max 10 chiffres">
+                        <input matInput placeholder="Telephone" #input maxlength="10">
+                        <mat-icon matSuffix>phone</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxLayout="row" style="margin-top: -5%;" fxLayout.xs="column" fxLayoutGap="10px">
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxLayout="row" style="margin-top: -16%;" fxLayout.xs="column" fxLayoutGap="10px">
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Reference Bancaire" required>
+                        <!--   <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>-->
+                    </mat-form-field>
+
+                </div>
+                <div>
+                    <mat-form-field>
+                        <input matInput placeholder="Montant Caution" type="number">
+                        <span matPrefix>$&nbsp;</span>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div fxLayout="row" style="margin-top: 2%;" fxLayout.xs="column" fxLayoutGap="10px">
+                <div style="margin-top: 43%;">
+                    <mat-slide-toggle> Acteur Client</mat-slide-toggle>
+                </div>
+                <div>
+                    <mat-form-field style="margin-top:-45%; margin-left: 25%">
+                        <input matInput placeholder="rechercher">
+                        <mat-icon matSuffix style="margin-left: 12%;">search</mat-icon>
+                    </mat-form-field>
+
+                </div>
+            </div>
+
+            <div fxLayout="row" style="margin-top: -12%;" fxLayout.xs="column" fxLayoutGap="10px">
+                <div>
+                    <mat-form-field>
+                        <mat-select placeholder="Type Acteur">
+                            <mat-option value="option">Type Acteur</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div style="margin-top: -4%;">
+                    <mat-dialog-actions>
+                        <button mat-button class="add">add role/+Niv. Agreement</button>
+                    </mat-dialog-actions>
+                </div>
+
+                <div>
+                    <mat-dialog-actions>
+                        <button mat-button class="acheteur">Acheteur</button>
+                    </mat-dialog-actions>
+                </div>
+
+            </div>
+
+            <div fxLayout="row">
+              
                     <div>
                                     <h2 mat-dialog-title>Ajouter Adresse</h2>
                                     <form class="add-adresscontainer">
                                             <div fxLayout="column" fxFlex="100px">
-                                                <div fxLayout="row">
+                                                <div fxLayout="row" >
                                                     <div>
                                                     <mat-form-field style ="width: 35%; margin-left: 6%;">
                                                         <input matInput placeholder="No">
@@ -116,13 +117,13 @@
                                                 
                                                 <div>
                                                 
-                                                      <mat-form-field style="width: 200%;">
+                                                      <mat-form-field style="width: 170%;">
                                                         <textarea matInput placeholder="Rue"></textarea>
                                                       </mat-form-field>
                                                 
                                                 </div>
                                             </div>
-                                            <div fxLayout="row" style="margin-top: -20%;">
+                                            <div fxLayout="row" style="margin-top: -20%;" >
                                                     <div>
                                                             <mat-form-field style ="width: 55%; margin-left: 6%;">
                                                                     <input matInput placeholder=" Code postal">
@@ -134,11 +135,10 @@
                                                                   </mat-form-field>
                                                     </div>
                                              </div>
-                                                <div fxLayout="row" style="margin-top: -23%;">
-                                                        <div>
-                                                                <mat-form-field style="width: 100%; margin-left: 6%;">
-                                                                <label >Pays</label><br><br>
-                                                                <mat-select required  >
+                                                <div fxLayout="row" style="margin-top: -23%; margin-left: 11%;">
+                                                        <div style="width: 100%; margin-left: 11%;">
+                                                                <mat-form-field >
+                                                                <mat-select placeholder="Pays"   >
                                                                         <mat-option>-- None --</mat-option>
                                                                         <mat-option value="option">Senegal</mat-option>
                                                                         <mat-option value="option">France</mat-option>
@@ -148,9 +148,9 @@
                                                         </div>
                                                         
                                                 </div>
-                                                <div fxLayout="row" style="margin-top: -12%;">
+                                                <div fxLayout="row" style="margin-top: -12%;" fxLayout.xs="column" fxLayoutGap="10px">
                                                         <div>
-                                                                <mat-dialog-actions style="margin-left:480px; margin-top: -9%;">
+                                                                <mat-dialog-actions style="margin-left:434px; margin-top: -10%;">
                                                                         <button mat-raised-button color="accent" class="">Ajout</button>
                                                                       </mat-dialog-actions>
                                                           
@@ -161,18 +161,16 @@
                                      </form>
                           
                                     </div>
-                                    <div  style="margin-left:-360%; width: 100%;">
-                                            <mat-form-field >
+                                    <div>
+                                            <mat-form-field  style="margin-left: -192px;">
                                                 <input matInput placeholder="CNI">
                                               </mat-form-field>
                                         </div>
                 </div>
-            </div>
-       
-      
+        </div>
     </form>
-    </mat-dialog-content>
-    <mat-dialog-actions align="end">
-      <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
-      <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>Inscrire</button>
-    </mat-dialog-actions>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>Inscrire</button>
+</mat-dialog-actions>

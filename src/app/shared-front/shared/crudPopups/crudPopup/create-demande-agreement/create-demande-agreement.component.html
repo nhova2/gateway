@@ -4,65 +4,56 @@
         <h2 mat-dialog-title >Demande Agreement</h2>
         </div>
 <form class="example-container">
-      <div fxLayout="column" fxFlex="50px">
-          <div fxLayout="row">
-              <div>
-                <mat-form-field style="margin-top:2%">
-                    <mat-select required >
-                      <mat-option value="option">Emetteur</mat-option>
-                    </mat-select>
-                </mat-form-field>
-              </div>
-             
-          </div>
-          <div fxLayout="row" style="margin-top: -3%;">
-                <div>
-                    <mat-form-field style="margin-top:2%">
-                        <label>Destiné à</label><br><br><br>
-                        <mat-select required >
-                          <mat-option value="option">Type de pret</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-              
-            </div>
-            <div fxLayout="row" style="margin-top: -3%;">
-                <div>
-                    <mat-form-field style="margin-top:2%">
-                        <label>Role Demandé</label><br><br><br>
-                        <mat-select required >
-                          <mat-option value="option">Fournisseur</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-            </div>
-                <div fxLayout="row" style="margin-top: -3%;">
-                    <div>
-                        <mat-form-field style="margin-top:2%">
-                            <label>Niveau Agreement</label><br><br><br>
-                            <mat-select required >
-                              <mat-option value="option">Niveau 3</mat-option>
-                            </mat-select>
-                        </mat-form-field>
+        <div fxLayout="column" fxFlex="50px">
+                <div fxLayout="row"fxLayout.xs="column" fxLayoutGap="5px">
+                      <div style="margin-top:-9%">
+                                  <mat-form-field>
+                                      <mat-select placeholder="Emetteu" >
+                                      <mat-option value="option">Emetteur</mat-option>
+                                      </mat-select>
+                                  </mat-form-field>
+                      </div>
+                    <div style="margin-left:461%;margin-top:-17%">
+                              <mat-form-field >
+                                  <mat-select placeholder="Destiné à" >
+                                    <mat-option value="option">Type de pret</mat-option>
+                                  </mat-select>
+                              </mat-form-field>
                     </div>
-                  
                 </div>
-       
-          <div fxLayout="row" style="margin-top: 40%;">
-            
-                <div style="margin-top:15%;">
-                        <mat-slide-toggle> Urgent</mat-slide-toggle>
-                </div>
-                <div style="margin-left: 328%;margin-top: -50%;">
-                    <mat-form-field>
-                        <label>Date</label><br>
-                       <input matInput type="date" >
-                        <mat-icon matSuffix>date_range</mat-icon>
-                    </mat-form-field>
-                </div>
-          </div>
-        </div>
-   
+             
+                  <div fxLayout="row" style="margin-top: -3%;"fxLayout.xs="column" fxLayoutGap="5px">
+                    <div>
+                          <mat-form-field>
+                              <mat-select placeholder="Role demandé" >
+                                <mat-option value="option">Fournisseur</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+                    </div> 
+                     <div >
+                               <mat-form-field >
+                                   <mat-select placeholder="Niveau Agreement" >
+                                     <mat-option value="option">Niveau agreement 3</mat-option>
+                                   </mat-select>
+                               </mat-form-field>
+                     </div> 
+                  </div>
+                  <div fxLayout="row" >
+                        <div style="margin-top:15%;">
+                                <mat-slide-toggle> Urgent</mat-slide-toggle>
+                        </div>
+                  </div> 
+             
+                    <div fxLayout="row" style="margin-top: 40%;"fxLayout.xs="column" fxLayoutGap="5px">
+                        <div style="margin-left: 287%;margin-top: -68%;">
+                            <mat-form-field>
+                                <label>Date</label><br>
+                                <input matInput type="date" >
+                                <mat-icon matSuffix>date_range</mat-icon>
+                            </mat-form-field>
+                        </div>
+                    </div>
+              </div>
   
 </form>
 </mat-dialog-content>

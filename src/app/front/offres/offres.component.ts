@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 @Component({
     selector: 'app-offres',
@@ -10,6 +11,14 @@ export class OffresComponent {
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public viewCol: number = 25;
+  /**
+     * Constructor
+     *
+     * 
+     * @param {FuseSidebarService} _fuseSidebarService
+     * 
+     */
+  constructor(private _fuseSidebarService: FuseSidebarService) { }
   public slides = [
       { title: 'The biggest sale', subtitle: '...   ...', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
       { title: 'Summer collection', subtitle: 'New Arrivals On Sale', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
@@ -35,6 +44,7 @@ export class OffresComponent {
   
   toggleSidebar(name): void
     {
-        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+        // TODO 
+        this._fuseSidebarService.getSidebar(name).toggleOpen();
     }
 }

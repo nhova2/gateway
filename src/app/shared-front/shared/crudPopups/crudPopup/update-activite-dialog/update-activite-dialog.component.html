@@ -6,7 +6,7 @@
             <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
     <form class="example-container">
           <div fxLayout="column" fxFlex="50px">
-              <div fxLayout="row">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
                   <div>
                       <mat-form-field>
                           <input matInput placeholder="Nom Activite" >
@@ -15,7 +15,7 @@
                   </div>
                  
               </div>
-              <div fxLayout="row" style="margin-top: -3%;">
+              <div fxLayout="row" style="margin-top: -3%;"  fxLayout.xs="column" fxLayoutGap="10px">
                   <div>
                         <mat-form-field style="width: 200%;">
                                 <textarea matInput placeholder="Description"></textarea>
@@ -25,23 +25,22 @@
               </div>
               <div fxLayout="row" style="margin-top: -3%;">
                     <div>
-                          <mat-form-field>
-                                  <mat-select required >
-                                        <mat-option value="option">peche</mat-option>
-                                        </mat-select>
-                           </mat-form-field>
+                           <mat-form-field>
+                                <mat-select placeholder="Domaine">
+                                  <mat-option value="option">peche</mat-option>
+                                </mat-select>
+                            </mat-form-field>
                        
                     </div>
+                    
                     <div>
-                          <div style="margin-top:15%;">
-                                  <mat-slide-toggle style="margin-left: 60%"> Statut Actif</mat-slide-toggle>
-                          </div>
+                            <mat-slide-toggle style=" margin-top: 21%; margin-left:28%" > Statut Actif</mat-slide-toggle>
                     </div>
                   
                 </div>
            
               
-              <div fxLayout="row" style="margin-top: 40%;">
+              <div fxLayout="row" style="margin-top: 40%;" >
                     <div>    
                       <h4 mat-dialog-title >Modifier Logo</h4>
                       <mat-dialog-actions style="margin-left: 104px;margin-top: -43%;">
@@ -53,7 +52,7 @@
                     </mat-dialog-actions>   
                   </div>
               </div>
-              <div fxLayout="row" style="margin-top: 40%;">
+              <div fxLayout="row" style="margin-top: 40%;"  fxLayout.xs="column" fxLayoutGap="10px">
                     <div>
                           <mat-form-field>
                               <label>Debut</label><br>

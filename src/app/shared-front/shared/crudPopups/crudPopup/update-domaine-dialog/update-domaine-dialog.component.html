@@ -11,7 +11,6 @@
                       <mat-form-field>
                           <input matInput placeholder="Nom Domaine" >
                         </mat-form-field>
-                     
                   </div>
                  
               </div>
@@ -35,21 +34,19 @@
                   </div>
                   <div>
                         <div style="margin-top:3%;">
-                                <mat-slide-toggle style="margin-left: 90%"> Statut Actif</mat-slide-toggle>
+                                <mat-slide-toggle style="margin-left: 25%"> Statut Actif</mat-slide-toggle>
                         </div>
                   </div>
               </div>
-              <div fxLayout="row" style="margin-top: 40%;">
-                  <div>
-                        <label>Ajout Activite</label>
-                        <mat-form-field style="width:70%;margin-top:-5%;">
-                          <mat-select required >
-                            <mat-option>-- None --</mat-option>
-                            <mat-option value="option">Nom activite </mat-option>
-                          </mat-select>
-                        </mat-form-field>
+              <div fxLayout="row">
+                  <div  style="margin-top: 34%;">
+                        <mat-form-field>
+                                <mat-select placeholder="Ajout Activite">
+                                  <mat-option value="option">Nom activite</mat-option>
+                                </mat-select>
+                            </mat-form-field>
                   </div>
-                  <div>
+                  <div style="margin-left: 75%;margin-top: 27%;">
                         <mat-dialog-actions>
                         <button mat-raised-button color="primary" mat-dialog-close>Ajouter</button>
                     </mat-dialog-actions>

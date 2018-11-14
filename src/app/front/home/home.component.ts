@@ -4,6 +4,7 @@ import { Product } from '../../front/app.models';
 import { MatDialog } from '@angular/material';
 import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
 import { navigation } from 'app/navigation/navigation';
+import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,18 @@ export class HomeComponent {
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public brands = [];
-  constructor(public appService: AppService, private _fuseNavigationService: FuseNavigationService) {
+
+  /**
+     * Constructor
+     *
+     * 
+     * @param {FuseSidebarService} _fuseSidebarService
+     * 
+     */
+
+  constructor(public appService: AppService, 
+    private _fuseNavigationService: FuseNavigationService,
+    private _fuseSidebarService: FuseSidebarService) {
 
     this.navigation = navigation;
 
@@ -47,7 +59,7 @@ export class HomeComponent {
     if (window.innerWidth < 1280) {
       this.viewCol = 33.3;
     };
-  }
+  
   public getBrands() {
     this.brands = this.appService.getBrands();
   }
@@ -58,7 +70,7 @@ export class HomeComponent {
     })
   }
 
-  @HostListener('window:resize')
+ @HostListener('window:resize')
   public onWindowResize(): void {
     (window.innerWidth < 960) ? this.sidenavOpen = false : this.sidenavOpen = true;
     (window.innerWidth < 1280) ? this.viewCol = 33.3 : this.viewCol = 25;
@@ -66,6 +78,7 @@ export class HomeComponent {
 
   toggleSidebar(name): void
     {
-        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+        // TODO 
+    this._fuseSidebarService.getSidebar(name).toggleOpen();
     }
 }

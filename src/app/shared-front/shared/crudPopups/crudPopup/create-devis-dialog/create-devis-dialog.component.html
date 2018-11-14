@@ -5,7 +5,7 @@
             </div>
             <form class="example-container">
                     <div fxLayout="column" fxFlex="50px">
-                        <div fxLayout="row">
+                        <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="5px">
                             <div>
                                 <mat-form-field>
                                     <input matInput placeholder="Emetteur Offre" >
@@ -18,9 +18,9 @@
             <mat-card>
 
                     <div class="mat-table cart-table">
-                      <div class="mat-header-row">
+                      <div class="mat-header-row" fxLayout.xs="column" fxLayoutGap="5px">
                         <div class="mat-header-cell"><img src="../../../assets/images/Panier/FineTech_PS_Elmt_Panier_Reacp_Icon.png" alt=""></div>
-                        <div class="mat-header-cell" style="margin-top: -1.8%;"><p class="countproduct">001</p><p class="products">Produits</p></div>
+                        <div class="mat-header-cell" style="margin-top: 1.2%;"><p class="countproduct">001</p><p class="products">Produits</p></div>
                         <div class="mat-header-cell productpolice">Nom</div>
                         <div class="mat-header-cell productpolice">Prix</div>      
                         <div class="mat-header-cell productpolice">Total</div>
@@ -30,7 +30,7 @@
                           </div>
                         </div>
                       </div>
-                      <div class="mat-row">
+                      <div class="mat-row" fxLayout.xs="column" fxLayoutGap="5px">
                         <div class="mat-cell"><img src="../../../assets/images/Panier/Panier_Produit.jpg" alt=""></div>
                         <div class="mat-cell handle-counter" id="handleCounter">
                           <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
@@ -54,7 +54,7 @@
                         </div>
                         
                       </div>
-                      <div class="mat-row">
+                      <div class="mat-row" fxLayout.xs="column" fxLayoutGap="5px">
                         <div class="mat-cell"><a [routerLink]="['/']" mat-raised-button color="primary" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 11pt">Continuer Achat</a></div>
                         <div class="mat-cell"></div>
                         <div class="mat-cell"></div>

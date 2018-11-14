@@ -6,7 +6,7 @@
             <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
     <form class="example-container">
           <div fxLayout="column" fxFlex="50px">
-              <div fxLayout="row">
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="10px">
                   <div>
                       <mat-form-field>
                           <input matInput placeholder="Nom Operation" >
@@ -15,7 +15,7 @@
                   </div>
                  
               </div>
-              <div fxLayout="row" style="margin-top: -3%;">
+              <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="10px">
                   <div>
                         <mat-form-field style="width: 200%;">
                                 <textarea matInput placeholder="Description Operation"></textarea>
