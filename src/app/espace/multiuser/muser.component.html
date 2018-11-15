@@ -1,6 +1,69 @@
-<div class="content">
-<div id="espace-acheteur-id" *ngIf="bool_acheteur"></div>
-<div id="espace-administrateur-id" *ngIf="bool_administrateur"></div>
-<div id="espace-fournisseur-id" *ngIf="bool_fournisseur"></div>
-<div id="espace-animateur-id" *ngIf="bool_animateur"></div>
-</div>
+<div fxLayout="column" fxFlex="100">   
+        <div class="px-24 py-8">
+            <div fxLayout="row" fxLayoutGap="100px">
+                <div style="display:inline-flex">
+                    <mat-form-field>
+                        <mat-select placeholder="Domaine" disableRipple>
+                            <mat-option value="1">Domaine 1</mat-option>
+                            <mat-option value="2">Domaine 2</mat-option>
+                            <mat-option value="3">Domaine 3</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div style="display:inline-flex">
+                    <mat-form-field>
+                        <input matInput placeholder="rechercher">
+                    </mat-form-field>
+                </div>
+                <div style="display:inline-flex">
+                    <!--mat-form-field>
+                        <mat-select placeholder="Role" disableRipple>
+                            <mat-option value="1">Animateur</mat-option>
+                            <mat-option value="2">Acheteur</mat-option>
+                            <mat-option value="3">Fournisseur</mat-option>
+                        </mat-select>
+                    </mat-form-field-->
+                    <mat-form-field>
+                        <mat-select placeholder="Role" (selectionChange)="changeNavigation($event.value)">
+                            <mat-option *ngFor="let role of roles" [value]="role.value">
+                                {{ role.Name }}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="page-layout carded left-sidebar">
+             <!-- SIDEBAR -->
+             <fuse-sidebar class="sidebar" name="carded-right-sidebar-1" position="end" lockedOpen="gt-md">
+                    <!-- SIDEBAR CONTENT -->
+                    <div class="content p-24">
+                        <!--admin-sidebar></admin-sidebar-->
+                        <mat-grid-list cols="1" rowHeight="2:1">
+                                <mat-grid-tile><button mat-button class="block"><mat-icon>brightness_low</mat-icon> Option Button 1</button></mat-grid-tile>
+                                <mat-grid-tile><button mat-button class="block"><mat-icon>done_outline</mat-icon> Option Button 2</button></mat-grid-tile>
+                                <mat-grid-tile><button mat-button class="block"><mat-icon>graphic_eq</mat-icon> Option Button 3</button></mat-grid-tile>
+                              </mat-grid-list>
+                              <filter-sidebar></filter-sidebar>
+                    </div>
+                </fuse-sidebar>
+                <!-- / SIDEBAR -->
+            <!-- CENTER -->
+            <div class="center pb-4" style="margin-left:10px !important">
+                <!-- CONTENT CARD -->
+                <div class="content-card px-5">
+                    <!-- CONTENT TOOLBAR -->
+                   <div class="toolbar px-24 py-8">
+                        <ng-marquee duration="20">
+                            <mark>
+                                Echec remboursement<mat-icon>error</mat-icon>    Fin de Stock produit<mat-icon>error</mat-icon>    Retard livraison<mat-icon>error</mat-icon>   Retard Paiement<mat-icon>error</mat-icon>    Echéance Pret<mat-icon>error</mat-icon>
+                            </mark>
+                        </ng-marquee>
+                    </div>
+                    <div content class="content p-24">
+                      <router-outlet></router-outlet>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

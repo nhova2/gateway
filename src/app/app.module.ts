@@ -177,26 +177,6 @@ const appRoutes: Routes = [
 	{
         path: '',
         component: FournisseurComponent, children: [
-            /*{
-                path: 'main-fourniss',
-                loadChildren: './espace/fournisseur/main/main-fourniss.module#MainFournissModule'
-            },
-            { 
-                path: 'fourniss-alertes',
-                loadChildren: './espace/fournisseur/alertes/fournisseur-alertes.module#AlertesFournisseurModule'
-            },
-            {
-                path: 'fourniss-suivi',
-                loadChildren: './espace/fournisseur/suivi-historique/suivi-historique.module#SuiviHistoriqueModule'
-            },
-            {
-                path: 'fourniss-statistique',
-                loadChildren: './espace/fournisseur/statistique/fourniss-statistique.module#StatistiqueFournissModule'
-            },
-            {
-                path: 'fourniss-gestion',
-                loadChildren: './espace/fournisseur/gestion/gestion.module#GestionFournissModule'
-            },*/
             {
                 path: 'main-livraisons',
                 loadChildren: './espace/fournisseur/four-livraisons/fournisseur-livraisons.module#LivraisonsFournisseurModule'
@@ -251,25 +231,30 @@ const appRoutes: Routes = [
 	{
         path: '',
         component: MultiUserComponent, children: [
-            {
-                path: 'main-muser',
-                loadChildren: './espace/multiuser/main/main-muser.module#MainMuserModule'
+           /* {
+                path: 'main-mode-fournisseur',
+                loadChildren: './espace/fournisseur/mode-multi-fourniss.module#MainMultiFournissModule'
             },
+            {
+                path: 'main-mode-animateur',
+                loadChildren: './espace/animateur/mode-multi-anim.module#MainMultiAnimModule'
+            },*/
+            
             { 
-                path: 'muser-alertes',
-                loadChildren: './espace/multiuser/alertes/multiuser-alertes.module#AlertesMultiuserModule'
+                path: 'muser-fournisseur',
+                loadChildren: './espace/fournisseur/main/main-fourniss.module#MainFournissModule'
+            }/*,
+            {
+                path: 'muser-banque',
+                loadChildren: './espace/banque/accueil/accueil.module#AccueilModule'
             },
             {
-                path: 'muser-suivi',
-                loadChildren: './espace/multiuser/suivi-historique/suivi-historique.module#SuiviHistoriqueModule'
-            },
-            {
-                path: 'muser-statistique',
-                loadChildren: './espace/multiuser/statistique/muser-statistique.module#StatistiqueMuserModule'
-            },
-            {
-                path: 'muser-gestion',
-                loadChildren: './espace/multiuser/gestion/gestion.module#GestionMuserModule'
+                path: 'muser-animateur',
+                loadChildren: './espace/animateur/statistique/muser-statistique.module#StatistiqueMuserModule'
+            },*/
+            ,{
+                path: 'muser-administrateur',
+                loadChildren: './espace/administrateur/main/main.module#MainModule'
             }
         ]
     },
@@ -333,8 +318,8 @@ const appRoutes: Routes = [
         AcheteurComponent,
         AnimateurComponent,
         FournisseurComponent,
-        MultiUserComponent,
-        AppFilterSidebarComponent
+        MultiUserComponent
+        ,AppFilterSidebarComponent
 
     ],
     imports     : [
@@ -370,7 +355,9 @@ const appRoutes: Routes = [
         
         // New modules
         NgMarqueeModule,
-        Ng5SliderModule
+        Ng5SliderModule,
+        //MainMultiAnimModule,
+        //MainMultiFournissModule
     ],
     bootstrap   : [
         AppComponent

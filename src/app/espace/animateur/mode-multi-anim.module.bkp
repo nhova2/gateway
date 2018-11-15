@@ -1,0 +1,56 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { AnimateurComponent } from './anim.component';
+import { MatSelectModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { FuseSidebarModule, FuseProgressBarModule, FuseThemeOptionsModule, FuseDemoModule } from '@fuse/components';
+import { SharedModule } from 'app/shared-front/shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+import { FuseSharedModule } from '@fuse/shared.module';
+import { LayoutModule } from '@angular/cdk/layout';
+import { AppStoreModule } from 'app/store/store.module';
+import { NgMarqueeModule } from 'ng-marquee';
+import { Ng5SliderModule } from 'ng5-slider';
+import { AppFilterSidebarComponent } from 'app/commons/filter-sidebar/filter-sidebar.component';
+import { MainMultiFournissModule } from '../fournisseur/mode-multi-fourniss.module';
+
+export const routes = [
+  { 
+    path: '', 
+    component: AnimateurComponent, 
+    pathMatch: 'full' 
+	/*,resolve  : 
+    {
+      data: MuserHomeService
+    }*/
+  }
+];
+@NgModule({
+  imports: [
+    RouterModule.forChild(routes),
+      MatSelectModule,
+      MatSelectModule,
+      CommonModule,
+HttpClientModule,
+MatMomentDateModule,
+MatButtonModule,
+MatIconModule,
+FuseProgressBarModule,
+FuseSharedModule,
+FuseSidebarModule,
+FuseThemeOptionsModule,
+LayoutModule,
+AppStoreModule,
+SharedModule,
+FuseDemoModule,
+NgMarqueeModule,
+Ng5SliderModule,
+MainMultiFournissModule
+  ],
+  providers   : [],
+  declarations: [AnimateurComponent],
+  exports: [AnimateurComponent]
+})
+export class MainMultiAnimModule { }

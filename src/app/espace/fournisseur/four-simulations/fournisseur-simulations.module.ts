@@ -7,7 +7,6 @@ import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 //import { FoSimulationListComponent } from './simulation-list/fourn-simulation-list.component';
 import { AppSimulationComponent } from 'app/commons/simulation/simulation.component';
-import { FoSimulationListComponent } from './simulation-list/fourn-simulation-list.component';
 
 
 export const routes = [
@@ -23,6 +22,6 @@ export const routes = [
     MatInputModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [AppSimulationComponent,FoSimulationListComponent]
+  declarations: [AppSimulationComponent]
 })
 export class SimulationsFournisseurModule { }

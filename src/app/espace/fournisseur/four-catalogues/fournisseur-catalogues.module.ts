@@ -96,7 +96,7 @@ export const routes = [
 	FuseWidgetModule
   ],
   declarations: [
-	FoCatalogueListComponent,
+	//FoCatalogueListComponent,
 	EcommerceProductsComponent,
 	EcommerceProductComponent,
 	EcommerceOrdersComponent,
