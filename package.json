@@ -4,7 +4,7 @@
   "license": "https://themeforest.net/licenses/terms/regular",
   "scripts": {
     "ng": "ng",
-    "start": "node --max_old_space_size=4096 --optimize_for_size --max_executable_size=4096 --stack_size=4096 server.js",
+    "start": "ng serve --open",
     "fix-memory-limit": "cross-env LIMIT=4096 increase-memory-limit",
     "start-hmr": "ng serve --configuration hmr --source-map=false --hmr-warning=false",
     "start-hmr-sourcemaps": "ng serve --configuration hmr --source-map=true --hmr-warning=false",
@@ -15,8 +15,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "bundle-report": "webpack-bundle-analyzer dist/stats.json",
-    "postinstall": "ng build --aot --prod"
+    "bundle-report": "webpack-bundle-analyzer dist/stats.json"
   },
   "private": true,
   "dependencies": {

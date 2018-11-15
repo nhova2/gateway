@@ -59,7 +59,7 @@ export class HomeComponent {
     if (window.innerWidth < 1280) {
       this.viewCol = 33.3;
     };
-  
+  }
   public getBrands() {
     this.brands = this.appService.getBrands();
   }

@@ -18,14 +18,14 @@ export class AuthenticationComponent implements OnInit {
   }
  
   login (): void {
-
-    if (this.username === 'banq' && this.password === 'banq'){
-      console.log("auth banq");
-      this.router.navigate(['banque']);
-    }
-    else if (this.username === 'admin' && this.password === 'admin') {
+    if (this.username === 'admin' && this.password === 'admin'){
 		console.log("auth admin");
       this.router.navigate(['main']);
+    }
+    else if (this.username === 'banq' && this.password === 'banq') {
+		console.log("auth banq");
+      this.router.navigate(['banque']);
+     
     }
     else if (this.username === 'acheteur' && this.password === 'acheteur') {
 		console.log("auth acheteur");
@@ -44,7 +44,7 @@ export class AuthenticationComponent implements OnInit {
     }
 	else if (this.username === 'multi' && this.password === 'multi') {
 		console.log("auth multiuser");
-      this.router.navigate(['main-muser']);
+      this.router.navigate(['main-mode-fournisseur']);
       
     }
     else{

@@ -3,7 +3,7 @@ export class AcademyFakeDb
     public static courses = [
         {
             'id'      : '15459251a6d6b397565',
-            'title'   : 'Basics of Angular',
+            'title'   : 'Demande Ligne Depot',
             'slug'    : 'basics-of-angular',
             'category': 'web',
             'length'  : 30,
@@ -11,7 +11,7 @@ export class AcademyFakeDb
         },
         {
             'id'      : '154588a0864d2881124',
-            'title'   : 'Basics of TypeScript',
+            'title'   : 'Demande Ligne de Credit',
             'slug'    : 'basics-of-typeScript',
             'category': 'web',
             'length'  : 60,
@@ -19,7 +19,7 @@ export class AcademyFakeDb
         },
         {
             'id'      : '15453ba60d3baa5daaf',
-            'title'   : 'Android N: Quick Settings',
+            'title'   : 'Simulation Pret',
             'slug'    : 'android-n-quick-settings',
             'category': 'android',
             'length'  : 120,
@@ -27,7 +27,7 @@ export class AcademyFakeDb
         },
         {
             'id'      : '15453a06c08fb021776',
-            'title'   : 'Keep Sensitive Data Safe and Private',
+            'title'   : 'Financer Devis',
             'slug'    : 'keep-sensitive-data-safe-and-private',
             'category': 'android',
             'length'  : 45,
@@ -35,7 +35,7 @@ export class AcademyFakeDb
         },
         {
             'id'      : '15427f4c1b7f3953234',
-            'title'   : 'Building a gRPC Service with Java',
+            'title'   : 'Gestion Agreement',
             'slug'    : 'building-a-grpc-service-with-java',
             'category': 'cloud',
             'length'  : 30,
@@ -43,7 +43,7 @@ export class AcademyFakeDb
         },
         {
             'id'      : '1542d75d929a603125',
-            'title'   : 'Build a PWA Using Workbox',
+            'title'   : 'Creer Compte',
             'slug'    : 'build-a-pwa-using-workbox',
             'category': 'web',
             'length'  : 120,
@@ -51,12 +51,12 @@ export class AcademyFakeDb
         },
         {
             'id'      : '1543ee3a5b43e0f9f45',
-            'title'   : 'Build an App for the Google Assistant with Firebase and Dialogflow',
+            'title'   : 'Creer Acteur',
             'slug'    : 'build-an-app-for-the-google-assistant-with-firebase-and-dialogflow',
             'category': 'firebase',
             'length'  : 30,
             'updated' : 'Jun 28, 2017'
-        },
+        }/*,
         {
             'id'      : '1543cc4515df3146112',
             'title'   : 'Cloud Functions for Firebase',
@@ -144,7 +144,7 @@ export class AcademyFakeDb
             'category': 'firebase',
             'length'  : 90,
             'updated' : 'Jun 28, 2017'
-        }
+        }*/
     ];
 
     public static categories = [
@@ -572,7 +572,7 @@ export class AcademyFakeDb
     public static course = [
         {
             'id'         : '15459251a6d6b397565',
-            'title'      : 'Basics of Angular',
+            'title'      : 'Demande Ligne Depot',
             'slug'       : 'basics-of-angular',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'web',
@@ -583,7 +583,7 @@ export class AcademyFakeDb
         },
         {
             'id'         : '154588a0864d2881124',
-            'title'      : 'Basics of TypeScript',
+            'title'      : 'Demande Ligne de Credit',
             'slug'       : 'basics-of-typeScript',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'web',
@@ -594,7 +594,7 @@ export class AcademyFakeDb
         },
         {
             'id'         : '15453ba60d3baa5daaf',
-            'title'      : 'Android N: Quick Settings',
+            'title'      : 'Simulation Pret',
             'slug'       : 'android-n-quick-settings',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'android',
@@ -605,7 +605,7 @@ export class AcademyFakeDb
         },
         {
             'id'         : '15453a06c08fb021776',
-            'title'      : 'Keep Sensitive Data Safe and Private',
+            'title'      : 'Financer Devis',
             'slug'       : 'keep-sensitive-data-safe-and-private',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'android',
@@ -616,7 +616,7 @@ export class AcademyFakeDb
         },
         {
             'id'         : '15427f4c1b7f3953234',
-            'title'      : 'Building a gRPC Service with Java',
+            'title'      : 'Gestion Agreement',
             'slug'       : 'building-a-grpc-service-with-java',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'cloud',
@@ -627,7 +627,7 @@ export class AcademyFakeDb
         },
         {
             'id'         : '1542d75d929a603125',
-            'title'      : 'Build a PWA Using Workbox',
+            'title'      : 'Creer Compte',
             'slug'       : 'build-a-pwa-using-workbox',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'web',
@@ -638,7 +638,7 @@ export class AcademyFakeDb
         },
         {
             'id'         : '1543ee3a5b43e0f9f45',
-            'title'      : 'Build an App for the Google Assistant with Firebase and Dialogflow',
+            'title'      : 'Creer Compte',
             'slug'       : 'build-an-app-for-the-google-assistant-with-firebase-and-dialogflow',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             'category'   : 'firebase',

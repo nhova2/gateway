@@ -28,7 +28,11 @@
 
                 <!-- CONTENT TOOLBAR -->
                <div class="toolbar px-24 py-8">
-
+                <ng-marquee duration="20">
+                    <mark>
+                        Echec remboursement<mat-icon>error</mat-icon>    Fin de Stock produit<mat-icon>error</mat-icon>    Retard livraison<mat-icon>error</mat-icon>   Retard Paiement<mat-icon>error</mat-icon>    Echéance Pret<mat-icon>error</mat-icon>
+                    </mark>
+                </ng-marquee>
                     <!--button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
                         <mat-icon>menu</mat-icon>
                     </button>
@@ -52,10 +56,10 @@
                     <span class="mr-5">
                         <h5 style="font-weight: bold"> <mat-icon>error</mat-icon> Echéance Pret</h5>
                     </span-->
-                    <div ng-controller="MyCtrl">
+                    <!--div ng-controller="MyCtrl">
                             <div angular-marquee scroll="scroll" duration="duration">{{title}}<span class="mr-5"><h5 style="font-weight: bold">Echec remboursement : 25</h5></span>    
                             </div>
-                    </div>
+                    </div-->
                 </div>
                 <div content class="content p-24">
                   <router-outlet></router-outlet>  

@@ -10,7 +10,6 @@ import { fournissNavigation } from './navigation/fourniss-navigation';
 export class FournisseurComponent {  
     navigation: any;
     constructor(private _fuseNavigationService: FuseNavigationService){
-
         this.navigation = fournissNavigation;
         
         // Register the navigation to the service
