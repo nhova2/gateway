@@ -95,6 +95,7 @@ import { CreateDemandeFinancementDevisDialogComponent } from './crudPopups/crudP
 import { UpdateDemandeFinancementDevisDialogComponent } from './crudPopups/crudPopup/update-demande-financement-devis-dialog/update-demande-financement-devis-dialog.component';
 import { CreateDemandeAgrementDialogComponent } from './crudPopups/crudPopup/create-demande-agreement/create-demande-agreement.component';
 import { UpdateDemandeAgrementDialogComponent } from './crudPopups/crudPopup/update-demande-agreement/update-demande-agreement.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
 @NgModule({
   imports: [
@@ -220,7 +221,8 @@ import { UpdateDemandeAgrementDialogComponent } from './crudPopups/crudPopup/upd
     CreateDemandeFinancementDevisDialogComponent,
     UpdateDemandeFinancementDevisDialogComponent,
     CreateDemandeAgrementDialogComponent,
-    UpdateDemandeAgrementDialogComponent
+    UpdateDemandeAgrementDialogComponent,
+    BreadcrumbComponent
   ],
   declarations: [
     RatingComponent,
@@ -270,7 +272,8 @@ import { UpdateDemandeAgrementDialogComponent } from './crudPopups/crudPopup/upd
     CreateDemandeFinancementDevisDialogComponent,
     UpdateDemandeFinancementDevisDialogComponent,
     CreateDemandeAgrementDialogComponent,
-    UpdateDemandeAgrementDialogComponent
+    UpdateDemandeAgrementDialogComponent,
+    BreadcrumbComponent
   ],
   entryComponents:[
     ProductDialogComponent,

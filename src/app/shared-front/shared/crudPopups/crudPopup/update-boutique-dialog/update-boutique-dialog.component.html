@@ -7,19 +7,19 @@
     <form class="example-container">
           <div fxLayout="column" fxFlex="50px">
               
-              <div fxLayout="row" style="margin-top: 10%;">
+              <div fxLayout="row" style="margin-top: 10%;"fxLayout.xs="column" fxLayoutGap="5px">
                   <div>
                       <mat-form-field >
                           <input matInput placeholder="Nom Boutique">
                         </mat-form-field>
                   </div>
-                  <div style="margin-left: 130%;">
-                      <mat-form-field >
+                  <div >
+                      <mat-form-field style="margin-left: 7%;">
                           <input matInput placeholder="Reference" >
                         </mat-form-field>
                   </div>
               </div>
-              <div fxLayout="row" style="margin-top: -38%;">
+              <div fxLayout="row" style="margin-top: -38%;"fxLayout.xs="column" fxLayoutGap="5px">
                   <div>
                         <mat-form-field style="width: 200%;">
                                 <textarea matInput placeholder="Description "></textarea>
@@ -40,7 +40,7 @@
                       </mat-dialog-actions>   
                     </div>
                     <div>
-                          <mat-form-field style="margin-left:68%;margin-top:-9%;">
+                          <mat-form-field style="margin-left:16%;margin-top:-9%;">
                                 <label>Proprietaire</label><br>
                                   <mat-select required >
                                     <mat-option value="option">Fournisseur N</mat-option>
@@ -48,32 +48,30 @@
                               </mat-form-field>
                     </div>
                 </div>
-                <div fxLayout="row" style="margin-top: 10%;">
+                <div fxLayout="row" style="margin-top: 10%;"fxLayout.xs="column" fxLayoutGap="5px">
                         <div>
-                            <label>Ajout Produits</label><br>
-                            <mat-form-field style="width: 52%;">
-                                <mat-select required >
-                                  <mat-option value="option">Produit</mat-option>
+                            <mat-form-field >
+                                <mat-select placeholder="Ajout Produits" >
+                                  <mat-option value="option">Produit M(QTY=220)</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
-                      <div style="margin-left: -154%;margin-top: 20%;">
+                      <div style="margin-left: 16%;margin-top: -8%;">
                               <mat-dialog-actions>
                                       <button  mat-raised-button color="primary" class="add">+ Ajouter</button>
                                     </mat-dialog-actions>
                         </div>
-                </div>
-                <div fxLayout="row" style="margin-top: -149%;margin-left:642%">
-                        <div>
-                            <label>Supprimer Produits</label><br>
-                            <mat-form-field style="width: 52%;">
-                                <mat-select required >
-                                  <mat-option value="option">Produit</mat-option>
+                
+
+                        <div style="margin-left:25%">
+                            <mat-form-field>
+                                <mat-select placeholder="Supprimer Produits" >
+                                  <mat-option value="option">Produit M(QTY=220)</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
-                      <div>
-                              <mat-dialog-actions style="margin-top:9%;margin-left:-61%">
+                      <div style="margin-top:-5%;margin-left:47%">
+                              <mat-dialog-actions >
                                       <button  mat-raised-button color="primary" class="add">- Supprimer</button>
                                     </mat-dialog-actions>
                         </div>
@@ -111,10 +109,10 @@
                                                                   </mat-form-field>
                                                     </div>
                                              </div>
-                                                <div fxLayout="row" style="margin-top: -23%;">
+                                                <div fxLayout="row" style="margin-top: -13%;margin-left: 11%">
                                                         <div>
-                                                                <mat-form-field style="width: 100%; margin-left: 6%;">
-                                                                <label >Pays</label><br><br>
+                                                                <label >Pays</label><br>
+                                                                <mat-form-field>
                                                                 <mat-select required  >
                                                                         <mat-option>-- None --</mat-option>
                                                                         <mat-option value="option">Senegal</mat-option>
@@ -124,7 +122,7 @@
                                                                 </mat-form-field>
                                                         </div>
                                                         <div>
-                                                            <mat-dialog-actions style="margin-left:330%;margin-top: 29%">
+                                                            <mat-dialog-actions style="margin-left:158%;margin-top: 29%">
                                                                 <button mat-raised-button color="primary" >Modifier</button>
                                                             </mat-dialog-actions> 
                                                         </div>

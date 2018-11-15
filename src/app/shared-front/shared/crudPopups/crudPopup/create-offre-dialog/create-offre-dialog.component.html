@@ -5,56 +5,60 @@
             </div>
     <form class="example-container">
           <div fxLayout="column" fxFlex="50px">
-              <div fxLayout="row">
+              <div fxLayout="row"  fxLayout.xs="column" fxLayoutGap="10px">
                   <div>
                       <mat-form-field>
                           <input matInput placeholder="Auteur Offre" >
                         </mat-form-field>
                      
                   </div>
-                  <div>
-                        <mat-form-field style="width: 52%; margin-top: 3%;margin-left: 100%">
-                            <mat-select required >
+                  <div style=" margin-top: 3%;margin-left: 100%">
+                        <mat-form-field >
+                            <mat-select placeholder="Type Acteur"  >
                               <mat-option value="option">Type Acteur</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
                  
               </div>
-                <div fxLayout="row" style="margin-top: -3%;">
+                <div fxLayout="row" style="margin-top: -3%;"  fxLayout.xs="column" fxLayoutGap="10px">
                         <div>
-                                <mat-form-field style="width: 52%;">
-                                    <mat-select required >
+                                <mat-form-field>
+                                    <mat-select placeholder="Activite" >
                                       <mat-option value="option">Activite</mat-option>
                                     </mat-select>
                                 </mat-form-field>
                             </div>
                 </div>
-                <div fxLayout="row" style="margin-top: 10%;">
+                <div fxLayout="row" style="margin-top: 10%;"  fxLayout.xs="column" fxLayoutGap="10px">
+                       
                         <div>
-                            <h4 mat-dialog-title >Date Lancement </h4>
-                        </div>
-                        <div>
-                             
-                              <mat-form-field style="margin-left: 94%;">
+                             <div>
+                                <h4 mat-dialog-title >Date Lancement </h4>
+                              </div>
+                              <div style="margin-top: -33%;margin-left: 101%;">
+                              <mat-form-field >
                                  <input matInput type="date" >
                                   <mat-icon matSuffix>date_range</mat-icon>
                               </mat-form-field>
+                            </div>
                         </div>
                 </div>
-                <div fxLayout="row" style="margin-top: 10%;">
+                <div fxLayout="row" style="margin-top: 10%;"fxLayout.xs="column" fxLayoutGap="10px">
+                        
                         <div>
+                            <div>
                             <h4 mat-dialog-title >Date Cloture  </h4>
                         </div>
-                        <div>
-                              
-                              <mat-form-field style="margin-left: 107%;">
+                        <div style="margin-top: -33%;margin-left: 101%;">
+                              <mat-form-field >
                                  <input matInput type="date" >
                                   <mat-icon matSuffix>date_range</mat-icon>
                               </mat-form-field>
+                            </div>
                         </div>
                  </div>
-                 <div fxLayout="row" style="margin-top: 10%;">
+                 <div fxLayout="row" style="margin-top: 10%;"fxLayout.xs="column" fxLayoutGap="10px">
                      <div>
                         <mat-form-field >
                            <input matInput placeholder="rechercher produit">
@@ -62,27 +66,27 @@
                          </mat-form-field>
                     </div>
                  </div>
-                 <div fxLayout="row" style="margin-top: -12%;">
+                 <div fxLayout="row" style="margin-top: 10%;"fxLayout.xs="column" fxLayoutGap="10px">
                         <div>
-                            <mat-form-field style="width: 52%;">
-                                <mat-select required >
+                            <mat-form-field>
+                                <mat-select placeholder="Type Produit" >
                                   <mat-option value="option">Produit M</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
-                        <div style="margin-top: -7%;margin-left: -108%;">
-                            <mat-form-field style ="width: 35%;">
+                        <div style="margin-top: -2%;margin-left: 25%;">
+                            <mat-form-field style ="width: 60%;">
                                 <input matInput placeholder="QTY">
                             </mat-form-field>
                         </div>
-                      <div style="margin-left: -83%; margin-top: -14%;">
-                              <mat-dialog-actions>
+                      <div>
+                              <mat-dialog-actions style="margin-left: -39%; margin-top: -1%;">
                                       <button  mat-raised-button color="primary" class="add">+ Offre</button>
                                     </mat-dialog-actions>
                         </div>
                       
-                        <div style="margin-left: 54%;margin-top: -14%;">
-                              <mat-dialog-actions>
+                        <div>
+                              <mat-dialog-actions style="margin-left: -39%; margin-top: -1%;">
                                       <button mat-raised-button color="primary" class="acheteur">- Offre</button>
                                     </mat-dialog-actions>
                         </div>

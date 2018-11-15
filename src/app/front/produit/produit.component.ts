@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
+import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 @Component({
     selector: 'app-produit',
@@ -10,7 +11,15 @@ export class ProduitsComponent {
   @ViewChild('sidenav') sidenav: any;
   public sidenavOpen: boolean = true;
   public brands = [];
-  constructor() { }
+
+  /**
+     * Constructor
+     *
+     * 
+     * @param {FuseSidebarService} _fuseSidebarService
+     * 
+     */
+  constructor(private _fuseSidebarService: FuseSidebarService) { }
   public viewCol: number = 25;
 
   public slides = [
@@ -31,6 +40,7 @@ export class ProduitsComponent {
   }
   toggleSidebar(name): void
     {
-        // TODO this._fuseSidebarService.getSidebar(name).toggleOpen();
+        // TODO 
+        this._fuseSidebarService.getSidebar(name).toggleOpen();
     }
 }

@@ -6,42 +6,39 @@
     <button href="#" class="edit"><mat-icon matPrefix>how_to_reg</mat-icon>Editer</button>
 <form class="example-container">
       <div fxLayout="column" fxFlex="50px">
-          <div fxLayout="row">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="5px">
               <div>
                 <mat-form-field>
                     <input matInput placeholder="Numero Compte Client">
                 </mat-form-field>
               </div>
-             
           </div>
-          <div fxLayout="row" style="margin-top: -3%;">
-                <div>
-                    <mat-form-field>
-                        <input matInput placeholder="Nom Deposant">
-                    </mat-form-field>
-                </div>
-              
-            </div>
-            <div fxLayout="row" style="margin-top: -3%;">
-                <div>
+        
+            <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="5px">
+                    <div>
+                            <mat-form-field>
+                                <input matInput placeholder="Nom Deposant">
+                            </mat-form-field>
+                        </div>
+                <div style="margin-left:75%">
                     <mat-form-field>
                         <input matInput placeholder="Prenom Deposant">
                     </mat-form-field>
                 </div>
             </div>
-            <div fxLayout="row" style="margin-top: -3%;">
+            <div fxLayout="row" style="margin-top: -3%;"fxLayout.xs="column" fxLayoutGap="5px">
                 <div>
                     <mat-form-field>
                         <input matInput placeholder="CNI Deposant">
                     </mat-form-field>
                 </div>
-                <div style="margin-left: 207%">
+                <div style="margin-left: 75%">
                     <mat-form-field>
                         <input matInput placeholder="Type CNI">
                     </mat-form-field>
                 </div>
             </div>
-            <div fxLayout="row" style="margin-top: 40%;">
+            <div fxLayout="row" style="margin-top: 40%;"fxLayout.xs="column" fxLayoutGap="5px">
                 <div style="margin-top: -50%;">
                     <mat-form-field>
                         <label>Date Delivrance CNI</label><br>
@@ -49,7 +46,7 @@
                         <mat-icon matSuffix>date_range</mat-icon>
                     </mat-form-field>
                 </div>
-                <div style="margin-left: 128%;margin-top: -50%;">
+                <div style="margin-left: 26%;margin-top: -50%;">
                     <mat-form-field>
                         <label>Date Expiration CNI</label><br>
                        <input matInput type="date" >
@@ -57,40 +54,37 @@
                     </mat-form-field>
                 </div>
           </div>
-                <div fxLayout="row" style="margin-top: -3%;">
+                <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="5px">
                     <div>
                         <mat-form-field  hintLabel="Max 10 chiffres" >
                             <input matInput placeholder="Telephone" #input maxlength="10" >
                             <mat-icon matSuffix>phone</mat-icon>
                           </mat-form-field>
                     </div>
+                    <div style="margin-left:25%">
+                            <mat-form-field>
+                                <input matInput placeholder="Montant Depot" type="number" >
+                                <span matPrefix>$&nbsp;</span>
+                              </mat-form-field>
+                        </div>
                 </div>
-                <div fxLayout="row" style="margin-top: -3%;">
+                <div fxLayout="row" style="margin-top: -3%;"fxLayout.xs="column" fxLayoutGap="5px">
+                  
                     <div>
-                        <mat-form-field>
-                            <input matInput placeholder="Montant Depot" type="number" >
-                            <span matPrefix>$&nbsp;</span>
-                          </mat-form-field>
-                    </div>
-                    <div style="margin-left:182%">
-                        <mat-form-field style="margin-top:2.2%">
-                            <mat-select required >
+                        <mat-form-field >
+                            <mat-select placeholder="Objet" >
                               <mat-option value="option">Objet Depot</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
+                    <div style="margin-left:219%">
+                            <mat-form-field>
+                                <mat-select placeholder="Numero Pret" >
+                                  <mat-option value="option">Numero de Pret(Inullable)</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
                 </div>      
-                <div fxLayout="row" style="margin-top: -3%;">
-                    <div>
-                        <mat-form-field style="margin-top:2%">
-                            <mat-select required >
-                              <mat-option value="option">Numero de Pret(Inullable)</mat-option>
-                            </mat-select>
-                        </mat-form-field>
-                    </div>
-                </div>
-       
-         
         </div>
    
   

@@ -8,7 +8,7 @@
     <form class="example-container">
           <div fxLayout="column" fxFlex="50px">
               
-              <div fxLayout="row" style="margin-top: 10%;">
+              <div fxLayout="row" style="margin-top: 10%;" fxLayout.xs="column" fxLayoutGap="5px">
                   <div>
                       <mat-form-field >
                           <input matInput placeholder="Nom Magasin">
@@ -20,7 +20,7 @@
                         </mat-form-field>
                   </div>
               </div>
-              <div fxLayout="row" style="margin-top: -38%;">
+              <div fxLayout="row" style="margin-top: -38%;"fxLayout.xs="column" fxLayoutGap="5px">
                   <div>
                         <mat-form-field style="width: 200%;">
                                 <textarea matInput placeholder="Description "></textarea>
@@ -40,52 +40,47 @@
                               <!--<button mat-fab color="primary" class="">Ajout</button>-->
                       </mat-dialog-actions>   
                     </div>
-                    <div>
-                          <mat-form-field style="margin-left:58%;margin-top:-9%;">
-                                <label>Proprietaire</label><br>
-                                  <mat-select required >
+                    <div style="margin-left:29%">
+                        
+                          <mat-form-field>
+                              
+                                  <mat-select placeholder="Proprietaire" >
                                     <mat-option value="option">Fournisseur N</mat-option>
                                   </mat-select>
                               </mat-form-field>
+                        
                     </div>
                 </div>
         
-                <div fxLayout="row" style="margin-top: 10%;">
+                <div fxLayout="row" style="margin-top: 10%;"fxLayout.xs="column" fxLayoutGap="5px">
                         <div>
-                            <label>Ajout Produits</label><br>
-                            <mat-form-field style="width: 52%;">
-                                <mat-select required >
+                            <mat-form-field >
+                                <mat-select placeholder="Ajout Produits" >
                                   <mat-option value="option">Produit</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
-                        <div style="margin-top: 31%;margin-left: -108%;">
-                            <mat-form-field style ="width: 35%;">
-                                <input matInput placeholder="QTY">
-                            </mat-form-field>
-                        </div>
-                      <div style="margin-left: -184%;margin-top: 20%;">
-                              <mat-dialog-actions>
+                      <div >
+                              <mat-dialog-actions style="margin-left: 2%;margin-top: -8%;">
                                       <button  mat-raised-button color="primary" class="add">+ Ajouter</button>
                                     </mat-dialog-actions>
                         </div>
-                </div>
-                <div fxLayout="row" style="margin-top: -149%;margin-left:642%">
-                        <div>
-                            <label>Supprimer Produits</label><br>
-                            <mat-form-field style="width: 52%;">
-                                <mat-select required >
+                
+
+                        <div style="margin-left:25%">
+                            <mat-form-field>
+                                <mat-select placeholder="Supprimer Produits" >
                                   <mat-option value="option">Produit</mat-option>
                                 </mat-select>
                             </mat-form-field>
                         </div>
-                      <div>
-                              <mat-dialog-actions style="margin-top:9%;margin-left:-61%">
+                      <div >
+                              <mat-dialog-actions style="margin-top:-5%;margin-left:2%">
                                       <button  mat-raised-button color="primary" class="add">- Supprimer</button>
                                     </mat-dialog-actions>
                         </div>
                 </div>
-              <div fxLayout="row" >
+              <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="5px">
                   
                     <div>
                                     <h2 mat-dialog-title>Modifier Adresse Emplacement</h2>
@@ -118,18 +113,17 @@
                                                                   </mat-form-field>
                                                     </div>
                                              </div>
-                                                <div fxLayout="row" style="margin-top: -23%;">
-                                                        <div>
-                                                                <mat-form-field style="width: 100%; margin-left: 6%;">
-                                                                <label >Pays</label><br><br>
-                                                                <mat-select required  >
-                                                                        <mat-option>-- None --</mat-option>
-                                                                        <mat-option value="option">Senegal</mat-option>
-                                                                        <mat-option value="option">France</mat-option>
-                                                                        <mat-option value="option">Canada</mat-option>
-                                                                </mat-select>
-                                                                </mat-form-field>
-                                                        </div>
+                                                <div fxLayout="row" style="margin-top: -23%;margin-left: 11%">
+                                                                <div>
+                                                                                <mat-form-field >
+                                                                                <mat-select placeholder="Pays"   >
+                                                                                        <mat-option>-- None --</mat-option>
+                                                                                        <mat-option value="option">Senegal</mat-option>
+                                                                                        <mat-option value="option">France</mat-option>
+                                                                                        <mat-option value="option">Canada</mat-option>
+                                                                                </mat-select>
+                                                                                </mat-form-field>
+                                                                 </div>
                                                         
                                                 </div>
                                              </div>
@@ -170,19 +164,18 @@
                                                                       </mat-form-field>
                                                         </div>
                                                  </div>
-                                                    <div fxLayout="row" style="margin-top: -23%;">
-                                                            <div>
-                                                                    <mat-form-field style="width: 100%; margin-left: 6%;">
-                                                                    <label >Pays</label><br><br>
-                                                                    <mat-select required  >
-                                                                            <mat-option>-- None --</mat-option>
-                                                                            <mat-option value="option">Senegal</mat-option>
-                                                                            <mat-option value="option">France</mat-option>
-                                                                            <mat-option value="option">Canada</mat-option>
-                                                                    </mat-select>
-                                                                    </mat-form-field>
-                                                            </div>
-                                                            <div style="margin-left: 130%;margin-top: 12%;" >
+                                                    <div fxLayout="row" style="margin-top: -13%;margin-left: 11%">
+                                                                <div style="width: 100%; margin-left: 1%">
+                                                                                <mat-form-field >
+                                                                                <mat-select placeholder="Pays"   >
+                                                                                        <mat-option>-- None --</mat-option>
+                                                                                        <mat-option value="option">Senegal</mat-option>
+                                                                                        <mat-option value="option">France</mat-option>
+                                                                                        <mat-option value="option">Canada</mat-option>
+                                                                                </mat-select>
+                                                                                </mat-form-field>
+                                                                 </div>
+                                                            <div style="margin-left: 99%;" >
                                                                     <mat-form-field  hintLabel="Max 10 chiffres" >
                                                                         <input matInput placeholder="Telephone" #input maxlength="10" >
                                                                         <mat-icon matSuffix>phone</mat-icon>

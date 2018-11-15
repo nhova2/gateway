@@ -7,10 +7,17 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./update-devis-dialog.component.scss']
 })
 export class UpdateDevisDialogComponent implements OnInit {
+  public counter : number = 0;
+    
+  increment(){
+    this.counter += 1;
+  }
+  
+  decrement(){
+    this.counter -= 1;
+  }
   hide = true;
-  counter = 0;
-  grandTotal = 0;
-  product = 0;
+
   constructor() { }
 
   ngOnInit() {
@@ -25,15 +32,4 @@ export class UpdateDevisDialogComponent implements OnInit {
     const file = event.target.files[0]
   }
  
-  clear() {
-  }
-
-  decrement() {
-  }
-
-  increment() {
-  }
-
-  remove(product) {
-  }
 }

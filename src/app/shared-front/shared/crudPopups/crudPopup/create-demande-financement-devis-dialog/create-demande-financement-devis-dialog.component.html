@@ -5,7 +5,7 @@
         </div>
 <form class="example-container">
       <div fxLayout="column" fxFlex="50px">
-          <div fxLayout="row">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="5px">
               <div>
                 <mat-form-field>
                     <input matInput placeholder="Montant Devis" type="number" >
@@ -14,59 +14,64 @@
               </div>
              
           </div>
-          <div fxLayout="row" style="margin-top: -3%;">
+          <div fxLayout="row" style="margin-top: -3%;"fxLayout.xs="column" fxLayoutGap="5px">
                 <div>
                     <a href="#" >IDDevis/Lien</a>
                 </div>
               
             </div>
-            <div fxLayout="row" style="margin-top: -3%;">
-                <div>
-                    <mat-form-field style="margin-top:2%">
-                        <mat-select required >
-                          <mat-option value="option">Type de pret</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field style="margin-left: 50%;margin-top:2%">
-                        <mat-select required >
-                          <mat-option value="option">Etat Pret</mat-option>
-                        </mat-select>
-                    </mat-form-field>
-            </div>
-                  
-                </div>
-                <div fxLayout="row" style="margin-top: -3%;">
+            <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="5px">
                     <div>
-                        <mat-form-field style="margin-top:2%">
-                            <mat-select required >
-                              <mat-option value="option">Echeance(4X)</mat-option>
+                        <mat-form-field>
+                            <mat-select placeholder="Type de pret" >
+                              <mat-option value="option">Type de pret</mat-option>
                             </mat-select>
                         </mat-form-field>
                     </div>
-                    <div>
-                        <mat-form-field style="margin-left: 50%;margin-top:2%">
-                            <mat-select required >
-                              <mat-option value="option">Emetteur</mat-option>
+                    <div style="margin-left:340%">
+                        <mat-form-field>
+                            <mat-select placeholder="Etat du pret"  >
+                              <mat-option value="option">Etat Pret</mat-option>
                             </mat-select>
                         </mat-form-field>
-                    </div>
+                </div>
                       
-                </div>
+                    </div>
+                    <div fxLayout="row" style="margin-top: -3%;"fxLayout.xs="column" fxLayoutGap="5px">
+                        <div>
+                            <mat-form-field>
+                                <mat-select placeholder="Echeance" >
+                                  <mat-option value="option">Echeance(4X)</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                        <div  style="margin-left: 313%;margin-top:2%">
+                            <mat-form-field>
+                                <mat-select  placeholder="Emetteur"  >
+                                  <mat-option value="option">Emetteur</mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                          
+                    </div>
+           
        
-          <div fxLayout="row" style="margin-top: 40%;">
+          <div fxLayout="row">
             
                 <div style="margin-top:15%;">
                         <mat-slide-toggle> Urgent</mat-slide-toggle>
                 </div>
-                <div style="margin-left: 328%;margin-top: -50%;">
-                    <mat-form-field>
-                        <label>Date</label><br>
-                       <input matInput type="date" >
-                        <mat-icon matSuffix>date_range</mat-icon>
-                    </mat-form-field>
-                </div>
+                
+          </div>
+          
+          <div fxLayout="row" style="margin-top: 40%;"fxLayout.xs="column" fxLayoutGap="5px">
+                <div style="margin-left: 252%;margin-top: -50%;">
+                        <mat-form-field>
+                            <label>Date</label><br>
+                           <input matInput type="date" >
+                            <mat-icon matSuffix>date_range</mat-icon>
+                        </mat-form-field>
+                    </div>
           </div>
         </div>
    
