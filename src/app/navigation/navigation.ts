@@ -4,21 +4,21 @@ export const navigation: FuseNavigation[] = [
     {
         id: 'domaines',
         title: 'Domaine',
-        type: 'collapsable',
+        type: 'item',
         icon: 'domain',
         url: 'domaines'
     },
     {
         id: 'produit',
         title: 'produit',
-        type: 'collapsable',
+        type: 'item',
         icon: 'card_giftcard',
         url: 'produit'
     },
     {
         id: 'Enchere',
         title: 'Enchere',
-        type: 'group',
+        type: 'item',
         icon: 'gavel',
         url: 'Enchere'
     },
@@ -26,21 +26,21 @@ export const navigation: FuseNavigation[] = [
         id: 'services',
         title: 'Services',
         icon: 'bookmark_border',
-        type: 'group',
+        type: 'item',
         url: 'services'
     },
     {
         id: 'ratings',
         title: 'Ratings',
         icon: 'star',
-        type: 'group',
+        type: 'item',
         url: 'ratings'
     },
     {
         id: 'offres',
         title: 'Offres',
         icon: 'local_offer',
-        type: 'group',
+        type: 'item',
         url: 'offres'
     }
 

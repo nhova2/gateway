@@ -1,0 +1,54 @@
+
+<mat-dialog-content class="mat-typography">
+    <div class="title">
+        <h2 mat-dialog-title >Ajout Pret</h2>
+        </div>
+<form class="example-container">
+      <div fxLayout="column" fxFlex="50px">
+          <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="5px">
+              <div>
+                <mat-form-field>
+                    <input matInput placeholder="Denomination" >
+                  </mat-form-field>
+              </div>
+              <div>
+                <mat-slide-toggle style="margin-top:20%; margin-left:10%"> Ligne de credit</mat-slide-toggle>
+        </div>
+          <div>
+            <mat-slide-toggle style="margin-top:32%; margin-left:50%"> client</mat-slide-toggle>
+          </div>
+             
+          </div>
+          <div fxLayout="row" style="margin-top: -3%;" fxLayout.xs="column" fxLayoutGap="5px">
+            <div>
+                <mat-form-field>
+                    <input matInput placeholder="Montant initiam" >
+                  </mat-form-field>
+              </div>
+              
+           
+                <div>
+                    <mat-form-field>
+                        <mat-select placeholder="Choix ligne de credit" >
+                          <mat-option value="option">Choix ligne credit</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-select placeholder="Choix ligne de credit" >
+                          <mat-option value="option">Choix client </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+               
+        </div>
+   
+  
+</form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial><mat-icon matPrefix>save_alt</mat-icon>Enregistrer</button>
+</mat-dialog-actions>

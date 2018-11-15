@@ -67,7 +67,7 @@ export class HomeComponent {
   public getProducts() {
     this.appService.getProducts('top-rated').subscribe(data => {
       this.topRatedProducts = data;
-    })
+    });
   }
 
  @HostListener('window:resize')
