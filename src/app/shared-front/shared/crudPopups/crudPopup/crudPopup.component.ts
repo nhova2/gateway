@@ -20,30 +20,27 @@ import { CreateEnchereDialogComponent } from './create-enchere-dialog/create-enc
 import { UpdateEnchereDialogComponent } from './update-enchere-dialog/update-enchere-dialog.component';
 import { CreateDevisDialogComponent } from './create-devis-dialog/create-devis-dialog.component';
 import { UpdateDevisDialogComponent } from './update-devis-dialog/update-devis-dialog.component';
-import { CreateProduitDialogComponent  } from './create-produit-dialog/create-produit-dialog.component';
+import { CreateProduitDialogComponent } from './create-produit-dialog/create-produit-dialog.component';
 import { UpdateProduitDialogComponent } from './update-produit-dialog/update-produit-dialog.component';
-import { CreateServiceDialogComponent  } from './create-service-dialog/create-service-dialog.component';
+import { CreateServiceDialogComponent } from './create-service-dialog/create-service-dialog.component';
 import { UpdateServiceDialogComponent } from './update-service-dialog/update-service-dialog.component';
-import { CreateMagasinDialogComponent  } from './create-magasin-dialog/create-magasin-dialog.component';
+import { CreateMagasinDialogComponent } from './create-magasin-dialog/create-magasin-dialog.component';
 import { UpdateMagasinDialogComponent } from './update-magasin-dialog/update-magasin-dialog.component';
-import { CreateBoutiqueDialogComponent  } from './create-boutique-dialog/create-boutique-dialog.component';
+import { CreateBoutiqueDialogComponent } from './create-boutique-dialog/create-boutique-dialog.component';
 import { UpdateBoutiqueDialogComponent } from './update-boutique-dialog/update-boutique-dialog.component';
-import { CreateLigneCreditDialogComponent  } from './create-ligne-credit-dialog/create-ligne-credit-dialog.component';
+import { CreateLigneCreditDialogComponent } from './create-ligne-credit-dialog/create-ligne-credit-dialog.component';
 import { UpdateLigneCreditDialogComponent } from './update-ligne-credit-dialog/update-ligne-credit-dialog.component';
-import { CreateLigneDepotDialogComponent  } from './create-ligne-depot-dialog/create-ligne-depot-dialog.component';
+import { CreateLigneDepotDialogComponent } from './create-ligne-depot-dialog/create-ligne-depot-dialog.component';
 import { UpdateLigneDepotDialogComponent } from './update-ligne-depot-dialog/update-ligne-depot-dialog.component';
-import { CreateDemandePretDepotDialogComponent  } from './create-demande-pret-dialog/create-demande-pret-dialog.component';
+import { CreateDemandePretDepotDialogComponent } from './create-demande-pret-dialog/create-demande-pret-dialog.component';
 import { UpdateDemandePretDepotDialogComponent } from './update-demande-pret-dialog/update-demande-pret-dialog.component';
-import { CreateDemandeDepotDialogComponent  } from './create-demande-depot/create-demande-depot.component';
+import { CreateDemandeDepotDialogComponent } from './create-demande-depot/create-demande-depot.component';
 import { UpdateDemandeDepotDialogComponent } from './update-demande-depot/update-demande-depot.component';
-import { CreateDemandeFinancementDevisDialogComponent  } from './create-demande-financement-devis-dialog/create-demande-financement-devis-dialog.component';
+import { CreateDemandeFinancementDevisDialogComponent } from './create-demande-financement-devis-dialog/create-demande-financement-devis-dialog.component';
 import { UpdateDemandeFinancementDevisDialogComponent } from './update-demande-financement-devis-dialog/update-demande-financement-devis-dialog.component';
-import { CreateDemandeAgrementDialogComponent  } from './create-demande-agreement/create-demande-agreement.component';
+import { CreateDemandeAgrementDialogComponent } from './create-demande-agreement/create-demande-agreement.component';
 import { UpdateDemandeAgrementDialogComponent } from './update-demande-agreement/update-demande-agreement.component';
-//import { AjoutPretDialogComponent } from './ajout-pret-popup/ajout-pret-dialog.component';
-//import { AjoutLigneCreditComponent } from './Ajout-ligne-credit/ajout-ligne-credit.component';
-//import { SuiviReglementCommandeComponent } from './Suivi-reglement-commande/Suivi-reglement-commande.component';
-//import { RechercherProduitComponent } from './Rechercher-produit/rechercher-produit-dialog.component';
+
 
 @Component({
   selector: 'app-crudpopup',
@@ -56,7 +53,7 @@ export class CrudPopupComponent implements OnInit {
 
   ngOnInit() {
   }
-//--------------------------Methodes creates dialog------------------------------------
+  //--------------------------Methodes creates dialog------------------------------------
 
   openCreateCompte() {
     const dialogCreateCpt = this.dialog.open(CreateCompteDialogComponent);
@@ -152,7 +149,7 @@ export class CrudPopupComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  
+
   openCreateBoutique() {
     const dialogCreateCpt = this.dialog.open(CreateBoutiqueDialogComponent);
 
@@ -202,37 +199,9 @@ export class CrudPopupComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  
-  /*openAjoutPret() {
-    const dialogCreateCpt = this.dialog.open(AjoutPretDialogComponent);
 
-    dialogCreateCpt.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-  openAjoutligneCredit() {
-    const dialogCreateCpt = this.dialog.open(AjoutLigneCreditComponent);
 
-    dialogCreateCpt.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-  openSuiviReglementCommande() {
-    const dialogCreateCpt = this.dialog.open(SuiviReglementCommandeComponent);
 
-    dialogCreateCpt.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }
-  openRechercherProduit() {
-    const dialogCreateCpt = this.dialog.open(RechercherProduitComponent);
-
-    dialogCreateCpt.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
-    });
-  }*/
-  
-  
   //--------------------------Methodes updates dialog------------------------------------
 
   openUpdateCompte() {
@@ -326,7 +295,7 @@ export class CrudPopupComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  
+
   openUpdateBoutique() {
     const dialogCreateCpt = this.dialog.open(UpdateBoutiqueDialogComponent);
 
@@ -369,7 +338,7 @@ export class CrudPopupComponent implements OnInit {
       console.log(`Dialog result: ${result}`);
     });
   }
-  openUpdateDemandeAgreement() {
+  openUpdateDemandeAgreement () {
     const dialogCreateCpt = this.dialog.open(UpdateDemandeAgrementDialogComponent);
 
     dialogCreateCpt.afterClosed().subscribe(result => {

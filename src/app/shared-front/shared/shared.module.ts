@@ -3,49 +3,52 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatAutocompleteModule,
-         MatButtonModule,
-         MatButtonToggleModule,
-         MatCardModule,
-         MatCheckboxModule,
-         MatChipsModule,
-         MatDatepickerModule,
-         MatDialogModule,
-         MatExpansionModule,
-         MatGridListModule,
-         MatIconModule,
-         MatInputModule,
-         MatListModule,
-         MatMenuModule,
-         MatNativeDateModule,
-         MatPaginatorModule,
-         MatProgressBarModule,
-         MatProgressSpinnerModule,
-         MatRadioModule,
-         MatRippleModule,
-         MatSelectModule,
-         MatSidenavModule,
-         MatSliderModule,
-         MatSlideToggleModule,
-         MatSnackBarModule,
-         MatSortModule,
-         MatTableModule,
-         MatTabsModule,
-         MatToolbarModule,
-         MatTooltipModule,
-         MatStepperModule } from '@angular/material';
+import {
+  MatAutocompleteModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatExpansionModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatStepperModule
+} from '@angular/material';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   wheelPropagation: true,
-  suppressScrollX: true               
+  suppressScrollX: true
 };
 
 import { PipesModule } from '../../front/theme/pipes/pipes.module';
 import { RatingComponent } from './rating/rating.component';
 import { ControlsComponent } from './controls/controls.component';
+import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { MainCarouselComponent } from './main-carousel/main-carousel.component';
 import { BrandsCarouselComponent } from './brands-carousel/brands-carousel.component';
 import { ProductsCarouselComponent } from './products-carousel/products-carousel.component';
@@ -95,7 +98,10 @@ import { CreateDemandeFinancementDevisDialogComponent } from './crudPopups/crudP
 import { UpdateDemandeFinancementDevisDialogComponent } from './crudPopups/crudPopup/update-demande-financement-devis-dialog/update-demande-financement-devis-dialog.component';
 import { CreateDemandeAgrementDialogComponent } from './crudPopups/crudPopup/create-demande-agreement/create-demande-agreement.component';
 import { UpdateDemandeAgrementDialogComponent } from './crudPopups/crudPopup/update-demande-agreement/update-demande-agreement.component';
-import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { AjoutPretDialogComponent } from './crudPopups/crudPopup/ajout-pret-popup/ajout-pret-dialog.component';
+import { AjoutLigneCreditComponent } from './crudPopups/crudPopup/Ajout-ligne-credit/ajout-ligne-credit.component';
+import { SuiviReglementCommandeComponent } from './crudPopups/crudPopup/Suivi-reglement-commande/Suivi-reglement-commande.component';
+import { RechercherProduitComponent } from './crudPopups/crudPopup/Rechercher-produit/rechercher-produit-dialog.component';
 
 @NgModule({
   imports: [
@@ -141,6 +147,7 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 
   ],
   exports: [
+    BreadcrumbComponent,
     RouterModule,
     SwiperModule,
     FlexLayoutModule,
@@ -222,9 +229,13 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     UpdateDemandeFinancementDevisDialogComponent,
     CreateDemandeAgrementDialogComponent,
     UpdateDemandeAgrementDialogComponent,
-    BreadcrumbComponent
+    AjoutPretDialogComponent,
+    AjoutLigneCreditComponent,
+    SuiviReglementCommandeComponent,
+    RechercherProduitComponent
   ],
   declarations: [
+    BreadcrumbComponent,
     RatingComponent,
     ControlsComponent,
     MainCarouselComponent,
@@ -273,9 +284,12 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     UpdateDemandeFinancementDevisDialogComponent,
     CreateDemandeAgrementDialogComponent,
     UpdateDemandeAgrementDialogComponent,
-    BreadcrumbComponent
+    AjoutPretDialogComponent,
+    AjoutLigneCreditComponent,
+    SuiviReglementCommandeComponent,
+    RechercherProduitComponent
   ],
-  entryComponents:[
+  entryComponents: [
     ProductDialogComponent,
     CreateCompteDialogComponent,
     CreateAcheteurDialogComponent,
@@ -316,9 +330,13 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     CreateDemandeFinancementDevisDialogComponent,
     UpdateDemandeFinancementDevisDialogComponent,
     CreateDemandeAgrementDialogComponent,
-    UpdateDemandeAgrementDialogComponent
+    UpdateDemandeAgrementDialogComponent,
+    AjoutPretDialogComponent,
+    AjoutLigneCreditComponent,
+    SuiviReglementCommandeComponent,
+    RechercherProduitComponent
   ],
-  providers:[
+  providers: [
     { provide: PERFECT_SCROLLBAR_CONFIG, useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG }
   ]
 })

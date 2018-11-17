@@ -24,12 +24,10 @@ export const routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule,
     FormsModule,
     ReactiveFormsModule,
     SwiperModule,
     NgxPaginationModule,
-    SharedModule,
     PipesModule,
     SharedModule,
     FuseSidebarModule,

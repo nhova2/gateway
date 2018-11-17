@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Data, AppService } from '../../../app.service';
-
+/* import { Data, AppService } from '../../../app.service';
+ */
 @Component({
   selector: 'app-top-menu',
   templateUrl: './top-menu.component.html'
@@ -17,7 +17,7 @@ export class TopMenuComponent implements OnInit {
   ]
   public flag:any;
 
-  constructor(public appService:AppService) { }
+  constructor() { }
 
   ngOnInit() {
     this.currency = this.currencies[0];

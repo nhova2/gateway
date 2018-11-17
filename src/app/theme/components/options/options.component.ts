@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
 })
 export class OptionsComponent {
   public showOptions:boolean = false;
-  public settings: Settings;
+ /*  public settings: Settings;
   constructor(public appSettings:AppSettings) { 
     this.settings = this.appSettings.settings; 
-  }
+  } */
 
   public changeTheme(theme){
-    this.settings.theme = theme;       
+    /* this.settings.theme = theme;  */      
   } 
 }

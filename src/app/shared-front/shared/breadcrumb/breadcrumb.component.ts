@@ -2,7 +2,7 @@
 
 
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router, ActivatedRouteSnapshot, UrlSegment, NavigationEnd } from "@angular/router"; 
+import { ActivatedRoute, Router, ActivatedRouteSnapshot, UrlSegment, NavigationEnd } from '@angular/router'; 
 import { Title } from '@angular/platform-browser';
 /* import { SidenavMenuService } from '../../../theme/components/sidenav-menu/sidenav-menu.service';
  */
