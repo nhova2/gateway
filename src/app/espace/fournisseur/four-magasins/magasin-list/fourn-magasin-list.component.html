@@ -47,7 +47,7 @@
     <!-- Color Column -->
     <ng-container matColumnDef="Modifier">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
-      <td mat-cell *matCellDef="let row"> {{row.Modifier}}<button mat-icon-button clear><i class="material-icons s-16">edit</i></button> </td>
+      <td mat-cell *matCellDef="let row"> {{row.Modifier}}<button mat-icon-button (click)="crudComp.openUpdateMagasin()"><i class="material-icons s-16">edit</i></button> </td>
     </ng-container>
 
     <!-- Color Column -->
@@ -62,7 +62,7 @@
   </table>
 
   <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
-  <button mat-raised-button color="primary">
+  <button mat-raised-button color="primary" (click)="crudComp.openCreateMagasin()">
       <span>AJOUT + MAGASIN</span>
   </button>
 </div>

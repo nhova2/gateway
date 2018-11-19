@@ -48,7 +48,7 @@
     <ng-container matColumnDef="Modifier">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
       <td mat-cell *matCellDef="let row"> {{row.Modifier}}
-        <button mat-icon-button>
+        <button mat-icon-button (click)="crudComp.openUpdateLigneCredit()">
           <i class="material-icons s-16">edit</i>
         </button>
       </td>

@@ -20,6 +20,7 @@ import { MatButtonModule, MatChipsModule, MatFormFieldModule, MatIconModule, Mat
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AgmCoreModule } from '@agm/core';
 import { FuseWidgetModule } from '@fuse/components';
+import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
 
 
 
@@ -112,7 +113,8 @@ export const routes = [
         EcommerceProductsService,
         EcommerceProductService,
         EcommerceOrdersService,
-        EcommerceOrderService
+        EcommerceOrderService,
+        CrudPopupComponent
     ]
 })
 export class CataloguesFournisseurModule { }

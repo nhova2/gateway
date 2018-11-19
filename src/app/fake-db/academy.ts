@@ -3,25 +3,25 @@ export class AcademyFakeDb
     public static courses = [
         {
             'id'      : '15459251a6d6b397565',
-            'title'   : 'Demande Ligne Depot',
+            'title'   : 'Demande Ligne Dépot',
             'slug'    : 'basics-of-angular',
-            'category': 'web',
+            'category': 'peche',
             'length'  : 30,
             'updated' : 'Jun 28, 2017'
         },
         {
             'id'      : '154588a0864d2881124',
-            'title'   : 'Demande Ligne de Credit',
+            'title'   : 'Demande Ligne Crédit',
             'slug'    : 'basics-of-typeScript',
-            'category': 'web',
+            'category': 'peche',
             'length'  : 60,
             'updated' : 'Nov 01, 2017'
         },
         {
             'id'      : '15453ba60d3baa5daaf',
-            'title'   : 'Simulation Pret',
+            'title'   : 'Simulation Prêt',
             'slug'    : 'android-n-quick-settings',
-            'category': 'android',
+            'category': 'peche',
             'length'  : 120,
             'updated' : 'Jun 28, 2017'
         },
@@ -29,7 +29,7 @@ export class AcademyFakeDb
             'id'      : '15453a06c08fb021776',
             'title'   : 'Financer Devis',
             'slug'    : 'keep-sensitive-data-safe-and-private',
-            'category': 'android',
+            'category': 'peche',
             'length'  : 45,
             'updated' : 'Jun 28, 2017'
         },
@@ -37,136 +37,184 @@ export class AcademyFakeDb
             'id'      : '15427f4c1b7f3953234',
             'title'   : 'Gestion Agreement',
             'slug'    : 'building-a-grpc-service-with-java',
-            'category': 'cloud',
+            'category': 'peche',
             'length'  : 30,
             'updated' : 'Jun 28, 2017'
         },
         {
             'id'      : '1542d75d929a603125',
-            'title'   : 'Creer Compte',
+            'title'   : 'Valider Produits',
             'slug'    : 'build-a-pwa-using-workbox',
-            'category': 'web',
+            'category': 'peche',
+            'length'  : 120,
+            'updated' : 'Jun 28, 2017'
+        },
+		 {
+            'id'      : '15459251a6d6b397565',
+            'title'   : 'Demande Ligne Dépot',
+            'slug'    : 'basics-of-angular',
+            'category': 'artisanat',
+            'length'  : 30,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '154588a0864d2881124',
+            'title'   : 'Demande Ligne Crédit',
+            'slug'    : 'basics-of-typeScript',
+            'category': 'artisanat',
+            'length'  : 60,
+            'updated' : 'Nov 01, 2017'
+        },
+        {
+            'id'      : '15453ba60d3baa5daaf',
+            'title'   : 'Simulation Prêt',
+            'slug'    : 'android-n-quick-settings',
+            'category': 'artisanat',
             'length'  : 120,
             'updated' : 'Jun 28, 2017'
         },
         {
-            'id'      : '1543ee3a5b43e0f9f45',
-            'title'   : 'Creer Acteur',
-            'slug'    : 'build-an-app-for-the-google-assistant-with-firebase-and-dialogflow',
-            'category': 'firebase',
-            'length'  : 30,
-            'updated' : 'Jun 28, 2017'
-        }/*,
-        {
-            'id'      : '1543cc4515df3146112',
-            'title'   : 'Cloud Functions for Firebase',
-            'slug'    : 'cloud-functions-for-firebase',
-            'category': 'firebase',
+            'id'      : '15453a06c08fb021776',
+            'title'   : 'Financer Devis',
+            'slug'    : 'keep-sensitive-data-safe-and-private',
+            'category': 'artisanat',
             'length'  : 45,
             'updated' : 'Jun 28, 2017'
         },
         {
-            'id'      : '154398a4770d7aaf9a2',
-            'title'   : 'Manage Your Pivotal Cloud Foundry App\'s Using Apigee Edge',
-            'slug'    : 'manage-your-pivotal-cloud-foundry-apps-using-apigee-Edge',
-            'category': 'cloud',
-            'length'  : 90,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '15438351f87dcd68567',
-            'title'   : 'Building Beautiful UIs with Flutter',
-            'your'    : 'building-beautiful-uis-with-flutter',
-            'category': 'web',
-            'length'  : 90,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '1544e43dcdae6ebf876',
-            'title'   : 'Cloud Firestore',
-            'slug'    : 'cloud-firestore',
-            'category': 'firebase',
-            'length'  : 90,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '1541ca7af66da284177',
-            'title'   : 'Customize Network Topology with Subnetworks',
-            'slug'    : 'customize-network-topology-with-subnetworks',
-            'category': 'web',
-            'length'  : 45,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '154297167e781781745',
-            'title'   : 'Looking at Campaign Finance with BigQuery',
-            'slug'    : 'looking-at-campaign-finance-with-bigquery',
-            'category': 'cloud',
-            'length'  : 60,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '154537435d5b32bf11a',
-            'title'   : 'Firebase Android',
-            'slug'    : 'firebase-android',
-            'category': 'android',
-            'length'  : 45,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '154204e45a59b168453',
-            'title'   : 'Simulating a Thread Network Using OpenThread',
-            'slug'    : 'simulating-a-thread-network-using-openthread',
-            'category': 'web',
-            'length'  : 45,
-            'updated' : 'Jun 28, 2017'
-        },
-        {
-            'id'      : '1541dd1e05dfc439216',
-            'title'   : 'Your First Progressive Web App',
-            'slug'    : 'your-first-progressive-web-app',
-            'category': 'web',
+            'id'      : '15427f4c1b7f3953234',
+            'title'   : 'Gestion Agreement',
+            'slug'    : 'building-a-grpc-service-with-java',
+            'category': 'artisanat',
             'length'  : 30,
             'updated' : 'Jun 28, 2017'
         },
         {
-            'id'      : '1532dfc67e704e48515',
-            'title'   : 'Launch Cloud Datalab',
-            'slug'    : 'launch-cloud-datalab',
-            'category': 'cloud',
-            'length'  : 60,
+            'id'      : '1542d75d929a603125',
+            'title'   : 'Valider Produits',
+            'slug'    : 'build-a-pwa-using-workbox',
+            'category': 'artisanat',
+            'length'  : 120,
+            'updated' : 'Jun 28, 2017'
+        },
+		 {
+            'id'      : '15459251a6d6b397565',
+            'title'   : 'Demande Ligne Dépot',
+            'slug'    : 'basics-of-angular',
+            'category': 'agriculture',
+            'length'  : 30,
             'updated' : 'Jun 28, 2017'
         },
         {
-            'id'      : '1542e43dfaae6ebf226',
-            'title'   : 'Personalize Your iOS App with Firebase User Management',
-            'slug'    : 'personalize-your-ios-app-with-firebase-user-management',
-            'category': 'firebase',
-            'length'  : 90,
+            'id'      : '154588a0864d2881124',
+            'title'   : 'Demande Ligne Crédit',
+            'slug'    : 'basics-of-typeScript',
+            'category': 'agriculture',
+            'length'  : 60,
+            'updated' : 'Nov 01, 2017'
+        },
+        {
+            'id'      : '15453ba60d3baa5daaf',
+            'title'   : 'Simulation Prêt',
+            'slug'    : 'android-n-quick-settings',
+            'category': 'agriculture',
+            'length'  : 120,
             'updated' : 'Jun 28, 2017'
-        }*/
+        },
+        {
+            'id'      : '15453a06c08fb021776',
+            'title'   : 'Financer Devis',
+            'slug'    : 'keep-sensitive-data-safe-and-private',
+            'category': 'agriculture',
+            'length'  : 45,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '15427f4c1b7f3953234',
+            'title'   : 'Gestion Agreement',
+            'slug'    : 'building-a-grpc-service-with-java',
+            'category': 'agriculture',
+            'length'  : 30,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '1542d75d929a603125',
+            'title'   : 'Valider Produits',
+            'slug'    : 'build-a-pwa-using-workbox',
+            'category': 'agriculture',
+            'length'  : 120,
+            'updated' : 'Jun 28, 2017'
+        },
+		 {
+            'id'      : '15459251a6d6b397565',
+            'title'   : 'Demande Ligne Dépot',
+            'slug'    : 'basics-of-angular',
+            'category': 'elevage',
+            'length'  : 30,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '154588a0864d2881124',
+            'title'   : 'Demande Ligne Crédit',
+            'slug'    : 'basics-of-typeScript',
+            'category': 'elevage',
+            'length'  : 60,
+            'updated' : 'Nov 01, 2017'
+        },
+        {
+            'id'      : '15453ba60d3baa5daaf',
+            'title'   : 'Simulation Prêt',
+            'slug'    : 'android-n-quick-settings',
+            'category': 'elevage',
+            'length'  : 120,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '15453a06c08fb021776',
+            'title'   : 'Financer Devis',
+            'slug'    : 'keep-sensitive-data-safe-and-private',
+            'category': 'elevage',
+            'length'  : 45,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '15427f4c1b7f3953234',
+            'title'   : 'Gestion Agreement',
+            'slug'    : 'building-a-grpc-service-with-java',
+            'category': 'elevage',
+            'length'  : 30,
+            'updated' : 'Jun 28, 2017'
+        },
+        {
+            'id'      : '1542d75d929a603125',
+            'title'   : 'Valider Produits',
+            'slug'    : 'build-a-pwa-using-workbox',
+            'category': 'elevage',
+            'length'  : 120,
+            'updated' : 'Jun 28, 2017'
+        }
     ];
 
     public static categories = [
         {
             'id'   : 0,
-            'value': 'web',
-            'label': 'Web'
+            'value': 'peche',
+            'label': 'Peche'
         },
         {
             'id'   : 1,
-            'value': 'firebase',
-            'label': 'Firebase'
+            'value': 'artisanat',
+            'label': 'Artisanat'
         },
         {
             'id'   : 2,
-            'value': 'cloud',
-            'label': 'Cloud'
+            'value': 'agriculture',
+            'label': 'Agriculture'
         },
         {
             'id'   : 3,
-            'value': 'android',
-            'label': 'Android'
+            'value': 'elevage',
+            'label': 'Elevage'
         }
     ];
 
@@ -575,7 +623,7 @@ export class AcademyFakeDb
             'title'      : 'Demande Ligne Depot',
             'slug'       : 'basics-of-angular',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 30,
             'totalSteps' : 11,
             'updated'    : 'Jun 28, 2017',
@@ -586,7 +634,7 @@ export class AcademyFakeDb
             'title'      : 'Demande Ligne de Credit',
             'slug'       : 'basics-of-typeScript',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 60,
             'totalSteps' : 11,
             'updated'    : 'Nov 01, 2017',
@@ -630,7 +678,7 @@ export class AcademyFakeDb
             'title'      : 'Creer Compte',
             'slug'       : 'build-a-pwa-using-workbox',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 120,
             'totalSteps' : 11,
             'updated'    : 'Jun 28, 2017',
@@ -674,7 +722,7 @@ export class AcademyFakeDb
             'title'      : 'Building Beautiful UIs with Flutter',
             'your'       : 'building-beautiful-uis-with-flutter',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 90,
             'totalSteps' : 11,
             'updated'    : 'Jun 28, 2017',
@@ -696,7 +744,7 @@ export class AcademyFakeDb
             'title'      : 'Customize Network Topology with Subnetworks',
             'slug'       : 'customize-network-topology-with-subnetworks',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 45,
             'totalSteps' : 11,
             'updated'    : 'Jun 28, 2017',
@@ -729,7 +777,7 @@ export class AcademyFakeDb
             'title'      : 'Simulating a Thread Network Using OpenThread',
             'slug'       : 'simulating-a-thread-network-using-openthread',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 45,
             'totalSteps' : 11,
             'updated'    : 'Jun 28, 2017',
@@ -740,7 +788,7 @@ export class AcademyFakeDb
             'title'      : 'Your First Progressive Web App',
             'slug'       : 'your-first-progressive-web-app',
             'description': 'Commits that need to be pushed lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-            'category'   : 'web',
+            'category'   : 'depot',
             'length'     : 30,
             'totalSteps' : 11,
             'updated'    : 'Jun 28, 2017',

@@ -7,6 +7,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { AnimHomeService } from '../anim-home.service';
+import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
 
 
 export const routes = [
@@ -23,6 +24,6 @@ export const routes = [
     RouterModule.forChild(routes),
   ],
   declarations: [AlertesAnimComponent],
-  providers   : [AnimHomeService  ]
+  providers   : [AnimHomeService,CrudPopupComponent ]
 })
 export class AlertesAnimateurModule { }

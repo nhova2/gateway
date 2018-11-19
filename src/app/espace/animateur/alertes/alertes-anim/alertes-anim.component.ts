@@ -3,6 +3,7 @@ import { AnimAlertesArticleComponent } from './dialogs/article/article.component
 import { AnimHomeService } from '../../anim-home.service';
 import { MatDialog } from '@angular/material';
 import { Subject } from 'rxjs';
+import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
 
 @Component({
   selector: 'app-alertes-anim',
@@ -12,109 +13,12 @@ import { Subject } from 'rxjs';
 })
 export class AlertesAnimComponent implements OnInit {
 
-  animAlertes: any[];
-  animAlertesdata = [
+  animAlertes1: any[];
+  animAlertes2: any[];
+	crudComp: CrudPopupComponent;
+  
+  animAlertesdata_line1 = [
       {
-        title: 'Plafond Ligne de Crédits',
-        path:'assets/img/',
-        articlesCount:'5',
-        featuredArticles:[
-                              {
-                                  title: 'No Ligne Crédit 1',
-                pourcent: '85',
-                icone:'account_balance',
-                color:'green'
-                              },
-                              {
-                                  title: 'No Ligne Crédit 2',
-                pourcent: '85',
-                icone:'account_balance',
-                color:'green'
-                              },
-                              {
-                                  title: 'No Ligne Crédit 3',
-                pourcent: '85',
-                icone:'account_balance',
-                color:'red'
-                              }
-                          ]
-      },
-      {
-        title: 'Plafond Ligne de Dépots',
-        path:'assets/img/',
-        articlesCount:'7',
-        featuredArticles:[
-                              {
-                                  title: 'No Ligne Dépot 1',
-                pourcent: '85',
-                icone:'receipt',
-                color:'orange'
-                              },
-                              {
-                                  title: 'No Ligne Dépot 2',
-                pourcent: '85',
-                icone:'receipt',
-                color:'green'
-                              },
-                              {
-                                  title: 'No Ligne Dépot 3',
-                pourcent: '85',
-                icone:'receipt',
-                color:'green'
-                              }
-                          ]
-      },
-      {
-        title: 'Retard Remboursement Pret',
-        path:'assets/img/',
-        articlesCount:'15',
-        featuredArticles:[
-                              {
-                                  title: 'Prenom Nom 1',
-                pourcent: '85',
-                icone:'assessment',
-                color:'red'
-                              },
-                              {
-                                  title: 'Prenom Nom 2',
-                pourcent: '85',
-                icone:'assessment',
-                color:'green'
-                              },
-                              {
-                                  title: 'Prenom Nom 3',
-                pourcent: '85',
-                icone:'assessment',
-                color:'green'
-                              }
-                          ]
-      },
-      {
-        title: 'Validation Produit',
-        path:'assets/img/',
-        articlesCount:'15',
-        featuredArticles:[
-                              {
-                                  title: 'Nom Produit (Boutique)',
-                pourcent: '85',
-                icone:'card_giftcard',
-                color:'green'
-                              },
-                              {
-                                  title: 'Nom Produit (Boutique)',
-                pourcent: '85',
-                icone:'card_giftcard',
-                color:'orange'
-                              },
-                              {
-                                  title: 'Nom Produit (Boutique)',
-                pourcent: '85',
-                icone:'card_giftcard',
-                color:'red'
-                              }
-                          ]
-      },
-   {
         title: 'Fin de Stock',
         path:'assets/img/',
         articlesCount:'5',
@@ -215,6 +119,109 @@ export class AlertesAnimComponent implements OnInit {
                           ]
       }
   ]
+
+  animAlertesdata_line2 = [
+    {
+      title: 'Plafond Ligne de Crédits',
+      path:'assets/img/',
+      articlesCount:'5',
+      featuredArticles:[
+                            {
+                                title: 'No Ligne Crédit 1',
+              pourcent: '85',
+              icone:'account_balance',
+              color:'green'
+                            },
+                            {
+                                title: 'No Ligne Crédit 2',
+              pourcent: '85',
+              icone:'account_balance',
+              color:'green'
+                            },
+                            {
+                                title: 'No Ligne Crédit 3',
+              pourcent: '85',
+              icone:'account_balance',
+              color:'red'
+                            }
+                        ]
+    },
+    {
+      title: 'Plafond Ligne de Dépots',
+      path:'assets/img/',
+      articlesCount:'7',
+      featuredArticles:[
+                            {
+                                title: 'No Ligne Dépot 1',
+              pourcent: '85',
+              icone:'receipt',
+              color:'orange'
+                            },
+                            {
+                                title: 'No Ligne Dépot 2',
+              pourcent: '85',
+              icone:'receipt',
+              color:'green'
+                            },
+                            {
+                                title: 'No Ligne Dépot 3',
+              pourcent: '85',
+              icone:'receipt',
+              color:'green'
+                            }
+                        ]
+    },
+    {
+      title: 'Retard Remboursement Pret',
+      path:'assets/img/',
+      articlesCount:'15',
+      featuredArticles:[
+                            {
+                                title: 'Prenom Nom 1',
+              pourcent: '85',
+              icone:'assessment',
+              color:'red'
+                            },
+                            {
+                                title: 'Prenom Nom 2',
+              pourcent: '85',
+              icone:'assessment',
+              color:'green'
+                            },
+                            {
+                                title: 'Prenom Nom 3',
+              pourcent: '85',
+              icone:'assessment',
+              color:'green'
+                            }
+                        ]
+    },
+    {
+      title: 'Validation Produit',
+      path:'assets/img/',
+      articlesCount:'15',
+      featuredArticles:[
+                            {
+                                title: 'Nom Produit (Boutique)',
+              pourcent: '85',
+              icone:'card_giftcard',
+              color:'green'
+                            },
+                            {
+                                title: 'Nom Produit (Boutique)',
+              pourcent: '85',
+              icone:'card_giftcard',
+              color:'orange'
+                            },
+                            {
+                                title: 'Nom Produit (Boutique)',
+              pourcent: '85',
+              icone:'card_giftcard',
+              color:'red'
+                            }
+                        ]
+    }
+]
   // Private
   private _unsubscribeAll: Subject<any>;
 
@@ -226,11 +233,12 @@ export class AlertesAnimComponent implements OnInit {
    */
   constructor(
       private _animHomeService: AnimHomeService,
-      private _matDialog: MatDialog
+      private _matDialog: MatDialog,private parCrud: CrudPopupComponent
   )
   {
       // Set the private defaults
       this._unsubscribeAll = new Subject();
+	  this.crudComp=this.parCrud;
   }
 
   // -----------------------------------------------------------------------------------------------------
@@ -255,8 +263,9 @@ export class AlertesAnimComponent implements OnInit {
               this.animAlertes = response;
           });
           console.log("AnimAlertesComponent :ngOnInit end");*/
-          this.animAlertes =this.animAlertesdata
-  }
+          this.animAlertes1 =this.animAlertesdata_line1;
+          this.animAlertes2 =this.animAlertesdata_line2;
+        }
 
   /**
    * On destroy

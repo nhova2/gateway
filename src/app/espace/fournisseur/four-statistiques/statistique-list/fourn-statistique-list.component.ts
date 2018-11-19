@@ -17,7 +17,6 @@ export class FoStatistiqueListComponent implements OnInit
 {
   stats: any[];
   selectedStatsTimeline: any;
-
   widgets: any;
   widget5: any = {};
   widget6: any = {};

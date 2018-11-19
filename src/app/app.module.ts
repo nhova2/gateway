@@ -38,6 +38,9 @@ import { CommonModule } from '@angular/common';
 import { NgMarqueeModule } from 'ng-marquee';
 import { AppFilterSidebarComponent } from './commons/filter-sidebar/filter-sidebar.component';
 import { Ng5SliderModule } from 'ng5-slider';
+import { Globals } from './globals/Globals.element';
+import { MultiUserModule } from './espace/multiuser/muser.module';
+import { CrudPopupComponent } from './shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 const appRoutes: Routes = [
     {
@@ -231,31 +234,36 @@ const appRoutes: Routes = [
 	{
         path: '',
         component: MultiUserComponent, children: [
-           /* {
-                path: 'main-mode-fournisseur',
-                loadChildren: './espace/fournisseur/mode-multi-fourniss.module#MainMultiFournissModule'
+            {
+                path: 'muser-main',
+                loadChildren: './espace/multiuser/muser.module#MultiUserModule'
             },
             {
-                path: 'main-mode-animateur',
-                loadChildren: './espace/animateur/mode-multi-anim.module#MainMultiAnimModule'
-            },*/
-            
-            { 
-                path: 'muser-fournisseur',
-                loadChildren: './espace/fournisseur/main/main-fourniss.module#MainFournissModule'
-            }/*,
+											
+																							 
+				
+			
+			  
+                path: 'muser-shopping',
+                loadChildren: './espace/acheteur/shopping/shopping.module#ShoppingModule'
+            },
+            {
+                path: 'muser-main-anim',
+                loadChildren: './espace/animateur/main/main-anim.module#MainAnimModule'
+            },
+            {
+                path: 'muser-main-magasin',
+                loadChildren: './espace/fournisseur/four-magasins/fournisseur-magasins.module#MagasinsFournisseurModule'
+            },
+            {
+                path: 'muser-main-catalogue',
+                loadChildren: './espace/fournisseur/four-catalogues/fournisseur-catalogues.module#CataloguesFournisseurModule'
+            },
             {
                 path: 'muser-banque',
                 loadChildren: './espace/banque/accueil/accueil.module#AccueilModule'
-            },
-            {
-                path: 'muser-animateur',
-                loadChildren: './espace/animateur/statistique/muser-statistique.module#StatistiqueMuserModule'
-            },*/
-            ,{
-                path: 'muser-administrateur',
-                loadChildren: './espace/administrateur/main/main.module#MainModule'
             }
+
         ]
     },
     {
@@ -317,9 +325,9 @@ const appRoutes: Routes = [
         BanqueComponent,
         AcheteurComponent,
         AnimateurComponent,
-        FournisseurComponent,
-        MultiUserComponent
-        ,AppFilterSidebarComponent
+        FournisseurComponent//,
+        //MultiUserComponent
+        //,AppFilterSidebarComponent
 
     ],
     imports     : [
@@ -356,13 +364,14 @@ const appRoutes: Routes = [
         // New modules
         NgMarqueeModule,
         Ng5SliderModule,
+			MultiUserModule			
         //MainMultiAnimModule,
         //MainMultiFournissModule
     ],
     bootstrap   : [
         AppComponent
     ], 
-    providers: [AppService,AnimHomeService,ProjectDashboardService,FournissHomeService,MuserHomeService
+    providers: [AppService,AnimHomeService,ProjectDashboardService,FournissHomeService,MuserHomeService,Globals,CrudPopupComponent
     ]
 })
 export class AppModule

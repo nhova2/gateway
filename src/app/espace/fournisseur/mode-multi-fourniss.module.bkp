@@ -13,8 +13,8 @@ import { LayoutModule } from 'app/layout/layout.module';
 import { AppStoreModule } from 'app/store/store.module';
 import { NgMarqueeModule } from 'ng-marquee';
 import { Ng5SliderModule } from 'ng5-slider';
-import { MainMultiAnimModule } from '../animateur/mode-multi-anim.module';
 import { AppFilterSidebarComponent } from 'app/commons/filter-sidebar/filter-sidebar.component';
+import { FournissHomeService } from './fourniss-home.service';
 
 export const routes = [
   { 
@@ -29,25 +29,25 @@ export const routes = [
 ];
 @NgModule({
   imports: [
-     RouterModule.forChild(routes),
-      MatSelectModule,
-      CommonModule,
-HttpClientModule,
-MatMomentDateModule,
-MatButtonModule,
-MatIconModule,
-FuseProgressBarModule,
-FuseSharedModule,
-FuseSidebarModule,
-FuseThemeOptionsModule,
-LayoutModule,
-AppStoreModule,
-SharedModule,
-FuseDemoModule,
-NgMarqueeModule,
-Ng5SliderModule
+    RouterModule.forChild(routes),
+    MatSelectModule,
+    CommonModule,
+    HttpClientModule,
+    MatMomentDateModule,
+    MatButtonModule,
+    MatIconModule,
+    FuseProgressBarModule,
+    FuseSharedModule,
+    FuseSidebarModule,
+    FuseThemeOptionsModule,
+    LayoutModule,
+    AppStoreModule,
+    SharedModule,
+    FuseDemoModule,
+    NgMarqueeModule,
+    Ng5SliderModule
   ],
-  providers   : [],
+  providers   : [FournissHomeService],
   declarations: [FournisseurComponent,AppFilterSidebarComponent],
   exports: [FournisseurComponent,AppFilterSidebarComponent]
 })

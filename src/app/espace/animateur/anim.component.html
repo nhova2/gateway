@@ -3,16 +3,25 @@
         <div fxLayout="row" fxLayoutGap="100px">
             <div style="display:inline-flex">
                 <mat-form-field>
-                    <mat-select placeholder="Domaine" disableRipple>
-                        <mat-option value="1">Domaine 1</mat-option>
-                        <mat-option value="2">Domaine 2</mat-option>
-                        <mat-option value="3">Domaine 3</mat-option>
+                    <mat-select placeholder="Activité" disableRipple>
+                        <mat-option value="1">Activité 1</mat-option>
+                        <mat-option value="2">Activité 2</mat-option>
+                        <mat-option value="3">Activité 3</mat-option>
                     </mat-select>
                 </mat-form-field>
             </div>
             <div style="display:inline-flex">
                 <mat-form-field>
                     <input matInput placeholder="rechercher">
+                </mat-form-field>
+            </div>
+            <div style="display:inline-flex" *ngIf="role=='multiuser'">
+                <mat-form-field>
+                    <mat-select placeholder="Role" (selectionChange)="changeNavigation($event.value)">
+                        <mat-option *ngFor="let rol of roles" [value]="rol.value">
+                            {{ rol.Name }}
+                        </mat-option>
+                    </mat-select>
                 </mat-form-field>
             </div>
         </div>

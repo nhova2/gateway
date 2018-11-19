@@ -1,6 +1,6 @@
 @import "src/@fuse/scss/fuse";
 
-#animalertes {
+#box-groups-a {
 
     .header {
         flex: 1 0 auto;
@@ -13,7 +13,7 @@
             height: 240px;
             padding: 16px;
         }
-
+       
         .hero-text {
 
             h1 {
@@ -44,7 +44,11 @@
             }
         }
     }
-
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .content {
         max-width: 960px;
         width: 100%;

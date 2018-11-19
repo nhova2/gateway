@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 
 @Component({
@@ -11,10 +12,14 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class FoBoutiqueListComponent implements OnInit {
   displayedColumns: string[] = ['NoFoBoutique', 'Nom', 'Date_Emission', 'Adresse','Contact', 'Details', 'Modifier', 'Supprimer'];
   dataSource = new MatTableDataSource<FoBoutiqueElement>(ELEMENT_DATA);
+  crudComp: CrudPopupComponent;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
+	constructor(private parCrud: CrudPopupComponent)
+	{
+		this.crudComp=this.parCrud;
+	}
 
   ngOnInit(){
 
