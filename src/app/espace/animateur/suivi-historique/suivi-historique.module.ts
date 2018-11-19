@@ -16,7 +16,8 @@ import { EncheresListComponent } from './encheres-list/encheres-list.component';
 import { GDemandeListComponent } from './g-demande-list/g-demande-list.component';
 import { DepotListComponent } from './depot-list/depot-list.component';
 import { NotationsListComponent } from './notations-list/notations-list.component';
-import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
+
 
 export const routes = [
       { path: '', component: SuiviAnimComponent, pathMatch: 'full' },

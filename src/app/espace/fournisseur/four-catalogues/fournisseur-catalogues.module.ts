@@ -20,7 +20,7 @@ import { MatButtonModule, MatChipsModule, MatFormFieldModule, MatIconModule, Mat
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { AgmCoreModule } from '@agm/core';
 import { FuseWidgetModule } from '@fuse/components';
-import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 
 

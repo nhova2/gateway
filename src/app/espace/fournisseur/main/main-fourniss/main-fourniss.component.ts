@@ -5,7 +5,7 @@ import { fuseAnimations } from '@fuse/animations';
 import { MatTableDataSource, MatPaginator, MatSort, PageEvent } from '@angular/material';
 import { FournissHomeService } from '../../fourniss-home.service';
 import { ProjectDashboardService } from 'app/main/apps/dashboards/project/project.service';
-import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 
 export interface UserData {

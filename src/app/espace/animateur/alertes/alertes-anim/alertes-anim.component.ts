@@ -3,7 +3,8 @@ import { AnimAlertesArticleComponent } from './dialogs/article/article.component
 import { AnimHomeService } from '../../anim-home.service';
 import { MatDialog } from '@angular/material';
 import { Subject } from 'rxjs';
-import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
+
 
 @Component({
   selector: 'app-alertes-anim',

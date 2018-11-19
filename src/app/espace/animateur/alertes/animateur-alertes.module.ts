@@ -7,8 +7,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
 import { AnimHomeService } from '../anim-home.service';
-import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
-
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 export const routes = [
   { path: '', component: AlertesAnimComponent, pathMatch: 'full' }

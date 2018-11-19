@@ -9,7 +9,8 @@ import { FuseUtils } from '@fuse/utils';
 
 import { takeUntil } from 'rxjs/internal/operators';
 import { EcommerceProductsService } from './products.service';
-import { CrudPopupComponent } from 'app/commons/crud/crudPopup.component';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
+
 
 @Component({
     selector   : 'e-commerce-products',
