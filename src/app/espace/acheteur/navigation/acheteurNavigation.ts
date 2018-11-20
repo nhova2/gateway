@@ -24,13 +24,6 @@ export const acheteurNavigation: FuseNavigation[] = [
         url     : 'suivi-commande'
     },
     {
-        id      : 'angular-material-elements',
-        title   : 'Livraison',
-        type    : 'group',
-        icon    : 'how_to_vote',
-        url     : 'livraisons'
-    },
-    {
         id      : 'demande-financement',
         title   : 'Demande Financement',
         icon    : 'send',

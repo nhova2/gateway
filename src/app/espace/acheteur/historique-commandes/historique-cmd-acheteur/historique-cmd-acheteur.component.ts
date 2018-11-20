@@ -9,7 +9,6 @@ export class HistoriqueCmdAcheteurComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
