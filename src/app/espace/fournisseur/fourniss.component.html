@@ -15,6 +15,15 @@
                     <input matInput placeholder="rechercher">
                 </mat-form-field>
             </div>
+			<div style="display:inline-flex" *ngIf="role=='multiuser'">
+                <mat-form-field>
+                    <mat-select placeholder="Role" (selectionChange)="changeNavigation($event.value)">
+                        <mat-option *ngFor="let rol of roles" [value]="rol.value">
+                            {{ rol.Name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
         </div>
     </div>
 
@@ -26,9 +35,9 @@
                 <div class="content p-24">
                     <!--admin-sidebar></admin-sidebar-->
                     <mat-grid-list cols="1" rowHeight="2:1">
-                            <mat-grid-tile><button mat-button class="block"><mat-icon>brightness_low</mat-icon> Creer Boutique</button></mat-grid-tile>
-                            <mat-grid-tile><button mat-button class="block"><mat-icon>done_outline</mat-icon> Creer Produit</button></mat-grid-tile>
-                            <mat-grid-tile><button mat-button class="block"><mat-icon>graphic_eq</mat-icon> Creer Magasin</button></mat-grid-tile>
+                            <mat-grid-tile><button mat-button class="block" (click)="crudComp.openCreateCompte()"><mat-icon>brightness_low</mat-icon> Creer Boutique</button></mat-grid-tile>
+                            <mat-grid-tile><button mat-button class="block" (click)="crudComp.openCreateProduit()"><mat-icon>done_outline</mat-icon> Creer Produit</button></mat-grid-tile>
+                            <mat-grid-tile><button mat-button class="block" (click)="crudComp.openCreateMagasin()"><mat-icon>graphic_eq</mat-icon> Creer Magasin</button></mat-grid-tile>
                           </mat-grid-list>
                           <filter-sidebar></filter-sidebar>
                 </div>

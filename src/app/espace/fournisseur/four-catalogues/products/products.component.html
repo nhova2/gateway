@@ -31,17 +31,20 @@
                     <mat-icon class="secondary-text">recherche</mat-icon>
                 </label>
                 <mat-form-field floatLabel="never" fxFlex="1 0 auto">
-                    <input id="search" matInput #filter placeholder="Search">
+                    <input id="search" matInput #filter placeholder="Recherche">
                 </mat-form-field>
             </div>
             <!-- / SEARCH -->
 
-            <button mat-raised-button
+            <!--button mat-raised-button
                     [routerLink]="'/apps/e-commerce/products/new'"
                     class="add-product-button fuse-white my-12 mt-sm-0">
                 <span>AJOUT + PRODUIT</span>
+            </button-->
+			<button mat-raised-button
+                    class="add-product-button fuse-white my-12 mt-sm-0">
+                <span>AJOUT + PRODUIT</span>
             </button>
-
         </div>
         <!-- / HEADER -->
 
@@ -130,11 +133,15 @@
 
                 <mat-header-row *matHeaderRowDef="displayedColumns; sticky:true"></mat-header-row>
 
-                <mat-row *matRowDef="let product; columns: displayedColumns;"
+                <!--mat-row *matRowDef="let product; columns: displayedColumns;"
                          class="product"
                          matRipple
                          [routerLink]="'/apps/e-commerce/products/'+product.id+'/'+product.handle">
-                </mat-row>
+                </mat-row-->
+				<mat-row *matRowDef="let product; columns: displayedColumns;"
+                         class="product"
+                         matRipple
+                         (click)="crudComp.openCreateProduit()"></mat-row>
 
             </mat-table>
 

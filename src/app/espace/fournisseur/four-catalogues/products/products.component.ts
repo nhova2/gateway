@@ -9,6 +9,8 @@ import { FuseUtils } from '@fuse/utils';
 
 import { takeUntil } from 'rxjs/internal/operators';
 import { EcommerceProductsService } from './products.service';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
+
 
 @Component({
     selector   : 'e-commerce-products',
@@ -20,6 +22,7 @@ export class EcommerceProductsComponent implements OnInit
 {
     dataSource: FilesDataSource | null;
     displayedColumns = ['id', 'image', 'name', 'category', 'price', 'quantity', 'active'];
+	crudComp: CrudPopupComponent;
 
     @ViewChild(MatPaginator)
     paginator: MatPaginator;
@@ -34,11 +37,12 @@ export class EcommerceProductsComponent implements OnInit
     private _unsubscribeAll: Subject<any>;
 
     constructor(
-        private _ecommerceProductsService: EcommerceProductsService
+        private _ecommerceProductsService: EcommerceProductsService,private parCrud: CrudPopupComponent
     )
     {
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+		this.crudComp=this.parCrud;
     }
 
     // -----------------------------------------------------------------------------------------------------

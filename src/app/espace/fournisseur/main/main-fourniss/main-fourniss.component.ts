@@ -5,6 +5,7 @@ import { fuseAnimations } from '@fuse/animations';
 import { MatTableDataSource, MatPaginator, MatSort, PageEvent } from '@angular/material';
 import { FournissHomeService } from '../../fourniss-home.service';
 import { ProjectDashboardService } from 'app/main/apps/dashboards/project/project.service';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 
 export interface UserData {
@@ -38,7 +39,7 @@ export class MainFournissComponent implements OnInit, OnDestroy
 	
 	displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
 	dataSource: MatTableDataSource<UserData>;
-
+crudComp: CrudPopupComponent;
 	@ViewChild(MatPaginator) paginator: MatPaginator;
 	@ViewChild(MatSort) sort: MatSort;
 	
@@ -69,7 +70,8 @@ export class MainFournissComponent implements OnInit, OnDestroy
      * @param {FournissHomeService} _fournissService
      */
     constructor(
-        private _fournissService: FournissHomeService, private _proj: ProjectDashboardService
+        private _fournissService: FournissHomeService, private _proj: ProjectDashboardService,private parCrud: CrudPopupComponent
+
     )
     {
         console.log("FournissHomeComponent contructor");
@@ -85,6 +87,8 @@ export class MainFournissComponent implements OnInit, OnDestroy
 		
 		// Assign the data to the data source for the table to render
 		this.dataSource = new MatTableDataSource(users);
+		
+		this.crudComp=this.parCrud;
     }
 
     // -----------------------------------------------------------------------------------------------------

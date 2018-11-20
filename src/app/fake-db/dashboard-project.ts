@@ -81,7 +81,7 @@ export class ProjectDashboardDb
         'widget5'      : {
             'title'     : 'Github Issues',
             'ranges'    : {
-                'TW': 'This Week',
+                'TW': 'C',
                 'LW': 'Last Week',
                 '2W': '2 Weeks Ago'
             },
@@ -1062,9 +1062,9 @@ export class ProjectDashboardDb
         'widget6'      : {
             'title'      : 'Task Distribution',
             'ranges'     : {
-                'TW': 'This Week',
-                'LW': 'Last Week',
-                '2W': '2 Weeks Ago'
+                'TW': 'Cette Semaine',
+                'LW': 'Semaine Derniere',
+                '2W': '1 mois'
             },
             'mainChart'  : {
                 'TW': [
@@ -1179,7 +1179,7 @@ export class ProjectDashboardDb
                 ],
                 'TM': [
                     {
-                        'title': 'Marketing Meeting',
+                        'title': 'Elevage Meeting',
                         'time' : '09:00 AM'
                     },
                     {
@@ -1213,36 +1213,36 @@ export class ProjectDashboardDb
             'title'    : 'Budget Distribution',
             'mainChart': [
                 {
-                    'name' : 'Wireframing',
+                    'name' : 'Agriculture',
                     'value': 12
                 },
                 {
-                    'name' : 'Design',
+                    'name' : 'Peche',
                     'value': 17
                 },
                 {
-                    'name' : 'Coding',
+                    'name' : 'Artisanat',
                     'value': 28
                 },
                 {
-                    'name' : 'Marketing',
+                    'name' : 'Elevage',
                     'value': 25
                 },
                 {
-                    'name' : 'Extra',
+                    'name' : 'Prospection',
                     'value': 15
                 }
             ]
         },
         'widget9'      : {
-            'title'         : 'Spent',
+            'title'         : 'Dépensé',
             'ranges'        : {
-                'TW': 'This Week',
-                'LW': 'Last Week',
-                '2W': '2 Weeks Ago'
+                'TW': 'Cette Semaine',
+                'LW': 'Semaine Derniere',
+                '2W': '1 mois'
             },
             'weeklySpent'   : {
-                'title': 'WEEKLY SPENT',
+                'title': 'DEPENSE SEMAINE',
                 'count': {
                     '2W': '2,682.85',
                     'LW': '1,445.34',
@@ -1357,7 +1357,7 @@ export class ProjectDashboardDb
                 }
             },
             'totalSpent'    : {
-                'title': 'TOTAL SPENT',
+                'title': 'TOTAL DEPENSE',
                 'count': {
                     '2W': '29,682.85',
                     'LW': '31,128.19',
@@ -1472,7 +1472,7 @@ export class ProjectDashboardDb
                 }
             },
             'remaining'     : {
-                'title': 'REMAINING',
+                'title': 'RESTANT',
                 'count': {
                     '2W': '94.317,15',
                     'LW': '92.871,81',
@@ -1586,7 +1586,7 @@ export class ProjectDashboardDb
                     ]
                 }
             },
-            'totalRemaining': {
+            'totalRestant': {
                 'title': 'TOTAL BUDGET',
                 'count': '124.000,00'
             },
@@ -1606,32 +1606,32 @@ export class ProjectDashboardDb
                         'title': 'Total Budget'
                     },
                     {
-                        'title': 'Spent ($)'
+                        'title': 'Dépensé ($)'
                     },
                     {
-                        'title': 'Spent (%)'
+                        'title': 'Dépensé (%)'
                     },
                     {
-                        'title': 'Remaining ($)'
+                        'title': 'Restant ($)'
                     },
                     {
-                        'title': 'Remaining (%)'
+                        'title': 'Restant (%)'
                     }
                 ],
                 'rows'   : [
                     [
                         {
-                            'value'  : 'Wireframing',
+                            'value'  : 'Agriculture',
                             'classes': 'primary',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$14,880.00',
+                            'value'  : 'EUR 14,880.00',
                             'classes': 'text-bold',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$14,000.00',
+                            'value'  : 'EUR 14,000.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1641,7 +1641,7 @@ export class ProjectDashboardDb
                             'icon'   : 'trending_up'
                         },
                         {
-                            'value'  : '$880.00',
+                            'value'  : 'EUR 880.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1653,17 +1653,17 @@ export class ProjectDashboardDb
                     ],
                     [
                         {
-                            'value'  : 'Design',
+                            'value'  : 'Peche',
                             'classes': 'green',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$21,080.00',
+                            'value'  : 'EUR 21,080.00',
                             'classes': 'text-bold',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$17,240.34',
+                            'value'  : 'EUR 17,240.34',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1673,7 +1673,7 @@ export class ProjectDashboardDb
                             'icon'   : 'trending_up'
                         },
                         {
-                            'value'  : '$3,839.66',
+                            'value'  : 'EUR 3,839.66',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1685,17 +1685,17 @@ export class ProjectDashboardDb
                     ],
                     [
                         {
-                            'value'  : 'Coding',
+                            'value'  : 'Artisanat',
                             'classes': 'red',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$34,720.00',
+                            'value'  : 'EUR 34,720.00',
                             'classes': 'text-bold',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$3,518.00',
+                            'value'  : 'EUR 3,518.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1705,7 +1705,7 @@ export class ProjectDashboardDb
                             'icon'   : 'trending_down'
                         },
                         {
-                            'value'  : '$31,202.00',
+                            'value'  : 'EUR 31,202.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1717,17 +1717,17 @@ export class ProjectDashboardDb
                     ],
                     [
                         {
-                            'value'  : 'Marketing',
+                            'value'  : 'Elevage',
                             'classes': 'accent',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$34,720.00',
+                            'value'  : 'EUR 34,720.00',
                             'classes': 'text-bold',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$0.00',
+                            'value'  : 'EUR 0.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1737,7 +1737,7 @@ export class ProjectDashboardDb
                             'icon'   : 'trending_flat'
                         },
                         {
-                            'value'  : '$34,720.00',
+                            'value'  : 'EUR 34,720.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1749,17 +1749,17 @@ export class ProjectDashboardDb
                     ],
                     [
                         {
-                            'value'  : 'Extra',
+                            'value'  : 'Prospection',
                             'classes': 'orange',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$18,600.00',
+                            'value'  : 'EUR 18,600.00',
                             'classes': 'text-bold',
                             'icon'   : ''
                         },
                         {
-                            'value'  : '$0.00',
+                            'value'  : 'EUR 0.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1769,7 +1769,7 @@ export class ProjectDashboardDb
                             'icon'   : 'trending_flat'
                         },
                         {
-                            'value'  : '$34,720.00',
+                            'value'  : 'EUR 34,720.00',
                             'classes': '',
                             'icon'   : ''
                         },
@@ -1790,7 +1790,7 @@ export class ProjectDashboardDb
                     {
                         avatar  : 'assets/images/avatars/james.jpg',
                         name    : 'Jack Gilbert',
-                        position: 'Design Manager',
+                        position: 'Peche Manager',
                         office  : 'Johor Bahru',
                         email   : 'jgilbert48@mail.com',
                         phone   : '+16 298 032 7774'

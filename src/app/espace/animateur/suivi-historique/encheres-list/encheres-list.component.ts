@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild} from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
+
 
 @Component({
   selector: 'app-encheres-list',
@@ -9,11 +11,14 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 export class EncheresListComponent implements OnInit {
   displayedColumns: string[] = ['NoDevis', 'Emetteur', 'Creation', 'Reponse', 'Details', 'Modifier', 'Supprimer'];
   dataSource = new MatTableDataSource<CommandeElement>(ELEMENT_DATA);
-
+crudComp: CrudPopupComponent;
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-
+constructor(private parCrud: CrudPopupComponent)
+	{
+		this.crudComp=this.parCrud;
+	}
   ngOnInit() {
 
     this.dataSource.paginator = this.paginator;

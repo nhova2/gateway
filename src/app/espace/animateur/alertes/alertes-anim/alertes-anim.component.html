@@ -1,18 +1,35 @@
-<div id="animalertes" class="page-layout simple">
-  <!-- CONTENT -->
-  <!--div class="content p-12"-->
-      <div fxLayout="row wrap" >
-          <mat-nav-list class="articles-list mat-elevation-z4" *ngFor="let category of animAlertesdata">
-              <h3 mat-subheader>{{category.title}}</h3>
-              <a mat-list-item *ngFor="let article of category.featuredArticles"
-                 >
-                  {{ article.title }} ({{ article.pourcent }} % ) <mat-icon class="secondary-text mr-8" [style.color]="article.color"> {{ article.icone }} </mat-icon>
-              </a>
-              <a mat-list-item class="see-all-link accent-fg">
-                  Voir plus ({{category.articlesCount}})
-              </a>
-          </mat-nav-list>
+<div class="box-groups-a" fxLayout="column" fxFlex="100" >
+    <div class="container">
+    <div id="animalertes" class="page-layout simple" >
+            <div fxLayout="row"  fxLayoutGap="50px" >
+                <mat-nav-list class="articles-list mat-elevation-z4" *ngFor="let category of animAlertesdata_line1">
+                    <h3 mat-subheader>{{category.title}}</h3>
+                    <a mat-list-item *ngFor="let article of category.featuredArticles">
+                        {{ article.title }} ({{ article.pourcent }} % ) <mat-icon class="secondary-text mr-8" [style.color]="article.color"> {{ article.icone }} </mat-icon>
+                    </a>
+                    <a mat-list-item class="see-all-link accent-fg">
+                        Voir plus ({{category.articlesCount}})
+                    </a>
+                </mat-nav-list>
+            </div>
+      </div></div>
+      <div>
+          <br>
+          <br>
+          <br>
       </div>
-  <!--/div-->
-  <!-- / CONTENT -->
+      <div class="container">
+      <div id="animalertes" class="page-layout simple">
+            <div fxLayout="row"  fxLayoutGap="50px">
+                <mat-nav-list class="articles-list mat-elevation-z4" *ngFor="let category of animAlertesdata_line2">
+                    <h3 mat-subheader>{{category.title}}</h3>
+                    <a mat-list-item *ngFor="let article of category.featuredArticles">
+                        {{ article.title }} ({{ article.pourcent }} % ) <mat-icon class="secondary-text mr-8" [style.color]="article.color"> {{ article.icone }} </mat-icon>
+                    </a>
+                    <a mat-list-item class="see-all-link accent-fg">
+                        Voir plus ({{category.articlesCount}})
+                    </a>
+                </mat-nav-list>
+            </div>
+        </div></div>
 </div>

@@ -5,6 +5,7 @@ import { fuseAnimations } from '@fuse/animations';
 import { MatTableDataSource, MatPaginator, MatSort, PageEvent } from '@angular/material';
 import { AnimHomeService } from '../../anim-home.service';
 import { ProjectDashboardService } from 'app/main/apps/dashboards/project/project.service';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 
 export interface UserData {
@@ -33,6 +34,7 @@ export class MainAnimComponent implements OnInit, OnDestroy
 
    home: any;
 	widgets: any;
+	crudComp: CrudPopupComponent;
     // Private
     private _unsubscribeAll: Subject<any>;
 	
@@ -69,8 +71,7 @@ export class MainAnimComponent implements OnInit, OnDestroy
      * @param {AnimHomeService} _animService
      */
     constructor(
-        private _animService: AnimHomeService, private _proj: ProjectDashboardService
-    )
+        private _animService: AnimHomeService, private _proj: ProjectDashboardService,private parCrud: CrudPopupComponent)
     {
         console.log("AnimHomeComponent contructor");
         this.widgets=_proj.getWidgets();
@@ -85,6 +86,8 @@ export class MainAnimComponent implements OnInit, OnDestroy
 		
 		// Assign the data to the data source for the table to render
 		this.dataSource = new MatTableDataSource(users);
+		
+		this.crudComp=this.parCrud;
     }
 
     // -----------------------------------------------------------------------------------------------------

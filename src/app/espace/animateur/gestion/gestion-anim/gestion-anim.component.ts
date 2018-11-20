@@ -3,6 +3,7 @@ import { fuseAnimations } from '@fuse/animations';
 import { Subject } from 'rxjs';
 import { AnimHomeService } from '../../anim-home.service';
 import { takeUntil } from 'rxjs/operators';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 @Component({
   selector: 'app-gestion-anim',
@@ -20,7 +21,7 @@ export class GestionAnimComponent implements OnInit, OnDestroy
     filteredCourses: any[];
     currentCategory: string;
     searchTerm: string;
-
+crudComp: CrudPopupComponent;
     // Private
     private _unsubscribeAll: Subject<any>;
 
@@ -30,7 +31,8 @@ export class GestionAnimComponent implements OnInit, OnDestroy
      * @param {AnimHomeService} _animHomeService
      */
     constructor(
-        private _animHomeService: AnimHomeService
+        private _animHomeService: AnimHomeService,private parCrud: CrudPopupComponent
+
     )
     {
         // Set the defaults
@@ -39,6 +41,8 @@ export class GestionAnimComponent implements OnInit, OnDestroy
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();
+		
+		this.crudComp=this.parCrud;
     }
 
     // -----------------------------------------------------------------------------------------------------
