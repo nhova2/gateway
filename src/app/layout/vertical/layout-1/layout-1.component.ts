@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 import { FuseConfigService } from '@fuse/services/config.service';
-import { navigation } from 'app/navigation/navigation';
+import { frontNavigation } from 'app/front/navigation/frontNavigation';
 
 @Component({
     selector     : 'vertical-layout-1',
@@ -29,7 +29,7 @@ export class VerticalLayout1Component implements OnInit, OnDestroy
     )
     {
         // Set the defaults
-        this.navigation = navigation;
+        this.navigation = frontNavigation;
 
         // Set the private defaults
         this._unsubscribeAll = new Subject();

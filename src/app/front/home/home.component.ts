@@ -32,10 +32,10 @@ export class HomeComponent {
     this.navigation = frontNavigation;
 
     // Register the navigation to the service
-    this._fuseNavigationService.register('main', this.navigation);
+    this._fuseNavigationService.register('home', this.navigation);
 
     // Set the main navigation as our current navigation
-    this._fuseNavigationService.setCurrentNavigation('main');
+    this._fuseNavigationService.setCurrentNavigation('home');
 
 
    }
