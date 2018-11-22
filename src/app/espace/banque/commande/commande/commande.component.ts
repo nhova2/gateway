@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
+
 
 @Component({
   selector: 'app-commande',
@@ -10,7 +12,10 @@ export class CommandeComponent implements OnInit {
 
   displayedColumns: string[] = ['Produit', 'Description', 'Quantite', 'Prix', 'Supprimer'];
   dataSource = new MatTableDataSource<CommandeElement>(ELEMENT_DATA);
-
+  crudComp: CrudPopupComponent;
+  constructor(private parCrud: CrudPopupComponent) {
+    this.crudComp = this.parCrud;
+  }
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 

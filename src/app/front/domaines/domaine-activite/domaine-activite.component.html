@@ -1,199 +1,215 @@
-<mat-sidenav-container>
-  <mat-sidenav fxFlex="20" #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav" perfectScrollbar>
-    <div fxLayout="row wrap" class="info-bar" ngClass.gt.md="m-0">
-      <h2>Commentaires</h2>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
+<div fxLayout="column" fxFlex="100">
+  <app-main-carousel [slides]="slides"></app-main-carousel>
+  <div class="page-layout carded left-sidebar">
+
+    <!-- TOP BACKGROUND -->
+    <!-- / TOP BACKGROUND -->
+
+    <!-- SIDEBAR -->
+    <fuse-sidebar class="sidebar" name="carded-left-sidebar-1" position="left" lockedOpen="gt-md">
+      <!-- SIDEBAR CONTENT -->    
+          <div fxLayout="row wrap" class="info-bar" ngClass.gt.md="m-0">
+            <h2>Commentaires</h2>
+            <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+              <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+                <div class="content">
+                  <p>user 1</p>
+                  <span class="text-muted m-0">30 Days money return guarantee</span>
+                </div>
+              </mat-card>
+            </div>
+            <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+              <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+                <div class="content">
+                  <p>user 1</p>
+                  <span class="text-muted m-0">30 Days money return guarantee</span>
+                </div>
+              </mat-card>
+            </div>
+            <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+              <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+                <div class="content">
+                  <p>user 1</p>
+                  <span class="text-muted m-0">30 Days money return guarantee</span>
+                </div>
+              </mat-card>
+            </div>
+            <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+              <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+                <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
+                <div class="content">
+                  <p>user 1</p>
+                  <span class="text-muted m-0">30 Days money return guarantee</span>
+                </div>
+              </mat-card>
+            </div>
+            <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
+              <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
+                <form class="example-form">
+                  <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Laisser un commentaire"></textarea>
+                  </mat-form-field>
+                </form>
+              </mat-card>
+            </div>
           </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
-          </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
-          </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <mat-icon class="mat-icon-xlg text-muted m-0">face</mat-icon>
-          <div class="content">
-            <p>user 1</p>
-            <span class="text-muted m-0">30 Days money return guarantee</span>
-          </div>
-        </mat-card>
-      </div>
-      <div fxFlex="100" fxFlex.md="25" fxFlex.sm="50" class="mt-16">
-        <mat-card class="light-block" fxLayout="row" fxLayoutAlign="start center">
-          <form class="example-form">
-            <mat-form-field class="example-full-width">
-              <textarea matInput placeholder="Laisser un commentaire"></textarea>
-            </mat-form-field>
-          </form>
-        </mat-card>
+      <!-- / SIDEBAR CONTENT -->
+
+    </fuse-sidebar>
+    <!-- / SIDEBAR -->
+
+
+    <!-- CENTER -->
+    <div class="center">
+
+      <!-- CONTENT CARD -->
+      <div class="content-card">
+
+        <!-- CONTENT TOOLBAR -->
+        <div class="toolbar px-24 py-8">
+
+          <button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
+            <mat-icon>menu</mat-icon>
+          </button>
+
+          <span>
+            <h1 style="font-weight: bold">Domaine</h1>
+          </span>
+
+        </div>
+        <!-- / CONTENT TOOLBAR -->
+        <div content class="content p-24">
+          <!-- CONTENT -->
+            <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="space-between center">
+              <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="start">
+                <div fxLayoutAlign="start">
+                  <mat-card class="panel-domaine-a">
+                    <mat-card-header>
+                    </mat-card-header>
+                    <mat-card-title>
+                      <div fxLayoutAlign="center center">Agriculture</div>
+                    </mat-card-title>
+                    <div fxLayoutAlign="center center">
+                      <img src="assets/images/domaine/agriculture.png" alt="" width="100px" height="50px">
+                    </div>
+                  </mat-card>
+                </div>
+                <div fxLayoutAlign="start">
+                  <textarea class="panel" disabled rows="12.5" cols="53" style="border: none;font-style: italic;padding: 2%;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
+                    </textarea>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="start">
+                <div fxLayoutAlign="start">
+                  <mat-card class="panel-domaine-b">
+                    <mat-card-header>
+                    </mat-card-header>
+                    <mat-card-title>
+                      <div fxLayoutAlign="center center">Elevage</div>
+                    </mat-card-title>
+                    <div fxLayoutAlign="center center">
+                      <img src="assets/images/domaine/elevage.png" alt="" width="100px" height="50px">
+                    </div>
+                  </mat-card>
+                </div>
+                <div fxLayoutAlign="start">
+                  <textarea class="panel" disabled rows="12.5" cols="53" style="border: none;font-style: italic;padding: 2%;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
+                                  </textarea>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="start">
+                <div fxLayoutAlign="start">
+                  <mat-card class="panel-domaine-c">
+                    <mat-card-header>
+                    </mat-card-header>
+                    <mat-card-title>
+                      <div fxLayoutAlign="center center">Peche</div>
+                    </mat-card-title>
+                    <div fxLayoutAlign="center center">
+                      <img src="assets/images/domaine/peche.png" alt="" width="100px" height="50px">
+                    </div>
+                  </mat-card>
+                </div>
+                <div fxLayoutAlign="start">
+                  <textarea class="panel" disabled rows="12.5" cols="53" style="border: none;font-style: italic;padding: 2%;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
+                                  </textarea>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="start">
+                <div fxLayoutAlign="start">
+                  <mat-card class="panel-domaine-d">
+                    <mat-card-header>
+                    </mat-card-header>
+                    <mat-card-title>
+                      <div fxLayoutAlign="center center">Artisanat</div>
+                    </mat-card-title>
+                    <div fxLayoutAlign="center center">
+                      <img src="assets/images/domaine/artisanat.png" alt="" width="100px" height="50px">
+                    </div>
+                  </mat-card>
+                </div>
+                <div fxLayoutAlign="start">
+                  <textarea class="panel" disabled rows="12.5" cols="53" style="border: none;font-style: italic;padding: 2%;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
+                                  </textarea>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="start">
+                <div fxLayoutAlign="start">
+                  <mat-card class="panel-domaine-e">
+                    <mat-card-header>
+                    </mat-card-header>
+                    <mat-card-title>
+                      <div fxLayoutAlign="center center">Technologie</div>
+                    </mat-card-title>
+                    <div fxLayoutAlign="center center">
+                      <img src="assets/images/domaine/tech.png" alt="" width="100px" height="50px">
+                    </div>
+                  </mat-card>
+                </div>
+                <div fxLayoutAlign="start">
+                  <textarea class="panel" disabled rows="12.5" cols="53" style="border: none;font-style: italic;padding: 2%;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
+                                  </textarea>
+                </div>
+              </div>
+              <div fxLayout="row" fxLayoutGap="50px" fxLayoutAlign="start">
+                <div fxLayoutAlign="start">
+                  <mat-card class="panel-domaine-e">
+                    <mat-card-header>
+                    </mat-card-header>
+                    <mat-card-title>
+                      <div fxLayoutAlign="center center">Commerce</div>
+                    </mat-card-title>
+                    <div fxLayoutAlign="center center">
+                      <img src="assets/images/domaine/commerce.png" alt="" width="100px" height="50px">
+                    </div>
+                  </mat-card>
+                </div>
+                <div fxLayoutAlign="start">
+                  <textarea class="panel" disabled rows="12.5" cols="53" style="border: none;font-style: italic;padding: 2%;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
+                  </textarea>
+                </div>
+              </div>
+            </div>
+          <br>
+        </div>
+        <!-- / CONTENT -->
       </div>
     </div>
+    <!-- / CONTENT CARD -->
+    <!-- / CENTER -->
+    <!-- SIDEBAR -->
+    <fuse-sidebar class="sidebar" name="carded-right-sidebar-1" position="end" lockedOpen="gt-md">
 
-  </mat-sidenav>
-  <mat-sidenav fxFlex="23" #rightSidenav position="end" [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" class="filter-sidenav"
-    perfectScrollbar>
-    <mat-accordion displayMode="flat" multi="true" class="tweets">
-      <mat-expansion-panel expanded>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <h4>Tweets</h4>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div fxLayout="column">
-          <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-            </mat-card-header>
-            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
-              <p fxLayoutAlign="left">
-                The Shiba Inu is the smallest of the six original.
-              </p>
-              <br>
-            </mat-card-content>
-            <mat-card-actions style=" padding-top: 0;">
-              <button mat-button>show summury</button>
-            </mat-card-actions>
-          </mat-card>
-          <mat-card class="example-card">
-            <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Shiba Inu</mat-card-title>
-            </mat-card-header>
-            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
-              <p>
-                The Shiba Inu is the smallest of the six original.
-              </p>
-            </mat-card-content>
-            <mat-card-actions style=" padding-top: 0;">
-              <button mat-button>show summury</button>
-            </mat-card-actions>
-          </mat-card>
-        </div>
-      </mat-expansion-panel>
-    </mat-accordion>
-    <mat-accordion displayMode="flat" multi="true">
-      <mat-expansion-panel expanded>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            <img src="../../../assets/images/Home/bot-icon.png" style=" width: 48px; height: 43px; ">
-            <h4>ChatBot</h4>
-            <a fxLayoutAlign="left" mat-button routerLink="."></a>
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <div fxLayout="column">
-          <mat-card class="example-card">
-            <mat-card-content style=" padding-bottom: 0; margin-bottom: 0;">
-              <p fxLayoutAlign="left" style="background: #67606061;border-radius: 25px;padding: 5%;">
-                Bonjour en quoi puis je vous etre utile aujourd'hui ?
-              </p>
-              <br>
-              <p fxLayoutAlign="right" style="background: rgba(236, 88, 88, 0.64);border-radius: 25px;padding: 5%;margin-left: 13%;">
-                The Shiba Inu is the smallest of the six original.
-              </p>
-              <p fxLayoutAlign="left" style="margin-top: 12%; background: #67606061;border-radius: 25px;padding: 5%;">
-                ok bla blaa ?
-              </p>
-            </mat-card-content>
-          </mat-card>
-        </div>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </mat-sidenav>
-
-  <mat-divider></mat-divider>
-  <mat-sidenav-content>
-    <div fxLayout="column" fxFlex="650px" fxLayoutAlign="space-between center">
-      <div fxLayout="row">
-        <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
-          <mat-card class="panel-domaine-a">
-            <mat-card-header>
-              <img src="../../../assets/images/domaine/agriculture.png" alt="" width="50px" height="50px">
-            </mat-card-header>
-            <mat-card-title>
-              Agriculture
-            </mat-card-title>
-            <mat-card-content>
-              &nbsp; &nbsp;
-            </mat-card-content>
-
-            <mat-card-footer>
-              &nbsp;
-            </mat-card-footer>
-          </mat-card>
-        </div>
-        <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
-          <textarea disabled rows="12.5" cols="53" style="border: none;font-style: italic;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
-                   </textarea>
-        </div>
+      <!-- SIDEBAR CONTENT -->
+      <div class="content p-24">
+        <chbot-sidebar></chbot-sidebar>
       </div>
-      <div fxLayout="row">
-        <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
-          <mat-card class="panel-domaine-b">
-            <mat-card-header>
-              <img src="../../../assets/images/domaine/peche.png" alt="" width="50px" height="50px">
-            </mat-card-header>
-            <mat-card-title>
-              Peche
-            </mat-card-title>
-            <mat-card-content>
-              &nbsp; &nbsp;
-            </mat-card-content>
+      <!-- / SIDEBAR CONTENT -->
 
-            <mat-card-footer>
-              &nbsp;
-            </mat-card-footer>
-          </mat-card>
-        </div>
-        <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
-          <textarea disabled rows="12.5" cols="53" style="border: none;font-style: italic;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
-                </textarea>
-        </div>
-      </div>
-      <div fxLayout="row">
-        <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
-          <mat-card class="panel-domaine-c">
-            <mat-card-header>
-              <img src="../../../assets/images/domaine/elevage.png" alt="" width="50px" height="50px">
-            </mat-card-header>
-            <mat-card-title>
-              Elevage
-            </mat-card-title>
-            <mat-card-content>
-              &nbsp; &nbsp;
-            </mat-card-content>
-
-            <mat-card-footer>
-              &nbsp;
-            </mat-card-footer>
-          </mat-card>
-        </div>
-        <div fxFlex="100px" fxFlex.gt-xs="33.3" ngClass.xs="mt-2">
-          <textarea disabled rows="12.5" cols="53" style="border: none;font-style: italic;">At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.At w3schools.com you will learn how to make a website.
-                </textarea>
-        </div>
-      </div>
-
-    </div>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+    </fuse-sidebar>
+    <!-- / SIDEBAR -->
+  </div>
+</div>

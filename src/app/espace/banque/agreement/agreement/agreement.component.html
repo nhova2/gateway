@@ -7,7 +7,7 @@
       </div>
     </div>
     <div class="py-8">
-      <button mat-raised-button color="accent">Ajouter un fournisseur</button>
+      <button mat-raised-button color="accent" (click)="crudComp.openCreateAcheteur()">Ajouter un fournisseur</button>
     </div>
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
@@ -44,7 +44,7 @@
         <ng-container matColumnDef="Modifier">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
           <td mat-cell *matCellDef="let row"> {{row.Modifier}}
-            <button mat-raised-button>
+            <button mat-raised-button (click)="crudComp.openUpdateAcheteur()">
               <mat-icon class="orange600">edit</mat-icon>
             </button>
           </td>
@@ -76,7 +76,7 @@
       </div>
     </div>
     <div class="py-8">
-      <button mat-raised-button color="accent">Ajouter un animateur</button>
+      <button mat-raised-button color="accent" (click)="crudComp.openCreateAcheteur()">Ajouter un animateur</button>
     </div>
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
@@ -113,7 +113,7 @@
         <ng-container matColumnDef="Modifier">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Modifier </th>
           <td mat-cell *matCellDef="let row"> {{row.Modifier}}
-            <button mat-raised-button>
+            <button mat-raised-button (click)="crudComp.openUpdateAcheteur()">
               <mat-icon class="orange600">edit</mat-icon>
             </button>
           </td>

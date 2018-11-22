@@ -22,12 +22,12 @@ export class AuthenticationComponent implements OnInit {
     if (this.username === 'admin' && this.password === 'admin'){
 		console.log("auth admin");
 		this.globals.role="administrateur";
-      this.router.navigate(['']);
+      this.router.navigate(['main']);
     }
     else if (this.username === 'banq' && this.password === 'banq') {
 		console.log("auth banq");
 		this.globals.role="banque";
-      this.router.navigate(['main']);
+      this.router.navigate(['banque']);
      
     }
     else if (this.username === 'acheteur' && this.password === 'acheteur') {

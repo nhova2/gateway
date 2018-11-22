@@ -57,7 +57,55 @@
                 
               </div>
               <div class="mat-row">
-                <div class="mat-cell"><a [routerLink]="['/']" mat-raised-button color="primary" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">Continuer Achat</a></div>
+                <div class="mat-cell"><img src="assets/images/Panier/Panier_Produit.jpg" alt=""></div>
+                <div class="mat-cell handle-counter" id="handleCounter">
+                  <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
+                
+                  <button  (click)="decrement()" class="counter-minus btn btn-primary" >-</button>
+                
+                  <input type="text" value="{{counter}} " style="width:11%; padding: 1.5%">
+                
+                  <button (click)="increment()" class="counter-plus btn btn-primary" >+</button>
+                </div>
+                <div class="mat-cell nameproduct"><!--<a [routerLink]="['/products', product.id, product.name]" class="product-name">{{product.name}}</a>-->Nom</div>
+                <div class="mat-cell firstprice">5000<SUP class="expo">XOF</SUP></div>      
+                
+                <div class="mat-cell totalprice">5000<SUP class="expo">XOF</SUP></div>
+                <div class="mat-cell text-center">
+                  <div class="p-1">
+                    <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="mat-row">
+                <div class="mat-cell"><img src="assets/images/Panier/Panier_Produit.jpg" alt=""></div>
+                <div class="mat-cell handle-counter" id="handleCounter">
+                  <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
+                
+                  <button  (click)="decrement()" class="counter-minus btn btn-primary" >-</button>
+                
+                  <input type="text" value="{{counter}} " style="width:11%; padding: 1.5%">
+                
+                  <button (click)="increment()" class="counter-plus btn btn-primary" >+</button>
+                </div>
+                <div class="mat-cell nameproduct"><!--<a [routerLink]="['/products', product.id, product.name]" class="product-name">{{product.name}}</a>-->Nom</div>
+                <div class="mat-cell firstprice">8000<SUP class="expo">XOF</SUP></div>      
+                
+                <div class="mat-cell totalprice">8000<SUP class="expo">XOF</SUP></div>
+                <div class="mat-cell text-center">
+                  <div class="p-1">
+                    <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="mat-row">
+                <div class="mat-cell"><a [routerLink]="['/cart','details-cart']" mat-raised-button color="primary" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">Continuer Achat</a></div>
                 <div class="mat-cell"></div>
                 <div class="mat-cell"></div>
                 <div class="mat-cell text-right">
@@ -74,7 +122,7 @@
                     <span class="new-price">${{ (grandTotal - (grandTotal*0.15)) | number : '1.2-2'}}</span>
                   </div>
                 </div>
-                <div class="mat-cell text-center"><a [routerLink]="['/checkout']" mat-raised-button style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt" >Passer Commande</a></div>
+                <div class="mat-cell text-center"><a mat-raised-button style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt" >Passer Commande</a></div>
               </div>
             </div>
           </mat-card>

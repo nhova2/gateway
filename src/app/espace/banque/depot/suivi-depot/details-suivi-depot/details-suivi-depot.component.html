@@ -1,0 +1,53 @@
+<div fxLayout="column" fxLayoutGap="10px">
+  <div fxLayout="row" class="toolbar">
+    <h1>LIGNE DE DEPOT A</h1>
+  </div>
+  <div fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="5px">
+      <div fxFlex="100">
+        <div class="form-container">
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Denomination">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Date creation">
+            </mat-form-field>
+          </div>
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <mat-select value="option1">
+                <mat-option>None</mat-option>
+                <mat-option value="option1">Credit A</mat-option>
+                <mat-option value="option2">Credit B</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutGap="20px">
+            <mat-form-field>
+              <textarea matInput placeholder="Description"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="100">
+        <div class="form-container">
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Montant plafond">
+            </mat-form-field>
+          </div>
+          
+          <div fxLayout="row" fxLayoutGap="20px" fxLayout.xs="column">
+            <mat-form-field>
+              <input matInput placeholder="Responsable">
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+</div>

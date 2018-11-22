@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudPopupComponent } from 'app/shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
 @Component({
   selector: 'app-main-admin',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainAdminComponent implements OnInit {
 
-  constructor() { }
+  crudComp: CrudPopupComponent;
+  constructor(private parCrud: CrudPopupComponent) {
+    this.crudComp = this.parCrud;
+  }
 
   ngOnInit() {
   }

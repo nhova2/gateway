@@ -4,9 +4,17 @@ export const navigation: FuseNavigation[] = [
     {
         id: 'domaines',
         title: 'Domaine',
-        type: 'item',
+        type: 'collapsable',
         icon: 'domain',
-        url: 'domaines'
+        url: '/domaines',
+        children: [
+            {
+                id: 'domaines-activite',
+                title: 'domaines-activité',
+                type: 'item',
+                url: '/domaines/activites/listes'
+            }
+        ]
     },
     {
         id: 'produit',
@@ -43,5 +51,4 @@ export const navigation: FuseNavigation[] = [
         type: 'item',
         url: 'offres'
     }
-
 ];

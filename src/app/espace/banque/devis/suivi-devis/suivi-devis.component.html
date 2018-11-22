@@ -1,3 +1,56 @@
-<p>
-  suivi-devis works!
-</p>
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+  <div>
+    <h2 class="title">SUIVI DEVIS</h2>
+  </div>
+</div>
+
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="Numero">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Numero </th>
+      <td mat-cell *matCellDef="let row"> {{row.Numero}} </td>
+    </ng-container>
+
+    <!-- Progress Column -->
+    <ng-container matColumnDef="Fournisseur">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Fournisseur </th>
+      <td mat-cell *matCellDef="let row"> {{row.Fournisseur}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Client">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Client </th>
+      <td mat-cell *matCellDef="let row"> {{row.Client}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Date_Creation">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Date_Creation </th>
+      <td mat-cell *matCellDef="let row"> {{row.Date_Creation}}
+
+      </td>
+    </ng-container>
+
+    <!-- Color Column -->
+    <ng-container matColumnDef="Details">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+      <td mat-cell *matCellDef="let row"> {{row.Details}}
+        <button mat-raised-button [routerLink]="['/devis','details-suivi-devis',1]">
+          <mat-icon class="orange600">edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

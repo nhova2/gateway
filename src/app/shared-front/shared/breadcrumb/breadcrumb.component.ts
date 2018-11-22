@@ -28,6 +28,7 @@ export class BreadcrumbComponent {
             if (event instanceof NavigationEnd) {
                 this.breadcrumbs = [];                
                 this.parseRoute(this.router.routerState.snapshot.root); 
+                
                 this.pageTitle = "";
                 this.breadcrumbs.forEach(breadcrumb => {
                     this.pageTitle += ' > ' + breadcrumb.name;
