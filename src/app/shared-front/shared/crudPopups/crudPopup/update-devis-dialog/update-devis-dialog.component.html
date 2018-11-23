@@ -26,7 +26,7 @@
                         <div class="mat-header-cell productpolice">Total</div>
                         <div class="mat-header-cell text-center">
                           <div class="px-1">
-                            <button mat-raised-button color="warn" (click)="clear()" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 11pt">Effacer Tout</button>
+                            <button mat-raised-button color="warn"  style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 11pt">Effacer Tout</button>
                           </div>
                         </div>
                       </div>
@@ -47,7 +47,7 @@
                         <div class="mat-cell totalprice">1000<SUP class="expo">XOF</SUP></div>
                         <div class="mat-cell text-center">
                           <div class="p-1">
-                            <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+                            <button mat-mini-fab color="warn"  matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
                                 <mat-icon>close</mat-icon>
                             </button>
                           </div>
@@ -67,9 +67,9 @@
                         </div>
                         <div class="mat-cell">
                           <div fxLayout="column" fxLayoutAlign="center start" class="grand-total">
-                            <span>${{ grandTotal | number : '1.2-2'}}</span>
+                            <span></span>
                             <span class="text-muted">15%</span>
-                            <span class="new-price">${{ (grandTotal - (grandTotal*0.15)) | number : '1.2-2'}}</span>
+                            <span class="new-price"></span>
                           </div>
                         </div>
                         <div class="mat-cell text-center"><a [routerLink]="['/checkout']" mat-raised-button style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 11pt" >Passer Commande</a></div>

@@ -1,4 +1,4 @@
-import { AutocompleteAutoActiveFirstOptionExample } from 'assets/angular-material-examples/autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
+/* import { AutocompleteAutoActiveFirstOptionExample } from 'assets/angular-material-examples/autocomplete-auto-active-first-option/autocomplete-auto-active-first-option-example';
 import { AutocompleteDisplayExample } from 'assets/angular-material-examples/autocomplete-display/autocomplete-display-example';
 import { AutocompleteFilterExample } from 'assets/angular-material-examples/autocomplete-filter/autocomplete-filter-example';
 import { AutocompleteOverviewExample } from 'assets/angular-material-examples/autocomplete-overview/autocomplete-overview-example';
@@ -169,7 +169,7 @@ import { TableStickyComplexExample } from 'assets/angular-material-examples/tabl
 import { TableStickyComplexFlexExample } from 'assets/angular-material-examples/table-sticky-complex-flex/table-sticky-complex-flex-example';
 import { TableStickyFooterExample } from 'assets/angular-material-examples/table-sticky-footer/table-sticky-footer-example';
 import { TableStickyHeaderExample } from 'assets/angular-material-examples/table-sticky-header/table-sticky-header-example';
-
+ */
 export const COMPONENT_MAP = {
     'autocomplete'    : [
         'autocomplete-overview',
@@ -422,11 +422,11 @@ export const COMPONENT_MAP = {
 };
 
 export const EXAMPLE_COMPONENTS = {
-    'autocomplete-auto-active-first-option': {
+   /*  'autocomplete-auto-active-first-option': {
         title    : 'Highlight the first autocomplete option',
         component: AutocompleteAutoActiveFirstOptionExample
-    },
-    'autocomplete-display'                 : {
+    }, */
+    /* 'autocomplete-display'                 : {
         title    : 'Display value autocomplete',
         component: AutocompleteDisplayExample
     },
@@ -1120,11 +1120,11 @@ export const EXAMPLE_COMPONENTS = {
     'tree-nested-overview'                 : {
         title    : 'Tree with nested nodes',
         component: TreeNestedOverviewExample
-    }
+    } */
 };
 
 export const EXAMPLE_LIST = [
-    AutocompleteAutoActiveFirstOptionExample,
+    /* AutocompleteAutoActiveFirstOptionExample,
     AutocompleteDisplayExample,
     AutocompleteFilterExample,
     AutocompleteOptgroupExample,
@@ -1295,5 +1295,5 @@ export const EXAMPLE_LIST = [
     TreeDynamicExample,
     TreeFlatOverviewExample,
     TreeLoadmoreExample,
-    TreeNestedOverviewExample
+    TreeNestedOverviewExample */
 ];

@@ -5,8 +5,8 @@ import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import { RouterModule } from '@angular/router';
-import { FoCatalogueListComponent } from './catalogue-list/fourn-catalogue-list.component';
-
+/* import { FoCatalogueListComponent } from './catalogue-list/fourn-catalogue-list.component';
+ */
 
 import { EcommerceProductsComponent } from './products/products.component';
 import { EcommerceProductsService } from './products/products.service';
