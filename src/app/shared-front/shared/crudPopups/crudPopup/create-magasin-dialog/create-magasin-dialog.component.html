@@ -9,19 +9,19 @@
               <div fxLayout="row" style="margin-top: 10%;" fxLayout.xs="column" fxLayoutGap="5px">
                   <div>
                       <mat-form-field >
-                          <input matInput placeholder="Nom Magasin">
+                          <input matInput placeholder="Nom Magasin" [(ngModel)]="magasin.nom">
                         </mat-form-field>
                   </div>
                   <div style="margin-left: 130%;">
                       <mat-form-field >
-                          <input matInput placeholder="Reference" >
+                          <input matInput placeholder="Reference" [(ngModel)]="magasin.ref">
                         </mat-form-field>
                   </div>
               </div>
               <div fxLayout="row" style="margin-top: -38%;"fxLayout.xs="column" fxLayoutGap="5px">
                   <div>
                         <mat-form-field style="width: 200%;">
-                                <textarea matInput placeholder="Description "></textarea>
+                                <textarea matInput placeholder="Description " [(ngModel)]="magasin.description"></textarea>
                          </mat-form-field>
                         
                   </div>
@@ -152,7 +152,7 @@
                                                     <div fxLayout="row" style="margin-top: -12%;">
                                                             <div style=" margin-left: 6%;">
                                                                     <mat-form-field>
-                                                                      <input matInput placeholder="Enter your email" [formControl]="email" required>
+                                                                      <input matInput placeholder="Enter your email" [(ngModel)]="magasin.email" [formControl]="email" required>
                                                                       <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
                                                                     </mat-form-field>
                                                             </div>
@@ -176,5 +176,5 @@
     </mat-dialog-content>
     <mat-dialog-actions align="end">
       <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
-      <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial>Inscrire</button>
+      <button mat-raised-button color="accent" [mat-dialog-close]="true" cdkFocusInitial (click)="createNewMagasin()">Inscrire</button>
     </mat-dialog-actions>

@@ -42,6 +42,15 @@ import { Globals } from './globals/Globals.element';
 import { MultiUserModule } from './espace/multiuser/muser.module';
 import { CrudPopupComponent } from './shared-front/shared/crudPopups/crudPopup/crudPopup.component';
 
+// Firebase Imports
+import { FIREBASE_CREDENTIALS } from './firebase.credentials';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { ProduitService } from './service/produit.service';
+import { MagasinService } from './service/magasin.service';
+
+
 const appRoutes: Routes = [
     {
         path        : 'apps',
@@ -364,14 +373,17 @@ const appRoutes: Routes = [
         // New modules
         NgMarqueeModule,
         Ng5SliderModule,
-			MultiUserModule			
+		MultiUserModule		,
+        AngularFireModule.initializeApp(FIREBASE_CREDENTIALS),
+        AngularFireDatabaseModule, AngularFireAuthModule	
         //MainMultiAnimModule,
         //MainMultiFournissModule
     ],
     bootstrap   : [
         AppComponent
     ], 
-    providers: [AppService,AnimHomeService,ProjectDashboardService,FournissHomeService,MuserHomeService,Globals,CrudPopupComponent
+    providers: [AppService,AnimHomeService,ProjectDashboardService,FournissHomeService,MuserHomeService,Globals,CrudPopupComponent,
+    ProduitService,MagasinService
     ]
 })
 export class AppModule
