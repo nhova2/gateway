@@ -40,7 +40,10 @@ import { CreateDemandeFinancementDevisDialogComponent } from './create-demande-f
 import { UpdateDemandeFinancementDevisDialogComponent } from './update-demande-financement-devis-dialog/update-demande-financement-devis-dialog.component';
 import { CreateDemandeAgrementDialogComponent } from './create-demande-agreement/create-demande-agreement.component';
 import { UpdateDemandeAgrementDialogComponent } from './update-demande-agreement/update-demande-agreement.component';
-
+import { AjoutPretDialogComponent } from './ajout-pret-popup/ajout-pret-dialog.component';
+import { AjoutLigneCreditComponent } from './Ajout-ligne-credit/ajout-ligne-credit.component';
+import { SuiviReglementCommandeComponent } from './Suivi-reglement-commande/Suivi-reglement-commande.component';
+import { RechercherProduitComponent } from './Rechercher-produit/rechercher-produit-dialog.component';
 
 @Component({
   selector: 'app-crudpopup',
@@ -194,6 +197,35 @@ export class CrudPopupComponent implements OnInit {
   }
   openCreateDemandeAgreement() {
     const dialogCreateCpt = this.dialog.open(CreateDemandeAgrementDialogComponent);
+
+    dialogCreateCpt.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
+  openAjoutPret() {
+    const dialogCreateCpt = this.dialog.open(AjoutPretDialogComponent);
+
+    dialogCreateCpt.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openAjoutligneCredit() {
+    const dialogCreateCpt = this.dialog.open(AjoutLigneCreditComponent);
+
+    dialogCreateCpt.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openSuiviReglementCommande() {
+    const dialogCreateCpt = this.dialog.open(SuiviReglementCommandeComponent);
+
+    dialogCreateCpt.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  openRechercherProduit() {
+    const dialogCreateCpt = this.dialog.open(RechercherProduitComponent);
 
     dialogCreateCpt.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AlertesAnimComponent } from './alertes-anim/alertes-anim.component';
+import { AnimAlertesArticleComponent } from './alertes-anim/dialogs/article/article.component';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -22,7 +23,7 @@ export const routes = [
     MatInputModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [AlertesAnimComponent],
+  declarations: [AlertesAnimComponent, AnimAlertesArticleComponent],
   providers   : [AnimHomeService,CrudPopupComponent ]
 })
 export class AlertesAnimateurModule { }

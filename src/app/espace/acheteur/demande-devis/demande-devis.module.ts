@@ -7,10 +7,13 @@ import { MatInputModule } from '@angular/material';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { DetailsDemandeDevisComponent } from './details-demande-devis/details-demande-devis.component';
+import { DemandDevisFormulaireComponent } from './demand-devis-formulaire/demand-devis-formulaire.component';
+import { MatTableModule } from '@angular/material/table';
 
 export const routes = [
   { path: '', component: DemandeDevisAcheteurComponent, pathMatch: 'full' },
-  { path: 'detailsDemandeDevis/:id', component: DetailsDemandeDevisComponent, pathMatch: 'full' }
+  { path: 'detailsDemandeDevis/:id', component: DetailsDemandeDevisComponent, pathMatch: 'full' },
+  { path: 'demande-devis-formulaire', component: DemandDevisFormulaireComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -18,8 +21,9 @@ export const routes = [
     CommonModule,
     RouterModule.forChild(routes),
     FuseSharedModule,
-    SharedModule
+    SharedModule,
+    MatTableModule
   ],
-  declarations: [DemandeDevisAcheteurComponent, DetailsDemandeDevisComponent]
+  declarations: [DemandeDevisAcheteurComponent, DetailsDemandeDevisComponent, DemandDevisFormulaireComponent]
 })
 export class DemandeDevisModule { }

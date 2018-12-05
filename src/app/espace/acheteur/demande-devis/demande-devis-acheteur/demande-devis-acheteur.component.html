@@ -1,6 +1,6 @@
 <div fxLayout="column" fxLayoutGap="10px">
   <div>
-    <button mat-raised-button color="accent" [routerLink]="['/domaine']">Nouvelle demande</button>
+    <button mat-raised-button color="accent" [routerLink]="['demande-devis-formulaire']">Nouvelle demande</button>
   </div>
   <div fxLayout="row" fxLayoutGap="10px" fxLayout.xs="column">
     <div fxFlex="100">
@@ -12,7 +12,7 @@
             <div class="mat-header-cell">DATE DEMANDE</div>
             <div class="mat-header-cell">INSTITUT DESTINATAIRE</div>
             <div class="mat-header-cell">ETAT DEMANDE</div>
-            <div class="mat-header-cell">VOIR DETAILS</div>
+            <!-- <div class="mat-header-cell">VOIR DETAILS</div> -->
           </div>
           <div class="mat-row">
             <div class="mat-cell">
@@ -30,10 +30,10 @@
             <div class="mat-cell">
               ACCORDE
             </div>
-            <div class="mat-cell">
+            <!-- <div class="mat-cell">
               <button [routerLink]="['detailsDemandeDevis',1]" mat-raised-button color="warn">
                 <mat-icon>details</mat-icon>details</button>
-            </div>
+            </div> -->
           </div>
           <div class="mat-row">
             <div class="mat-cell">
@@ -51,11 +51,11 @@
             <div class="mat-cell">
               EN PREPARATION
             </div>
-            <div class="mat-cell">
+            <!-- <div class="mat-cell">
               <button mat-raised-button color="warn">
                 <mat-icon>details</mat-icon>details
               </button>
-            </div>
+            </div> -->
           </div>
           <div class="mat-row">
             <div class="mat-cell">
@@ -73,10 +73,10 @@
             <div class="mat-cell">
               REJETE
             </div>
-            <div class="mat-cell">
+            <!-- <div class="mat-cell">
               <button mat-raised-button color="warn">
                 <mat-icon>details</mat-icon>details</button>
-            </div>
+            </div> -->
           </div>
           <div class="mat-row">
             <div class="mat-cell">
@@ -94,10 +94,10 @@
             <div class="mat-cell">
               EN ATTENTE D'APPROBATION
             </div>
-            <div class="mat-cell">
+            <!-- <div class="mat-cell">
               <button mat-raised-button color="warn">
                 <mat-icon>details</mat-icon>details</button>
-            </div>
+            </div> -->
           </div>
           <div class="mat-row">
             <div class="mat-cell">
@@ -115,10 +115,10 @@
             <div class="mat-cell">
               EN ATTENTE DE VALIDATION
             </div>
-            <div class="mat-cell">
+            <!-- <div class="mat-cell">
               <button mat-raised-button color="warn">
                 <mat-icon>details</mat-icon>details</button>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

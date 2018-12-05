@@ -1,0 +1,813 @@
+<div fxLayout="column" fxFlex="100">
+  <app-main-carousel [slides]="slides"></app-main-carousel>
+  <div class="page-layout carded left-sidebar">
+
+    <!-- TOP BACKGROUND -->
+    <!-- / TOP BACKGROUND -->
+
+    <!-- SIDEBAR -->
+    <fuse-sidebar class="sidebar" name="carded-left-sidebar-1" position="left" lockedOpen="gt-md">
+
+      <!-- SIDEBAR CONTENT -->
+      <div class="content p-24">
+        <fuse-demo-sidebar></fuse-demo-sidebar>
+      </div>
+      <!-- / SIDEBAR CONTENT -->
+
+    </fuse-sidebar>
+    <!-- / SIDEBAR -->
+
+
+    <!-- CENTER -->
+    <div class="center">
+
+      <!-- CONTENT CARD -->
+      <div class="content-card">
+
+        <!-- CONTENT TOOLBAR -->
+        <div class="toolbar px-24 py-8">
+
+          <button mat-icon-button class="sidebar-toggle" fxHide.gt-md (click)="toggleSidebar('carded-left-sidebar-1')">
+            <mat-icon>menu</mat-icon>
+          </button>
+
+          <span>
+            <h1 style="font-weight: bold">Domaine</h1>
+          </span>
+
+        </div>
+        <!-- / CONTENT TOOLBAR -->
+        <div content class="content p-24">
+          <!-- CONTENT -->
+          <div fxLayout="row" fxLayoutGap="60px" fxLayout.xs="column" fxLayoutAlign="space-between center">
+            <div fxLayout="column" fxFlex="100">
+              <div fxLayout="column" fxLayout.xs="column" fxLayoutAlign="space-between center" class="filter-row mat-elevation-z1 text-muted">
+                <div fxLayout="column">
+            
+                  <div class="products-tabs">
+                    <mat-tab-group mat-stretch-tabs>
+                      <mat-tab label="Meilleur vente">
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                        </div>
+                      </mat-tab>
+                      <mat-tab label="Nouveauté">
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                      </mat-tab>
+                      <mat-tab label="Mieux noté">
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                      </mat-tab>
+                    </mat-tab-group>
+                  </div>
+                  <div class="products-tabs">
+                    <mat-tab-group mat-stretch-tabs>
+                      <mat-tab label="Meilleur vente">
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                      </mat-tab>
+                      <mat-tab label="Nouveauté">
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/Produit/cirot.jpg" alt="">
+                              </a>
+                              <h4 class="category text-muted">Agriculture</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12500 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                      </mat-tab>
+                      <mat-tab label="Mieux noté">
+                        <div fxLayout="row" fxLayout.xs="column">
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/products/printer/1-medium.png" alt="">
+                              </a>
+                              <h4 class="category text-muted">Tech</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                PC
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>120000 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">4 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+                          <div>
+                            <mat-card class="product-item text-center">
+                              <mat-chip-list>
+                                <mat-chip color="warn" selected="true">0% OFF</mat-chip>
+                              </mat-chip-list>
+                              <a [routerLink]="['#']" class="image-link">
+                                <img src="assets/images/products/pc/1-medium.png" alt="">
+                              </a>
+                              <h4 class="category text-muted">Tech</h4>
+                              <a [routerLink]="['#']" class="title text-truncate">
+                                Cirot
+                              </a>
+                              <div fxLayout="row" fxLayoutAlign="space-between center" class="prices">
+                                <div fxLayout="column" fxLayoutAlign="center start">
+                                  <p class=" text-muted">
+                                    <span>12000 CFA</span>
+                                  </p>
+                                </div>
+                                <div fxLayout="row" fxLayoutAlign='center end'>
+                                  <div class="ratings">
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                    <mat-icon class="mat-icon-xs">star</mat-icon>
+                                  </div>
+                                  <p class="ratings-count text-muted">5 ratings</p>
+                                </div>
+                              </div>
+                              <div class="divider mt-2"></div>
+                              <div class="icons">
+                                <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="align" class="text-muted">
+                                  <div>
+                                    <button mat-icon-button matTooltip="Ajouter au panier">
+                                      <mat-icon>shopping_cart</mat-icon>
+                                    </button>
+                                    <button mat-icon-button matTooltip="Detail produit">
+                                      <mat-icon>remove_red_eye</mat-icon>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-card>
+                          </div>
+            
+                        </div>
+                      </mat-tab>
+                    </mat-tab-group>
+                  </div>
+                </div>
+                <br>
+                <mat-divider></mat-divider>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+          <br>
+        </div>
+
+        <!-- / CONTENT -->
+      </div>
+
+
+    </div>
+    <!-- / CONTENT CARD -->
+    <!-- / CENTER -->
+    <!-- SIDEBAR -->
+    <fuse-sidebar class="sidebar" name="carded-right-sidebar-1" position="end" lockedOpen="gt-md">
+
+      <!-- SIDEBAR CONTENT -->
+      <div class="content p-24">
+        <chbot-sidebar></chbot-sidebar>
+      </div>
+      <!-- / SIDEBAR CONTENT -->
+
+    </fuse-sidebar>
+    <!-- / SIDEBAR -->
+  </div>
+</div>
+
+

@@ -7,10 +7,12 @@ import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { DetailsDemandeFinancementComponent } from './details-demande-financement/details-demande-financement.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material';
+import { DemandFinanFormulaireComponent } from './demand-finan-formulaire/demand-finan-formulaire.component';
 
 export const routes = [
   { path: '', component: DemandeFinancementAcheteurComponent, pathMatch: 'full' },
-  { path: 'detailsDemande-fiancement/:id', component: DetailsDemandeFinancementComponent, pathMatch: 'full' }
+  { path: 'detailsDemande-fiancement/:id', component: DetailsDemandeFinancementComponent, pathMatch: 'full' },
+  { path: 'nouvelle-demande-Formulaire', component: DemandFinanFormulaireComponent, pathMatch: 'full' }
 ];
 
 @NgModule({
@@ -23,6 +25,6 @@ export const routes = [
     MatInputModule
 
   ],
-  declarations: [DemandeFinancementAcheteurComponent, DetailsDemandeFinancementComponent]
+  declarations: [DemandeFinancementAcheteurComponent, DetailsDemandeFinancementComponent, DemandFinanFormulaireComponent]
 })
 export class DemandeFinancementModule { }

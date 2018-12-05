@@ -1,16 +1,28 @@
 .panel-domaine-a {
-    width: 10em !important;
+    width: 15em !important;
     background-color: #ed7d31 !important;
 }
 
 .panel-domaine-b {
-    width: 10em !important;
+    width: 15em !important;
     background-color: #70ad47 !important;
 }
 
 .panel-domaine-c {
-    width: 10em !important;
+    width: 15em !important;
     background-color: #5b9bd5 !important;
+}
+.panel-domaine-d {
+    width: 15em !important;
+    background-color: #946727 !important;
+}
+.panel-domaine-e {
+    width: 15em !important;
+    background-color: #d5b95b !important;
+}
+.panel-domaine-f {
+    width: 15em !important;
+    background-color: #d5b95b !important;
 }
 
 .mat-card.product-image {
@@ -102,4 +114,9 @@
 .ratings-count {
     margin-left: 12px;
     font-weight: 500;
+}
+.panel{
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2),
+    0 2px 2px 0 rgba(0, 0, 0, .14),
+    0 1px 5px 0 rgba(0, 0, 0, .12);
 }

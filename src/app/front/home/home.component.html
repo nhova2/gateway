@@ -65,11 +65,14 @@
                                                             <span>12500 CFA</span>
                                                         </p>
                                                     </div>
-                                                    <div fxLayout="row" fxFlex="50" fxLayoutAlign='center end'>
-                                                        
-                                                        <p>
-                                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod asperiores provident corporis neque.                                                         
-                                                        </p>
+                                                    <div fxLayout="row" fxLayoutAlign='center end'>
+                                                        <div class="ratings">
+                                                            <mat-icon class="mat-icon-xs">star</mat-icon>
+                                                            <mat-icon class="mat-icon-xs">star</mat-icon>
+                                                            <mat-icon class="mat-icon-xs">star</mat-icon>
+                                                            <mat-icon class="mat-icon-xs">star</mat-icon>
+                                                        </div>
+                                                        <p class="ratings-count text-muted">5 ratings</p>
                                                     </div>
                                                 </div>
                                                 <div class="divider mt-2"></div>
@@ -132,7 +135,7 @@
                                         </div>
                                     </div>
                                 </mat-expansion-panel>
-                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                <mat-expansion-panel>
                                     <mat-expansion-panel-header>
                                         <mat-panel-title>
                                             <h4>Appels d'offres</h4>
@@ -252,7 +255,7 @@
                                     </mat-card>
                                     <br>
                                 </mat-expansion-panel>
-                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                <mat-expansion-panel >
                                     <mat-expansion-panel-header>
                                         <mat-panel-title>
                                             <h4>Enchère en cours</h4>
@@ -293,13 +296,13 @@
                                                         <div fxLayout="column">
                                                             <div style="font-size:10px; font-weight:bold; color:rgb(182, 177, 177)">Enchère courante</div>
                                                             <div style="color:red ; font-size:14px; font-weight:bold">1 800 000
-                                                                <span style="font-size:10px !important; height:2%; color:grey">XOF</span>
+                                                                <SUP style="text-transform:lowercase; font-size: 10px;" class="expo">XOF</SUP>
                                                             </div>
                                                         </div>
                                                         <div fxLayout="column">
                                                             <div style="font-size:10px; font-weight:bold; color:rgb(182, 177, 177)">Estimation valeur</div>
                                                             <div style="font-size:14px; font-weight:bold">1 545 877
-                                                                <span style="font-size:10px !important; height:2%; color:grey">XOF</span>
+                                                                <SUP style="text-transform:lowercase; font-size: 10px;" class="expo">XOF</SUP>
                                                             </div>
                                                         </div>
                                                         <div fxLayout="column">

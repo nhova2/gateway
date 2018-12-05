@@ -1,3 +1,47 @@
-<p>
-  suivi-depot works!
-</p>
+<div fxLayout="row" fxLayoutAlign="center center" class="title-top">
+  <div>
+    <h2 class="title">LISTE DEPOT</h2>
+  </div>
+</div>
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource" matSort>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="Denomination">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Denomination </th>
+      <td mat-cell *matCellDef="let row"> {{row.Denomination}} </td>
+    </ng-container>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="Montant_Plafond">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Montant_Plafond </th>
+      <td mat-cell *matCellDef="let row"> {{row.Montant_Plafond}} </td>
+    </ng-container>
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="Accorde_a">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Accorde_a </th>
+      <td mat-cell *matCellDef="let row"> {{row.Accorde_a}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="Details">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Details </th>
+      <td mat-cell *matCellDef="let row"> {{row.Details}}
+        <button mat-raised-button [routerLink]="['/depot','details-suivi-depot',1]">
+          <mat-icon class="orange600">details</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+    </tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>

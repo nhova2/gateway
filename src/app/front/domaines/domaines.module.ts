@@ -9,11 +9,13 @@ import { FuseSidebarModule } from '@fuse/components';
 import { FuseDemoModule } from '@fuse/components/demo/demo.module';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { DomainesListComponent } from './domaines-list/domaines-list.component';
+import { DomaineProduitComponent } from './domaine-produit/domaine-produit.component';
 
 export const routes = [
   { path: '', component: DomainesComponent, pathMatch: 'full' },
   { path: ':name', component: DomaineComponent },
-  { path: ':name/:name', component: DomaineActiviteComponent }
+  { path: 'activites/listes', component: DomaineActiviteComponent },
+  { path: ':name/produits', component: DomaineProduitComponent }
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ export const routes = [
     DomainesComponent,
     DomaineComponent,
     DomaineActiviteComponent,
-    DomainesListComponent
+    DomainesListComponent,
+    DomaineProduitComponent
   ]
 })
 export class DomaineModule { }

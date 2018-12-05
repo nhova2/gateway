@@ -1,0 +1,238 @@
+<div fxLayout="column" fxFlex="100" class="px-24 py-8">
+  <div class="page-layout carded left-sidebar">
+    <!-- CENTER -->
+    <div class="center">
+      <!-- CONTENT CARD -->
+      <div class="content-card">
+        <!-- CONTENT TOOLBAR -->
+        <div class="toolbar px-24 py-8">
+          <span>
+            <h1 style="font-weight: bold">Panier</h1>
+          </span>
+        </div>
+        <div *ngIf="appService.Data.cartList.length != 0">
+          <mat-chip-list>
+            <mat-chip color="warn" selected="true">YOU HAVE NO ITEMS IN YOUR SHOPPING CART.</mat-chip>
+          </mat-chip-list>
+          <a [routerLink]="['/']" mat-raised-button color="primary" class="mt-2">Continue shopping</a>
+        </div>
+        <mat-card class="p-0">
+          <div class="mat-table cart-table">
+            <div class="mat-header-row">
+              <div class="mat-header-cell">
+                <img src="assets/images/Panier/FineTech_PS_Elmt_Panier_Reacp_Icon.png" alt="">
+              </div>
+              <div class="mat-header-cell" style="margin-top: -1.8%;">
+                <p class="countproduct">001</p>
+                <p class="products">Produits</p>
+              </div>
+              <div class="mat-header-cell productpolice">Nom</div>
+              <div class="mat-header-cell productpolice">Prix</div>
+              <div class="mat-header-cell productpolice">Total</div>
+              <div class="mat-header-cell text-center">
+                <div class="px-1">
+                  <button mat-raised-button color="warn" (click)="clear()" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">Effacer Tout</button>
+                </div>
+              </div>
+            </div>
+            <div class="mat-row">
+              <div class="mat-cell">
+                <img src="assets/images/Panier/Panier_Produit.jpg" alt="">
+              </div>
+              <div class="mat-cell handle-counter" id="handleCounter">
+                <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
+
+                <button (click)="decrement()" class="counter-minus btn btn-primary">-</button>
+
+                <input type="text" value="{{counter}} " style="width:11%; padding: 1.5%">
+
+                <button (click)="increment()" class="counter-plus btn btn-primary">+</button>
+              </div>
+              <div class="mat-cell nameproduct">
+                <!--<a [routerLink]="['/products', product.id, product.name]" class="product-name">{{product.name}}</a>-->Nom</div>
+              <div class="mat-cell firstprice">1000
+                <SUP class="expo">XOF</SUP>
+              </div>
+
+              <div class="mat-cell totalprice">1000
+                <SUP class="expo">XOF</SUP>
+              </div>
+              <div class="mat-cell text-center">
+                <div class="p-1">
+                  <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+            <div class="mat-row">
+              <div class="mat-cell">
+                <img src="assets/images/Panier/Panier_Produit.jpg" alt="">
+              </div>
+              <div class="mat-cell handle-counter" id="handleCounter">
+                <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
+
+                <button (click)="decrement()" class="counter-minus btn btn-primary">-</button>
+
+                <input type="text" value="{{counter}} " style="width:11%; padding: 1.5%">
+
+                <button (click)="increment()" class="counter-plus btn btn-primary">+</button>
+              </div>
+              <div class="mat-cell nameproduct">
+                <!--<a [routerLink]="['/products', product.id, product.name]" class="product-name">{{product.name}}</a>-->Nom</div>
+              <div class="mat-cell firstprice">5000
+                <SUP class="expo">XOF</SUP>
+              </div>
+
+              <div class="mat-cell totalprice">5000
+                <SUP class="expo">XOF</SUP>
+              </div>
+              <div class="mat-cell text-center">
+                <div class="p-1">
+                  <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+            <div class="mat-row">
+              <div class="mat-cell">
+                <img src="assets/images/Panier/Panier_Produit.jpg" alt="">
+              </div>
+              <div class="mat-cell handle-counter" id="handleCounter">
+                <!-- <app-controls [product]="product" [type]="'wish'" (onQuantityChange)="getTotalPrice($event)"></app-controls> -->
+
+                <button (click)="decrement()" class="counter-minus btn btn-primary">-</button>
+
+                <input type="text" value="{{counter}} " style="width:11%; padding: 1.5%">
+
+                <button (click)="increment()" class="counter-plus btn btn-primary">+</button>
+              </div>
+              <div class="mat-cell nameproduct">
+                <!--<a [routerLink]="['/products', product.id, product.name]" class="product-name">{{product.name}}</a>-->Nom</div>
+              <div class="mat-cell firstprice">8000
+                <SUP class="expo">XOF</SUP>
+              </div>
+
+              <div class="mat-cell totalprice">8000
+                <SUP class="expo">XOF</SUP>
+              </div>
+              <div class="mat-cell text-center">
+                <div class="p-1">
+                  <button mat-mini-fab color="warn" (click)="remove(product)" matTooltip="Clear" style="background-color:#2A2A2A; color: #F8F8F8; font-weight: 500; font-size: 15pt">
+                    <mat-icon>close</mat-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card>
+        <div class="px-24 py-8" fxLayout="row" fxLayoutGap="5px">
+          <div fxFlex="70" fxLayout="column">
+            <span class="toolbar px-24 py-8">
+              <h1 style="font-weight: bold">INFORMATIONS DE PAIEMENT</h1>
+            </span>
+            <fieldset>
+              <legend>RECAPITULATIF COMMANDE</legend>
+              <div fxLayout="row" class="px-24 py-8">
+                <div fxFlex="50">
+                  <span class="firstprice">Montant Hors Taxe</span>
+                </div>
+                <div fxFlex="50">
+                  <span class="firstprice">14 000
+                    <SUP class="expo">XOF</SUP>
+                  </span>
+                </div>
+              </div>
+              <mat-divider></mat-divider>
+              <div fxLayout="row" class="px-24 py-8">
+                <div fxFlex="50">
+                  <span class="firstprice">Montant Tva</span>
+                </div>
+                <div fxFlex="50">
+                  <span class="firstprice">5 000
+                    <SUP class="expo">XOF</SUP>
+                  </span>
+                </div>
+              </div>
+              <mat-divider></mat-divider>
+              <div fxLayout="row" class="px-24 py-8">
+                <div fxFlex="50">
+                  <span class="firstprice">Montant TTC</span>
+                </div>
+                <div fxFlex="50">
+                  <span class="firstprice">16 000
+                    <SUP class="expo">XOF</SUP>
+                  </span>
+                </div>
+              </div>
+            </fieldset>
+            <div fxLayout="row" class="px-24 py-8">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Code promotionnel">
+              </mat-form-field>
+            </div>
+            
+              <fieldset>
+                <legend>Mode paiement</legend>
+                <div class="px-24 py-8">
+                  <div fxLayout="row" class="px-24 py-8" fxLayoutGap="100px">
+                    <div fxFlex="50"><mat-slide-toggle><img src="assets/" alt=""> ORANGE MONEY</mat-slide-toggle></div>
+                    <div fxFlex="50"><mat-slide-toggle>TIGO CASH</mat-slide-toggle></div>
+                    <div fxFlex="50"><mat-slide-toggle>WARI</mat-slide-toggle></div>
+                  </div>
+                  <div fxLayout="row" class="px-24 py-8" fxLayoutGap="100px">
+                    <div fxFlex="50"><mat-slide-toggle>MASTER CARD</mat-slide-toggle></div>
+                    <div fxFlex="50"><mat-slide-toggle>VISA</mat-slide-toggle></div>
+                    <div fxFlex="50"><mat-slide-toggle>CAISSE</mat-slide-toggle></div>
+                  </div>
+                  <div fxLayout="row" class="px-24 py-8" fxLayoutGap="100px">
+                    <div fxFlex="50"><mat-slide-toggle>A LA LIVRAISON</mat-slide-toggle></div>
+                    <div fxFlex="50"><mat-slide-toggle>PRET</mat-slide-toggle></div>
+                    <div fxFlex="50">&nbsp;</div>
+                  </div>
+                </div>
+              </fieldset>
+            <button mat-raised-button color="primary" style="width:50%; margin-top:2%">Valider Le Paimement</button>
+          </div>
+          <div fxFlex="30" fxLayout="column">
+            <span class="toolbar px-24 py-8">
+              <h1 style="font-weight: bold">ADRESSE DE LIVRAISON</h1>
+            </span>     
+              <mat-card>
+                <mat-card-content>
+                  <div fxLayout="column" fxLayoutGap="1px">
+                    <div fxLayout="column" style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12);
+                                    padding: 1%;
+                                    text-decoration: none;
+                                    background-color: #9A3838;
+                                    color: white;">
+                      <div>p A Domicile</div>
+                      <div>Jean Marc Dupont</div>
+                      <div>2 rue Pierre expert</div>
+                      <div>92700 Colombie</div>
+                      <div>Telephone: 0689585447</div>
+                    </div>
+                  </div>
+                  <div class="py-8"><button mat-raised-button color="primary">Modifier</button></div>
+                </mat-card-content>
+              </mat-card>
+            <span class="toolbar px-24 py-8">
+              <h1 style="font-weight: bold">TYPE DE LIVRAISON</h1>
+            </span>
+            <div fxLayout="column" class="px-24 py-8" fxLayoutGap="30px" style="box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0,
+            0, 0.12); padding: 1%; text-decoration: none;">
+              <div class="firstprice"><mat-slide-toggle>La Poste</mat-slide-toggle></div>
+              <div class="firstprice"><mat-slide-toggle>Point de Retrait</mat-slide-toggle></div>
+              <div class="firstprice"><mat-slide-toggle>Agent Livreur</mat-slide-toggle></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- / CONTENT CARD -->
+    </div>
+  </div>
+</div>

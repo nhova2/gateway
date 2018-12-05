@@ -4,7 +4,6 @@ import { Product } from '../../front/app.models';
 import { MatDialog } from '@angular/material';
 import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 import { FuseConfigService } from '@fuse/services/config.service';
-import { navigation } from 'app/navigation/navigation';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -17,7 +16,6 @@ import { takeUntil } from 'rxjs/operators';
   export class DomainesComponent {
 
   fuseConfig: any;
-  navigation: any;
 
   public slides = [
     { title: 'The biggest sale', subtitle: '...   ...', image: 'assets/images/carousel/FineTech_PS_Elmt_Main_Advertisement_FalseContent.png' },
@@ -49,8 +47,6 @@ import { takeUntil } from 'rxjs/operators';
        * @param {FuseSidebarService} _fuseSidebarService
        */
   constructor(private _fuseSidebarService: FuseSidebarService, private _fuseConfigService: FuseConfigService ) {
-    // Set the defaults
-    this.navigation = navigation;
 
     // Set the private defaults
     this._unsubscribeAll = new Subject();

@@ -3,7 +3,8 @@ import { Data, AppService } from '../../front/app.service';
 import { Product } from '../../front/app.models';
 import { MatDialog } from '@angular/material';
 import { FuseNavigationService } from '@fuse/components/navigation/navigation.service';
-import { navigation } from 'app/navigation/navigation';
+import { frontNavigation } from 'app/front/navigation/frontNavigation';
+
 import { FuseSidebarService } from '@fuse/components/sidebar/sidebar.service';
 
 @Component({
@@ -28,13 +29,13 @@ export class HomeComponent {
     private _fuseNavigationService: FuseNavigationService,
     private _fuseSidebarService: FuseSidebarService) {
 
-    this.navigation = navigation;
+    this.navigation = frontNavigation;
 
     // Register the navigation to the service
-    this._fuseNavigationService.register('main', this.navigation);
+    this._fuseNavigationService.register('home', this.navigation);
 
     // Set the main navigation as our current navigation
-    this._fuseNavigationService.setCurrentNavigation('main');
+    this._fuseNavigationService.setCurrentNavigation('home');
 
 
    }

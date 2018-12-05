@@ -4,9 +4,11 @@ import { SuiviDevisComponent } from './suivi-devis/suivi-devis.component';
 import { FuseSharedModule } from '@fuse/shared.module';
 import { SharedModule } from '../../../shared-front/shared/shared.module';
 import { RouterModule } from '@angular/router';
+import { DetailsSuiviDevisComponent } from './suivi-devis/details-suivi-devis/details-suivi-devis.component';
 
 export const routes = [
   { path: '', component: SuiviDevisComponent, pathMatch: 'full' },
+  { path: 'details-suivi-devis/:id', component: DetailsSuiviDevisComponent, pathMatch: 'full' },
 ];
 
 @NgModule({
@@ -17,6 +19,6 @@ export const routes = [
     SharedModule,
     
   ],
-  declarations: [SuiviDevisComponent]
+  declarations: [SuiviDevisComponent, DetailsSuiviDevisComponent]
 })
 export class DevisModule { }
